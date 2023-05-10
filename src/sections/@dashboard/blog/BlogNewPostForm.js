@@ -1,3 +1,4 @@
+import axios from 'axios';
 import * as Yup from 'yup';
 import { useState, useCallback } from 'react';
 // next
@@ -59,16 +60,16 @@ export default function BlogNewPostForm() {
   });
 
   const defaultValues = {
-    title: '',
-    description: '',
-    content: '',
+    title: 'fdfdfdfdfdfd',
+    description: 'fdfdfdfdfdfd',
+    content: 'fdfdfdfdfdfd',
     cover: null,
-    tags: ['The Kid'],
+    tags: ['The Kid','Logan'],
     publish: true,
     comments: true,
-    metaTitle: '',
-    metaDescription: '',
-    metaKeywords: [],
+    metaTitle: 'fdfdfdfdfdfd',
+    metaDescription: 'fdfdfdfdfdfd',
+    metaKeywords: ['The Kid','Logan'],
   };
 
   const methods = useForm({
@@ -96,7 +97,8 @@ export default function BlogNewPostForm() {
 
   const onSubmit = async (data) => {
     try {
-      await new Promise((resolve) => setTimeout(resolve, 500));
+      const res = await axios.post('/api/posts', data);
+      console.log(res)
       reset();
       handleClosePreview();
       enqueueSnackbar('Post success!');
@@ -126,6 +128,10 @@ export default function BlogNewPostForm() {
     setValue('cover', null);
   };
 
+  const handleUploadFile = () => {
+    console.log("UPDKkdjfdf")
+  }
+
   return (
     <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
       <Grid container spacing={3}>
@@ -148,12 +154,13 @@ export default function BlogNewPostForm() {
                 <Typography variant="subtitle2" sx={{ color: 'text.secondary' }}>
                   Cover
                 </Typography>
-
+                {/* <input type='file' name='cover' onChange={handleUploadFile} /> */}
                 <RHFUpload
                   name="cover"
                   maxSize={3145728}
                   onDrop={handleDrop}
                   onDelete={handleRemoveFile}
+                  onUpload={handleUploadFile}
                 />
               </Stack>
             </Stack>

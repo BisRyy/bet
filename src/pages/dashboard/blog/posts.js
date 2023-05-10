@@ -44,7 +44,7 @@ export default function BlogPostsPage() {
 
   const getAllPosts = useCallback(async () => {
     try {
-      const response = await axios.get('/api/blog/posts');
+      const response = await axios.get('/api/posts');
       setPosts(response.data.posts);
     } catch (error) {
       console.error(error);
