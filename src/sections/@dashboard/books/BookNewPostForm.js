@@ -21,7 +21,7 @@ import FormProvider, {
   RHFAutocomplete,
 } from '../../../components/hook-form';
 //
-import BlogNewPostPreview from './BlogNewPostPreview';
+import BlogNewPostPreview from '../blog/BlogNewPostPreview';
 import Iconify from '../../../components/iconify/Iconify';
 import { useAuthContext } from '../../../auth/useAuthContext';
 
@@ -45,7 +45,7 @@ const TAGS_OPTION = [
 
 // ----------------------------------------------------------------------
 
-export default function BlogNewPostForm() {
+export default function BookNewPostForm() {
   const { user } = useAuthContext();
   const { push } = useRouter();
 

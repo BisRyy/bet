@@ -39,7 +39,7 @@ BlogPostCard.propTypes = {
 export default function BlogPostCard({ post, index }) {
   const isDesktop = useResponsive('up', 'md');
 
-  const { image, cover, title, view, comment, share, author, createdAt } = post;
+  const { cover, title, view, comment, share, author, createdAt } = post;
 
   const latestPost = index === 0 || index === 1 || index === 2;
 
@@ -68,7 +68,7 @@ export default function BlogPostCard({ post, index }) {
 
         <StyledOverlay />
 
-        <Image alt="cover" src={image} sx={{ height: 360 }} />
+        <Image alt="cover" src={cover} sx={{ height: 360 }} />
       </Card>
     );
   }

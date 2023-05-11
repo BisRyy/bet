@@ -145,41 +145,45 @@ export default function BlogPostPage() {
               <BlogPostTags post={post} />
               <Divider />
             </Stack>
-
-            <Stack
-              sx={{
-                px: { md: 5 },
-              }}
-            >
-              <Stack direction="row" sx={{ mb: 3 }}>
-                <Typography variant="h4">Comments</Typography>
-
-                <Typography variant="subtitle2" sx={{ color: 'text.disabled' }}>
-                  ({post.comments.length})
-                </Typography>
-              </Stack>
-
-              <BlogPostCommentForm />
-
-              <Divider sx={{ mt: 5, mb: 2 }} />
-            </Stack>
-
-            <Stack
-              sx={{
-                px: { md: 5 },
-              }}
-            >
-              <BlogPostCommentList comments={post.comments} />
-
-              <Pagination
-                count={8}
-                sx={{
-                  my: 5,
-                  ml: 'auto',
-                  mr: { xs: 'auto', md: 0 },
-                }}
-              />
-            </Stack>
+            {
+              post.commentsOn && (<>
+                <Stack
+                  sx={{
+                    px: { md: 5 },
+                  }}
+                >
+                  <Stack direction="row" sx={{ mb: 3 }}>
+                    <Typography variant="h4">Comments</Typography>
+    
+                    <Typography variant="subtitle2" sx={{ color: 'text.disabled' }}>
+                      ({post.comments.length})
+                    </Typography>
+                  </Stack>
+    
+                  <BlogPostCommentForm />
+    
+                  <Divider sx={{ mt: 5, mb: 2 }} />
+                </Stack>
+    
+                <Stack
+                  sx={{
+                    px: { md: 5 },
+                  }}
+                >
+                  <BlogPostCommentList comments={post.comments} />
+    
+                  <Pagination
+                    count={8}
+                    sx={{
+                      my: 5,
+                      ml: 'auto',
+                      mr: { xs: 'auto', md: 0 },
+                    }}
+                  />
+                </Stack>
+                </>
+              )
+            }
           </Stack>
         )}
 

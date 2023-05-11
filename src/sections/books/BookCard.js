@@ -1,4 +1,3 @@
-"use client";
 import { useState } from "react";
 import PropTypes from "prop-types";
 // @mui
@@ -17,11 +16,11 @@ import {
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import BookDetails from "./BookDetails"
-import Image from "next/image";
 // utils
 // components
 // import Label from '../../components/label';
 import Iconify from '../../components/iconify';
+import BookView from "./BookView";
 
 // ----------------------------------------------------------------------
 
@@ -36,14 +35,13 @@ const StyledProductImg = styled("img")({
 // ----------------------------------------------------------------------
 
 BookCard.propTypes = {
-  menu: PropTypes.object,
+  book: PropTypes.object,
 };
 
 export default function BookCard({ book }) {
   const {
     title = "name",
     image = "",
-    price = "",
     description = "jdfhduhfd",
   } = book;
 

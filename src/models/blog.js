@@ -17,6 +17,7 @@ const blogSchema = new Schema({
   body: String,
   favoritePerson: [],
   comments: [],
+  commentsOn: Boolean,
 });
 
 const Blog = models.Blog || model('Blog', blogSchema);

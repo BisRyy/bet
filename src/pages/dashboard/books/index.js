@@ -1,11 +1,8 @@
-"use client";
-
+import { useEffect, useCallback, useState } from "react";
 import { Box, Button, Container, Grid } from "@mui/material";
 import BookCard from "../../../sections/books/BookCard";
 import DashboardLayout from "../../../layouts/dashboard/DashboardLayout";
-import { useCallback, useState } from "react";
-import axiosInstance from "src/utils/axios";
-import { useEffect } from "react";
+import axiosInstance from "../../../utils/axios";
 
 Books.getLayout = (page) => <DashboardLayout>{page}</DashboardLayout>;
 
