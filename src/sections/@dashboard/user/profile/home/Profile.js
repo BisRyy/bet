@@ -40,7 +40,7 @@ export default function Profile({ info, posts }) {
           <ProfilePostInput />
 
           {posts.map((post) => (
-            <ProfilePostCard key={post.id} post={post} />
+            <ProfilePostCard key={post._id} post={post} />
           ))}
         </Stack>
       </Grid>

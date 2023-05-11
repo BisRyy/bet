@@ -48,7 +48,7 @@ export default function BlogPostCard({ post, index }) {
       <Card>
         <Avatar
           alt={author ? author.name : 'Guest'}
-          src={author ? author.avatarUrl : ''}
+          src={author ? author.photoURL : ''}
           sx={{
             top: 24,
             left: 24,
@@ -90,7 +90,7 @@ export default function BlogPostCard({ post, index }) {
 
         <Avatar
           alt={author ? author.name : 'Guest'}
-          src={author ? author.avatarUrl : ''}
+          src={author ? author.photoURL : ''}
           sx={{
             left: 24,
             zIndex: 9,

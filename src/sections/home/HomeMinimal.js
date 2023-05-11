@@ -11,18 +11,18 @@ import { MotionViewport, varFade } from '../../components/animate';
 const CARDS = [
   {
     icon: ' /assets/icons/home/ic_make_brand.svg',
-    title: 'Branding',
+    title: 'Blogs',
     description: 'Consistent design makes it easy to brand your own.',
   },
   {
     icon: ' /assets/icons/home/ic_design.svg',
-    title: 'UI & UX Design',
+    title: 'Books',
     description:
       'The kit is built on the principles of the atomic design system. It helps you to create projects fastest and easily customized packages for your projects.',
   },
   {
     icon: ' /assets/icons/home/ic_development.svg',
-    title: 'Development',
+    title: 'Courses',
     description: 'Easy to customize and extend, saving you time and money.',
   },
 ];
@@ -58,13 +58,13 @@ export default function HomeMinimal() {
         >
           <m.div variants={varFade().inUp}>
             <Typography component="div" variant="overline" sx={{ color: 'text.disabled' }}>
-              Minimal UI
+              Bete Liq
             </Typography>
           </m.div>
 
           <m.div variants={varFade().inDown}>
             <Typography variant="h2">
-              What minimal <br /> helps you?
+              All resources <br /> at one place 
             </Typography>
           </m.div>
         </Stack>

@@ -87,7 +87,7 @@ export default function BlogPostHero({ post }) {
 
       <StyledFooter>
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <Avatar alt={author ? author.name : 'Guest' } src={author ? author.avatarUrl : '' } sx={{ width: 48, height: 48 }} />
+          <Avatar alt={author ? author.name : 'Guest' } src={author ? author.photoURL : '' } sx={{ width: 48, height: 48 }} />
 
           <Box sx={{ ml: 2 }}>
             <Typography variant="subtitle1" sx={{ color: 'common.white' }}>

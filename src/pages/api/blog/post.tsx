@@ -12,25 +12,41 @@ import Blog from '../../../models/blog'
 // ----------------------------------------------------------------------
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    await cors(req, res);
-    await connectMongo();
-    const posts = await Blog.find({});
-    const { title } = req.query;
+  if (req.method == 'GET') {
+    try {
+      await cors(req, res);
+      await connectMongo();
+      const posts = await Blog.find({});
+      const { title } = req.query;
 
-    const post = posts.find((_post) => paramCase(_post.title) === title);
+      const post = posts.find((_post) => paramCase(_post.title) === title);
 
-    if (!post) {
-      return res.status(404).json({
-        message: 'Post not found!',
+      if (!post) {
+        return res.status(404).json({
+          message: 'Post not found!',
+        });
+      }
+
+      res.status(200).json({ post });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({
+        message: 'Internal server error',
       });
     }
-
-    res.status(200).json({ post });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({
-      message: 'Internal server error',
-    });
+  } else if (req.method == 'DELETE'){
+    const { id } = req.query;
+    try {
+      await cors(req, res);
+      await connectMongo();
+      const post = await Blog.findByIdAndDelete(id);
+      res.status(200).json({ post });
+    }
+    catch (error) {
+      console.error(error);
+      res.status(500).json({
+        message: 'Internal server error',
+      });
+    }
   }
 }

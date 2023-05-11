@@ -103,7 +103,7 @@ export default function BlogNewPostForm() {
     try {
       const author = {
         name: user.displayName,
-        avatar: user.photoURL,
+        photoURL: user.photoURL,
       }
       const res = await axios.post('/api/posts', {...data, cover: image, author});
       console.log(res)

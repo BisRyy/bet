@@ -2,8 +2,11 @@ import { useEffect, useState, useCallback } from 'react';
 // next
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import NextLink from 'next/link';
 // @mui
-import { Box, Divider, Stack, Container, Typography, Pagination } from '@mui/material';
+import { Box, Divider, Stack, Container, Typography, Pagination, Button } from '@mui/material';
+// hooks
+import { useSnackbar } from 'notistack';
 // routes
 import { PATH_DASHBOARD } from '../../../../routes/paths';
 // utils
@@ -23,6 +26,8 @@ import {
   BlogPostCommentList,
   BlogPostCommentForm,
 } from '../../../../sections/@dashboard/blog';
+import Iconify from '../../../../components/iconify/Iconify';
+import { useAuthContext } from '../../../../auth/useAuthContext';
 
 // ----------------------------------------------------------------------
 
@@ -32,10 +37,14 @@ BlogPostPage.getLayout = (page) => <DashboardLayout>{page}</DashboardLayout>;
 
 export default function BlogPostPage() {
   const { themeStretch } = useSettingsContext();
+  const { enqueueSnackbar } = useSnackbar();
 
   const {
-    query: { title },
+    query: { title }, 
+    push
   } = useRouter();
+
+  const { user } = useAuthContext();
 
   const [recentPosts, setRecentPosts] = useState([]);
 
@@ -72,6 +81,19 @@ export default function BlogPostPage() {
     }
   }, [title]);
 
+  const handleDeletePost = async () => {
+    console.log('delete post', post._id);
+    try {
+      await axios.delete('/api/blog/post', {
+        params: { id: post._id },
+      });
+    } catch (error) {
+      console.error(error);
+    }
+    push(PATH_DASHBOARD.blog.root);
+    enqueueSnackbar('Post deleted', { variant: 'error' });
+  };
+
   useEffect(() => {
     getRecentPosts();
   }, [getRecentPosts]);
@@ -104,6 +126,18 @@ export default function BlogPostPage() {
               name: post?.title,
             },
           ]}
+           action={
+            user?.role === 'admin' && (
+                <Button
+                  onClick={handleDeletePost}
+                  variant="contained"
+                  startIcon={<Iconify icon="eva:trash-2-fill" />}
+                  color='error'
+                >
+                  Delete Post
+                </Button>
+            )
+           }
         />
 
         {post && (
@@ -207,7 +241,7 @@ export default function BlogPostPage() {
               }}
             >
               {recentPosts.slice(recentPosts.length - 4).map((recentPost) => (
-                <BlogPostCard key={recentPost.id} post={recentPost} />
+                <BlogPostCard key={recentPost._id} post={recentPost} />
               ))}
             </Box>
           </>

@@ -57,8 +57,8 @@ export default function BookNewPostForm() {
     title: Yup.string().required('Title is required'),
     description: Yup.string().required('Description is required'),
     tags: Yup.array().min(2, 'Must have at least 2 tags'),
-    metaKeywords: Yup.array().min(1, 'Meta keywords is required'),
     cover: Yup.mixed().required('Cover is required').nullable(true),
+    link: Yup.string().required('Link is required'),
     content: Yup.string().required('Content is required'),
   });
 
@@ -152,7 +152,7 @@ export default function BookNewPostForm() {
     formData.append('file', file);
     formData.append('upload_preset', 'qtfvzmdj');
     axios
-      .post(`https://${process.env.REACT_APP_CLOUD_API_KEY}:${process.env.REACT_APP_CLOUD_API_SECRET}@api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUD_NAME}/image/upload`, formData)
+      .post(`https://${process.env.REACT_APP_CLOUD_API_KEY}:${process.env.REACT_APP_CLOUD_API_SECRET}@api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUD_NAME}/auto/upload`, formData)
       .then((res) => {
         console.log("uploaded", res.data);
         setImage(res.data.secure_url)

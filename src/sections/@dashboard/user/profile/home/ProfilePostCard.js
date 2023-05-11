@@ -152,7 +152,7 @@ export default function ProfilePostCard({ post }) {
         <Stack spacing={1.5} sx={{ px: 3, pb: 2 }}>
           {post.comments && post.comments.map((comment) => (
             <Stack key={comment.id} direction="row" spacing={2}>
-              <CustomAvatar alt={comment.author.name} src={comment.author.avatarUrl} />
+              <CustomAvatar alt={comment.author.name} src={comment.author.photoURL} />
 
               <Paper
                 sx={{
