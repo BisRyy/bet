@@ -13,7 +13,7 @@ BlogPostCommentList.propTypes = {
 export default function BlogPostCommentList({ comments }) {
   return (
     <List disablePadding>
-      {comments.map((comment) => {
+      {!comments && comments.map((comment) => {
         const { id, replyComment, name, users, message, avatarUrl, postedAt } = comment;
 
         const hasReply = replyComment.length > 0;

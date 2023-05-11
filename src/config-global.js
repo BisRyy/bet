@@ -5,7 +5,7 @@ import { PATH_DASHBOARD } from './routes/paths';
 // ----------------------------------------------------------------------
 
 export const HOST_API_KEY = process.env.HOST_API_KEY || '';
-export const {MONGODB_URI} = process.env;
+export const MONGODB_URI = process.env.MONGODB_URI || '';
 
 export const FIREBASE_API = {
   apiKey: process.env.FIREBASE_API_KEY,

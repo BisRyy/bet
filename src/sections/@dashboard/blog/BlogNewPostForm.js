@@ -8,7 +8,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 // @mui
 import { LoadingButton } from '@mui/lab';
-import { Grid, Card, Stack, Button, Typography } from '@mui/material';
+import { Grid, Card, Stack, Button, Typography, Alert } from '@mui/material';
 // routes
 import { PATH_DASHBOARD } from '../../../routes/paths';
 // components
@@ -22,6 +22,8 @@ import FormProvider, {
 } from '../../../components/hook-form';
 //
 import BlogNewPostPreview from './BlogNewPostPreview';
+import Iconify from '../../../components/iconify/Iconify';
+import { useAuthContext } from '../../../auth/useAuthContext';
 
 // ----------------------------------------------------------------------
 
@@ -44,6 +46,7 @@ const TAGS_OPTION = [
 // ----------------------------------------------------------------------
 
 export default function BlogNewPostForm() {
+  const { user } = useAuthContext();
   const { push } = useRouter();
 
   const { enqueueSnackbar } = useSnackbar();
@@ -95,9 +98,14 @@ export default function BlogNewPostForm() {
     setOpenPreview(false);
   };
 
+  const [image , setImage] = useState(null)
   const onSubmit = async (data) => {
     try {
-      const res = await axios.post('/api/posts', data);
+      const author = {
+        name: user.displayName,
+        avatar: user.photoURL,
+      }
+      const res = await axios.post('/api/posts', {...data, cover: image, author});
       console.log(res)
       reset();
       handleClosePreview();
@@ -128,9 +136,29 @@ export default function BlogNewPostForm() {
     setValue('cover', null);
   };
 
-  const handleUploadFile = () => {
-    console.log("UPDKkdjfdf")
-  }
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0];
+    // const filePreview = files.map((file) => URL.createObjectURL(file));
+    const newFile = Object.assign(file, {
+      preview: URL.createObjectURL(file),
+    });
+
+    if (file) {
+      setValue('cover', newFile, { shouldValidate: true });
+    }
+    console.log(process.env.REACT_APP_CLOUD_NAME)
+
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('upload_preset', 'qtfvzmdj');
+    axios
+      .post(`https://${process.env.REACT_APP_CLOUD_API_KEY}:${process.env.REACT_APP_CLOUD_API_SECRET}@api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUD_NAME}/image/upload`, formData)
+      .then((res) => {
+        console.log("uploaded", res.data);
+        setImage(res.data.secure_url)
+      })
+      .catch((err) => console.log(err));
+  };
 
   return (
     <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
@@ -154,14 +182,28 @@ export default function BlogNewPostForm() {
                 <Typography variant="subtitle2" sx={{ color: 'text.secondary' }}>
                   Cover
                 </Typography>
-                {/* <input type='file' name='cover' onChange={handleUploadFile} /> */}
-                <RHFUpload
+                <Button
+                  variant="contained"
+                  component="label"
+                  startIcon={<Iconify icon="bx:bx-image-add" />}
+                >
+                  <Typography variant="body2" sx={{ mr: 1, display: { xs: 'none', sm: 'block' } }}>
+                    Upload Cover
+                  </Typography>
+              <input type="file" accept="image/*" hidden onChange={handleImageUpload} />
+            </Button>
+              
+                {
+                  image ? (
+                    <RHFUpload
                   name="cover"
                   maxSize={3145728}
                   onDrop={handleDrop}
                   onDelete={handleRemoveFile}
-                  onUpload={handleUploadFile}
-                />
+                  onChange={handleImageUpload}
+                />) : (<Alert severity="error"> Cover is required</Alert>
+                  )
+                }
               </Stack>
             </Stack>
           </Card>

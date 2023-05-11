@@ -128,7 +128,7 @@ export default function BlogPostPage() {
             </Typography>
 
             <Markdown
-              children={post.body}
+              children={post.content}
               sx={{
                 px: { md: 5 },
               }}

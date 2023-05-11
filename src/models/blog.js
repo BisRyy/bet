@@ -4,6 +4,7 @@ const blogSchema = new Schema({
   title: String,
   description:String,
   metaDescription: String,
+  cover: String,
   metaKeywords: [Array],
   content: String,
   view: Number,
@@ -11,11 +12,11 @@ const blogSchema = new Schema({
   share: Number,
   favorite: Number,
   publish: Boolean,
-  author: String,
+  author: Object,
   tags: [String],
   body: String,
   favoritePerson: [],
-  comments: Boolean,
+  comments: [],
 });
 
 const Blog = models.Blog || model('Blog', blogSchema);
