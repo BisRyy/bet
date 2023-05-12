@@ -6,7 +6,7 @@ import { addDays, subDays, setHours, endOfDay, setMinutes, startOfDay, subHours 
 // utils
 import cors from 'src/utils/cors';
 // theme
-import palette from 'src/theme/palette';
+import palette from '../../../../theme/colorpalette';
 // _mock
 import _mock from 'src/_mock';
 
@@ -30,16 +30,16 @@ export let events = [
   {
     id: _mock.id(1),
     allDay: false,
-    textColor: primaryMain,
+    textColor: infoMain,
     description: _mock.text.description(1),
     start: setHours(setMinutes(subDays(now, 12), 30), 7),
     end: setHours(setMinutes(subDays(now, 12), 0), 9),
-    title: _mock.text.title(1),
+    title: "Lideta Mariam Holyday",
   },
   {
     id: _mock.id(2),
     allDay: false,
-    textColor: infoMain,
+    textColor: primaryMain,
     description: _mock.text.description(2),
     start: setHours(setMinutes(subDays(now, 6), 0), 2),
     end: setHours(setMinutes(subDays(now, 6), 30), 5),

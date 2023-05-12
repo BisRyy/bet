@@ -80,6 +80,7 @@ export default function CalendarForm({
         title: data.title,
         description: data.description,
         color: data.color,
+        textColor: data.color,
         allDay: data.allDay,
         start: data.start,
         end: data.end,

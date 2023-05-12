@@ -265,7 +265,6 @@ export default function CalendarPage() {
               name: 'Calendar',
             },
           ]}
-          moreLink={['https://fullcalendar.io/docs/react']}
           action={
             <Button
               variant="contained"
@@ -371,8 +370,7 @@ const useGetEvents = () => {
   }, [getAllEvents]);
 
   const events = data.map((event) => ({
-    ...event,
-    textColor: event.color,
+    ...event
   }));
 
   return events;

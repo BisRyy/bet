@@ -88,7 +88,7 @@ FriendCard.propTypes = {
 };
 
 function FriendCard({ friend }) {
-  const { name, role, avatarUrl } = friend;
+  const { name, role, photoURL  } = friend;
 
   const [openPopover, setOpenPopover] = useState(null);
 
@@ -121,7 +121,7 @@ function FriendCard({ friend }) {
           flexDirection: 'column',
         }}
       >
-        <Avatar alt={name} src={avatarUrl} sx={{ width: 64, height: 64, mb: 3 }} />
+        <Avatar alt={name} src={photoURL } sx={{ width: 64, height: 64, mb: 3 }} />
 
         <Link variant="subtitle1" color="text.primary">
           {name}

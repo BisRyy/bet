@@ -47,7 +47,7 @@ export default function UserNewEditForm({ isEdit = false, currentUser }) {
     state: Yup.string().required('State is required'),
     city: Yup.string().required('City is required'),
     role: Yup.string().required('Role is required'),
-    avatarUrl: Yup.string().required('Avatar is required').nullable(true),
+    photoURL : Yup.string().required('Avatar is required').nullable(true),
   });
 
   const defaultValues = useMemo(
@@ -60,7 +60,7 @@ export default function UserNewEditForm({ isEdit = false, currentUser }) {
       state: currentUser?.state || '',
       city: currentUser?.city || '',
       zipCode: currentUser?.zipCode || '',
-      avatarUrl: currentUser?.avatarUrl || null,
+      photoURL : currentUser?.photoURL  || null,
       isVerified: currentUser?.isVerified || true,
       status: currentUser?.status,
       company: currentUser?.company || '',
@@ -117,7 +117,7 @@ export default function UserNewEditForm({ isEdit = false, currentUser }) {
       });
 
       if (file) {
-        setValue('avatarUrl', newFile, { shouldValidate: true });
+        setValue('photoURL ', newFile, { shouldValidate: true });
       }
     },
     [setValue]
@@ -139,7 +139,7 @@ export default function UserNewEditForm({ isEdit = false, currentUser }) {
 
             <Box sx={{ mb: 5 }}>
               <RHFUploadAvatar
-                name="avatarUrl"
+                name="photoURL "
                 maxSize={3145728}
                 onDrop={handleDrop}
                 helperText={

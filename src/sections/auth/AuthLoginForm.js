@@ -15,11 +15,13 @@ import { useAuthContext } from '../../auth/useAuthContext';
 // components
 import Iconify from '../../components/iconify';
 import FormProvider, { RHFTextField } from '../../components/hook-form';
+import { useLocales } from '../../locales';
 
 // ----------------------------------------------------------------------
 
 export default function AuthLoginForm() {
   const { login } = useAuthContext();
+  const { translate:t } = useLocales();
 
   const [showPassword, setShowPassword] = useState(false);
 
@@ -29,7 +31,7 @@ export default function AuthLoginForm() {
   });
 
   const defaultValues = {
-    email: 'demo@minimals.cc',
+    email: 'dev@bisrat.tech',
     password: 'demo1234',
   };
 
@@ -89,7 +91,7 @@ export default function AuthLoginForm() {
           color="inherit"
           underline="always"
         >
-          Forgot password?
+          {t('auth.reset_password.main_title')}
         </Link>
       </Stack>
 
@@ -109,7 +111,7 @@ export default function AuthLoginForm() {
           },
         }}
       >
-        Login
+        {t('auth.login')}
       </LoadingButton>
     </FormProvider>
   );

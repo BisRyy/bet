@@ -11,11 +11,14 @@ import { useAuthContext } from '../../auth/useAuthContext';
 // components
 import Iconify from '../../components/iconify';
 import FormProvider, { RHFTextField } from '../../components/hook-form';
+import { useLocales } from '../../locales';
 
 // ----------------------------------------------------------------------
 
 export default function AuthRegisterForm() {
   const { register } = useAuthContext();
+  const { translate:t } = useLocales();
+
 
   const [showPassword, setShowPassword] = useState(false);
 
@@ -105,7 +108,7 @@ export default function AuthRegisterForm() {
             },
           }}
         >
-          Create account
+          {t('auth.register.title')}
         </LoadingButton>
       </Stack>
     </FormProvider>

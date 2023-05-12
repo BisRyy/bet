@@ -40,7 +40,7 @@ export default function BlogPostTags({ post }) {
 
         <CustomAvatarGroup>
           {favoritePerson.map((person) => (
-            <Avatar key={person.name} alt={person.name} src={person.avatarUrl} />
+            <Avatar key={person.name} alt={person.name} src={person.photoURL } />
           ))}
         </CustomAvatarGroup>
       </Stack>

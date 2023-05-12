@@ -11,42 +11,39 @@ import { PATH_AUTH } from '../../routes/paths';
 //
 import AuthLoginForm from './AuthLoginForm';
 import AuthWithSocial from './AuthWithSocial';
+import { useLocales } from '../../locales';
 
 // ----------------------------------------------------------------------
 
 export default function Login() {
-  const { method } = useAuthContext();
+const { translate } = useLocales();
+
 
   return (
-    <LoginLayout>
+    <LoginLayout title={translate('auth.login_head_title')} illustration="/assets/images/eotc.png">
       <Stack spacing={2} sx={{ mb: 5, position: 'relative' }}>
-        <Typography variant="h4">Sign in to Minimal</Typography>
+        <Typography variant="h4">
+          {`${translate('auth.login_title')}` }
+        </Typography>
 
         <Stack direction="row" spacing={0.5}>
-          <Typography variant="body2">New user?</Typography>
+          <Typography variant="body2">
+            {`${translate('auth.dont_have_account')}` }
+          </Typography>
 
           <Link component={NextLink} href={PATH_AUTH.register} variant="subtitle2">
-            Create an account
+            {`${translate('auth.register.title')}` }
           </Link>
         </Stack>
-
-        <Tooltip title={method} placement="left">
-          <Box
-            component="img"
-            alt={method}
-            src={`/assets/icons/auth/ic_${method}.png`}
-            sx={{ width: 32, height: 32, position: 'absolute', right: 0 }}
-          />
-        </Tooltip>
       </Stack>
 
       <Alert severity="info" sx={{ mb: 3 }}>
-        Use email : <strong>demo@minimals.cc</strong> / password :<strong> demo1234</strong>
+        Use email : <strong>dev@bisrat.tech</strong> / password :<strong> demo1234</strong> for Admin access
       </Alert>
 
       <AuthLoginForm />
 
-      <AuthWithSocial />
+      {/* <AuthWithSocial /> */}
     </LoginLayout>
   );
 }

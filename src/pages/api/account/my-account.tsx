@@ -5,6 +5,8 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import cors from 'src/utils/cors';
 // _mock
 import { users, JWT_SECRET } from 'src/_mock/_account';
+import connectMongo from '../../../lib/dbConnect';
+import User from '../../../models/user';
 
 // ----------------------------------------------------------------------
 
@@ -25,6 +27,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const data = verify(accessToken, JWT_SECRET);
 
     const userId = typeof data === 'object' ? data?.userId : '';
+
+    await connectMongo();
+    const newUsers = await User.find({});
+
+    newUsers.forEach((user) => {
+      users.push(user);
+    });
 
     const user = users.find((_user) => _user.id === userId);
 

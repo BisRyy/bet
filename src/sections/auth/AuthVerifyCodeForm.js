@@ -12,6 +12,7 @@ import { PATH_DASHBOARD } from '../../routes/paths';
 // components
 import { useSnackbar } from '../../components/snackbar';
 import FormProvider, { RHFCodes } from '../../components/hook-form';
+import { useLocales } from '../../locales';
 
 // ----------------------------------------------------------------------
 
@@ -19,6 +20,8 @@ export default function AuthVerifyCodeForm() {
   const { push } = useRouter();
 
   const { enqueueSnackbar } = useSnackbar();
+
+  const { translate:t } = useLocales();
 
   const VerifyCodeSchema = Yup.object().shape({
     code1: Yup.string().required('Code is required'),
@@ -72,7 +75,7 @@ export default function AuthVerifyCodeForm() {
           !!errors.code5 ||
           !!errors.code6) && (
           <FormHelperText error sx={{ px: 2 }}>
-            Code is required
+            {t('auth.verify_code_error')}
           </FormHelperText>
         )}
 
@@ -84,7 +87,7 @@ export default function AuthVerifyCodeForm() {
           loading={isSubmitting}
           sx={{ mt: 3 }}
         >
-          Verify
+          {t('auth.verify')}
         </LoadingButton>
       </Stack>
     </FormProvider>

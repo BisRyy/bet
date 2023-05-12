@@ -37,7 +37,9 @@ export default function LoginLayout({ children, illustration, title }) {
           visibleByDefault
           alt="auth"
           src={illustration || '/assets/illustrations/illustration_dashboard.png'}
-          sx={{ maxWidth: 720 }}
+          sx={{ maxWidth: 720 ,
+            width: illustration ? '40%' : 'auto' ,
+          }}
         />
 
         <StyledSectionBg />

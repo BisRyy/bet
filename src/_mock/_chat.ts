@@ -13,8 +13,8 @@ import { _files } from './_files';
 export const MY_CONTACT = {
   id: '8864c717-587d-472a-929a-8e5f298024da-0',
   avatar: `${HOST_API}/assets/images/avatars/avatar_15.jpg`,
-  name: 'Jaydon Frankie',
-  username: 'jaydon.frankie',
+  name: 'Beteliq Admin',
+  username: 'beteliq',
 };
 
 // ----------------------------------------------------------------------

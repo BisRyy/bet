@@ -14,11 +14,13 @@ import { PATH_DASHBOARD } from '../../routes/paths';
 import Iconify from '../../components/iconify';
 import { useSnackbar } from '../../components/snackbar';
 import FormProvider, { RHFTextField, RHFCodes } from '../../components/hook-form';
+import { useLocales } from '../../locales';
 
 // ----------------------------------------------------------------------
 
 export default function AuthNewPasswordForm() {
   const { push } = useRouter();
+  const { translate:t } = useLocales();
 
   const { enqueueSnackbar } = useSnackbar();
 
@@ -101,7 +103,7 @@ export default function AuthNewPasswordForm() {
           !!errors.code5 ||
           !!errors.code6) && (
           <FormHelperText error sx={{ px: 2 }}>
-            Code is required
+            {t('auth.verify_code_error')}
           </FormHelperText>
         )}
 
@@ -143,7 +145,7 @@ export default function AuthNewPasswordForm() {
           loading={isSubmitting}
           sx={{ mt: 3 }}
         >
-          Update Password
+          {t('auth.change_password')}
         </LoadingButton>
       </Stack>
     </FormProvider>

@@ -13,8 +13,8 @@ BlogPostCommentList.propTypes = {
 export default function BlogPostCommentList({ comments }) {
   return (
     <List disablePadding>
-      {!comments && comments.map((comment) => {
-        const { id, replyComment, name, users, message, avatarUrl, postedAt } = comment;
+      {comments && comments.map((comment) => {
+        const { id, replyComment, name, users, message, photoURL , postedAt } = comment;
 
         const hasReply = replyComment.length > 0;
 
@@ -24,7 +24,7 @@ export default function BlogPostCommentList({ comments }) {
               name={name}
               message={message}
               postedAt={postedAt}
-              avatarUrl={avatarUrl}
+              photoURL ={photoURL }
             />
             {hasReply &&
               replyComment.map((reply) => {
@@ -36,7 +36,7 @@ export default function BlogPostCommentList({ comments }) {
                     name={userReply?.name || ''}
                     message={reply.message}
                     postedAt={reply.postedAt}
-                    avatarUrl={userReply?.avatarUrl || ''}
+                    photoURL ={userReply?.photoURL  || ''}
                     tagUser={reply.tagUser}
                     hasReply
                   />

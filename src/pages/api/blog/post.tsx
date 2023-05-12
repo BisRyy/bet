@@ -7,7 +7,7 @@ import connectMongo from '../../../lib/dbConnect';
 import Blog from '../../../models/blog'
 
 // _mock
-// import { posts } from 'src/_mock/_blog';
+import { posts } from 'src/_mock/_blog';
 
 // ----------------------------------------------------------------------
 
@@ -16,10 +16,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
       await cors(req, res);
       await connectMongo();
-      const posts = await Blog.find({});
+      const newPosts = await Blog.find({});
+      newPosts.reverse();
+      posts.forEach((post) => {
+        newPosts.push(post);
+      });
       const { title } = req.query;
 
-      const post = posts.find((_post) => paramCase(_post.title) === title);
+      const post = newPosts.find((_post) => paramCase(_post.title) === title);
 
       if (!post) {
         return res.status(404).json({

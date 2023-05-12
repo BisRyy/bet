@@ -73,3 +73,5 @@ export const books = [
         "lorem ipsum dolor sit amet conse adipisicing elit. Quisquam, voluptatum.",
     },
   ];
+
+ export const TAGS_OPTION = [  "Orthodox",  "Theology",  "Spirituality",  "Worship",  "Church History",  "Church Tradition",  "Feasts and Fasts",  "Iconography",  "Prayer",  "Liturgy",  "Sacraments",  "Missions",  "Evangelism",  "Monasticism",  "Christian Unity",  "Bible Study",  "Christian Living",  "Family Life",  "Marriage",  "Parenting",  "Youth Ministry",  "Community Outreach",  "Charitable Works",  "Philanthropy",  "Social Justice",  "Ecumenism",  "Church Music",  "Byzantine Chant",  "Church Architecture",  "Spiritual Formation",  "Church Leadership",  "Catechism",  "Christian Education",  "Theosis",  "Asceticism",  "Martyrdom",  "Saints and Holy Men and Women",  "Theotokos",  "Biblical Studies",  "Biblical Languages",  "Pastoral Care",  "Missionary Work",  "Church Planting",  "Ecclesiology",  "Eastern Christianity",  "The Bible",  "Church Fathers",  "Religious Art",  "Divine Liturgy",  "Orthodox Ethics",  "Church and State",  "Soteriology",  "Orthodox Spirituality",  "Christian Mysticism",  "Christian Ethics",  "Christian Morality"]

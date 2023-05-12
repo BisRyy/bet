@@ -5,6 +5,8 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import cors from 'src/utils/cors';
 // _mock
 import { users, JWT_SECRET, JWT_EXPIRES_IN } from 'src/_mock/_account';
+import connectMongo from '../../../lib/dbConnect';
+import User from '../../../models/user';
 
 // ----------------------------------------------------------------------
 
@@ -13,6 +15,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await cors(req, res);
 
     const { email, password } = req.body;
+
+    await connectMongo();
+    const newUsers = await User.find({});
+
+    newUsers.forEach((user) => {
+      users.push(user);
+    });
 
     const user = users.find((_user) => _user.email === email);
 

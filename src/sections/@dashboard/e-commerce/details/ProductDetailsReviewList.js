@@ -59,7 +59,7 @@ ReviewItem.propTypes = {
 };
 
 function ReviewItem({ review }) {
-  const { name, rating, comment, helpful, postedAt, avatarUrl, isPurchased } = review;
+  const { name, rating, comment, helpful, postedAt, photoURL , isPurchased } = review;
 
   const [isHelpful, setIsHelpful] = useState(false);
 
@@ -84,7 +84,7 @@ function ReviewItem({ review }) {
         }}
       >
         <Avatar
-          src={avatarUrl}
+          src={photoURL }
           sx={{
             width: { md: 64 },
             height: { md: 64 },

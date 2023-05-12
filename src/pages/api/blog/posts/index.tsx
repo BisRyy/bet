@@ -4,13 +4,17 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import cors from 'src/utils/cors';
 import connectMongo from '../../../../lib/dbConnect';
 import Blog from '../../../../models/blog'
-// import { posts } from 'src/_mock/_blog';
+import { posts } from 'src/_mock/_blog';
 
 // ----------------------------------------------------------------------
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   await cors(req, res);
   await connectMongo();
-  const posts = await Blog.find({});
-  res.status(200).json({ posts });
+  const newPosts = await Blog.find({});
+  newPosts.reverse();
+  posts.forEach((post) => {
+    newPosts.push(post);
+  });
+  res.status(200).json({ posts: newPosts });
 }

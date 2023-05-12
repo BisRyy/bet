@@ -27,21 +27,7 @@ import { useAuthContext } from '../../../auth/useAuthContext';
 
 // ----------------------------------------------------------------------
 
-const TAGS_OPTION = [
-  'Toy Story 3',
-  'Logan',
-  'Full Metal Jacket',
-  'Dangal',
-  'The Sting',
-  '2001: A Space Odyssey',
-  "Singin' in the Rain",
-  'Toy Story',
-  'Bicycle Thieves',
-  'The Kid',
-  'Inglourious Basterds',
-  'Snatch',
-  '3 Idiots',
-];
+import { TAGS_OPTION } from '../../../_mock/_blog'
 
 // ----------------------------------------------------------------------
 
@@ -63,16 +49,16 @@ export default function BlogNewPostForm() {
   });
 
   const defaultValues = {
-    title: 'fdfdfdfdfdfd',
-    description: 'fdfdfdfdfdfd',
-    content: 'fdfdfdfdfdfd',
+    title: '',
+    description: '',
+    content: '',
     cover: null,
-    tags: ['The Kid','Logan'],
+    tags: ['Orthodox' ,'Education'],
     publish: true,
     commentsOn: true,
-    metaTitle: 'fdfdfdfdfdfd',
-    metaDescription: 'fdfdfdfdfdfd',
-    metaKeywords: ['The Kid','Logan'],
+    metaTitle: 'Ethiopian Orthodox Tewahdo Church',
+    metaDescription: '',
+    metaKeywords: ['Orthodox' ,'Education'],
   };
 
   const methods = useForm({

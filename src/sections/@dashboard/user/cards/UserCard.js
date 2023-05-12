@@ -30,7 +30,7 @@ UserCard.propTypes = {
 };
 
 export default function UserCard({ user }) {
-  const { name, cover, role, follower, totalPosts, avatarUrl, following } = user;
+  const { name, cover, role, follower, totalPosts, photoURL , following } = user;
 
   return (
     <Card sx={{ textAlign: 'center' }}>
@@ -52,7 +52,7 @@ export default function UserCard({ user }) {
 
         <Avatar
           alt={name}
-          src={avatarUrl}
+          src={photoURL }
           sx={{
             width: 64,
             height: 64,

@@ -133,7 +133,7 @@ export default function ProfilePostCard({ post }) {
 
         <CustomAvatarGroup>
           {post.personLikes.map((person) => (
-            <CustomAvatar key={person.name} alt={person.name} src={person.avatarUrl} />
+            <CustomAvatar key={person.name} alt={person.name} src={person.photoURL } />
           ))}
         </CustomAvatarGroup>
 

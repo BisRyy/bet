@@ -9,20 +9,26 @@ import { PATH_AUTH } from '../../routes/paths';
 //
 import AuthWithSocial from './AuthWithSocial';
 import AuthRegisterForm from './AuthRegisterForm';
+import { useLocales } from '../../locales';
 
 // ----------------------------------------------------------------------
 
 export default function Register() {
+  const { translate:t } = useLocales();
   return (
-    <LoginLayout title="Manage the job more effectively with Minimal">
+    <LoginLayout title={t('auth.register.main_title')} illustration="/assets/images/eotc.png">
       <Stack spacing={2} sx={{ mb: 5, position: 'relative' }}>
-        <Typography variant="h4">Get started absolutely free.</Typography>
+        <Typography variant="h4">
+          {t('auth.register.title')}
+        </Typography>
 
         <Stack direction="row" spacing={0.5}>
-          <Typography variant="body2"> Already have an account? </Typography>
+          <Typography variant="body2"> 
+            {t('auth.register.subtitle')}
+          </Typography>
 
           <Link component={NextLink} href={PATH_AUTH.login} variant="subtitle2">
-            Sign in
+            {t('auth.register.subtitle2')}
           </Link>
         </Stack>
       </Stack>
@@ -33,18 +39,18 @@ export default function Register() {
         component="div"
         sx={{ color: 'text.secondary', mt: 3, typography: 'caption', textAlign: 'center' }}
       >
-        {'By signing up, I agree to '}
+        {' '} {t('auth.register.subtitle3')} {' '}
         <Link underline="always" color="text.primary">
-          Terms of Service
+         {t('auth.register.subtitle4')}
         </Link>
-        {' and '}
+        {' '} {t('auth.register.subtitle5')} {' '}
         <Link underline="always" color="text.primary">
-          Privacy Policy
+          {t('auth.register.subtitle6')}
         </Link>
         .
       </Typography>
 
-      <AuthWithSocial />
+      {/* <AuthWithSocial /> */}
     </LoginLayout>
   );
 }

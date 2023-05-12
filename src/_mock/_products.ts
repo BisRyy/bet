@@ -77,7 +77,7 @@ export const products = [...Array(24)].map((_, index) => ({
   reviews: [...Array(8)].map((_, index) => ({
     id: _mock.id(index),
     name: _mock.name.fullName(index),
-    avatarUrl: `${HOST_API}/assets/images/avatars/avatar_${index + 1}.jpg`,
+    photoURL : `${HOST_API}/assets/images/avatars/avatar_${index + 1}.jpg`,
     comment: _mock.text.sentence(index),
     rating: _mock.number.rating(index),
     isPurchased: _mock.boolean(index),

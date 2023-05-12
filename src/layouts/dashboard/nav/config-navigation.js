@@ -271,6 +271,17 @@ const newConfig = [
         //   { title: 'details', path: PATH_DASHBOARD.books.detailsById },
         // ],
       },
+      {
+        title: 'calendar',
+        path: PATH_DASHBOARD.calendar,
+        icon: ICONS.calendar,
+      },
+      {
+        title: 'chat',
+        path: PATH_DASHBOARD.chat.root,
+        icon: ICONS.chat,
+        caption: 'This feature is under development',
+      },
     ],
   },
 ];

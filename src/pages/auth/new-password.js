@@ -13,6 +13,7 @@ import Iconify from '../../components/iconify';
 import AuthNewPasswordForm from '../../sections/auth/AuthNewPasswordForm';
 // assets
 import { SentIcon } from '../../assets/icons';
+import { useLocales } from '../../locales';
 
 // ----------------------------------------------------------------------
 
@@ -21,6 +22,7 @@ NewPasswordPage.getLayout = (page) => <CompactLayout>{page}</CompactLayout>;
 // ----------------------------------------------------------------------
 
 export default function NewPasswordPage() {
+  const { translate:t } = useLocales();
   return (
     <>
       <Head>
@@ -30,20 +32,22 @@ export default function NewPasswordPage() {
       <SentIcon sx={{ mb: 5, height: 96 }} />
 
       <Typography variant="h3" paragraph>
-        Request sent successfully!
+        {t('auth.new_password.main_title')}
       </Typography>
 
       <Typography sx={{ color: 'text.secondary', mb: 5 }}>
-        We&apos;ve sent a 6-digit confirmation email to your email.
+        {t('auth.new_password.subtitle')}
         <br />
-        Please enter the code in below box to verify your email.
+        {t('auth.new_password.subtitle2')}
       </Typography>
 
       <AuthNewPasswordForm />
 
       <Typography variant="body2" sx={{ my: 3 }}>
-        Don’t have a code? &nbsp;
-        <Link variant="subtitle2">Resend code</Link>
+        {t('auth.new_password.subtitle3')} &nbsp;
+        <Link variant="subtitle2">
+          {t('auth.new_password.subtitle4')}
+        </Link>
       </Typography>
 
       <Link
@@ -58,7 +62,7 @@ export default function NewPasswordPage() {
         }}
       >
         <Iconify icon="eva:chevron-left-fill" width={16} />
-        Return to sign in
+        {t('auth.new_password.subtitle5')}
       </Link>
     </>
   );

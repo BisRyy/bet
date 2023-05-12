@@ -38,7 +38,7 @@ export default function DemoUploadPage() {
 
   const [file, setFile] = useState(null);
 
-  const [avatarUrl, setAvatarUrl] = useState(null);
+  const [photoURL , setphotoURL ] = useState(null);
 
   const handleDropSingleFile = useCallback((acceptedFiles) => {
     const newFile = acceptedFiles[0];
@@ -54,7 +54,7 @@ export default function DemoUploadPage() {
   const handleDropAvatar = useCallback((acceptedFiles) => {
     const newFile = acceptedFiles[0];
     if (newFile) {
-      setAvatarUrl(
+      setphotoURL (
         Object.assign(newFile, {
           preview: URL.createObjectURL(newFile),
         })
@@ -154,7 +154,7 @@ export default function DemoUploadPage() {
             <CardHeader title="Upload Avatar" />
             <CardContent>
               <UploadAvatar
-                file={avatarUrl}
+                file={photoURL }
                 onDrop={handleDropAvatar}
                 helperText={
                   <Typography

@@ -22,12 +22,12 @@ BlogPostCommentItem.propTypes = {
   message: PropTypes.string,
   tagUser: PropTypes.string,
   postedAt: PropTypes.string,
-  avatarUrl: PropTypes.string,
+  photoURL : PropTypes.string,
 };
 
 export default function BlogPostCommentItem({
   name,
-  avatarUrl,
+  photoURL ,
   message,
   tagUser,
   postedAt,
@@ -47,7 +47,7 @@ export default function BlogPostCommentItem({
           }),
         }}
       >
-        <Avatar alt={name} src={avatarUrl} sx={{ mr: 2, width: 48, height: 48 }} />
+        <Avatar alt={name} src={photoURL } sx={{ mr: 2, width: 48, height: 48 }} />
 
         <Stack>
           <Typography variant="subtitle1"> {name} </Typography>

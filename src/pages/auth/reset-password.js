@@ -13,6 +13,7 @@ import Iconify from '../../components/iconify';
 import AuthResetPasswordForm from '../../sections/auth/AuthResetPasswordForm';
 // assets
 import { PasswordIcon } from '../../assets/icons';
+import { useLocales } from '../../locales';
 
 // ----------------------------------------------------------------------
 
@@ -21,21 +22,21 @@ ResetPasswordPage.getLayout = (page) => <CompactLayout>{page}</CompactLayout>;
 // ----------------------------------------------------------------------
 
 export default function ResetPasswordPage() {
+  const { translate } = useLocales();
   return (
     <>
       <Head>
-        <title> Reset Password | Minimal UI</title>
+        <title> {translate('auth.reset_password.title')} |  {translate("beteliq")}</title>
       </Head>
 
       <PasswordIcon sx={{ mb: 5, height: 96 }} />
 
       <Typography variant="h3" paragraph>
-        Forgot your password?
+        {translate('auth.reset_password.main_title')}
       </Typography>
 
       <Typography sx={{ color: 'text.secondary', mb: 5 }}>
-        Please enter the email address associated with your account and We will email you a link to
-        reset your password.
+        {translate('auth.reset_password.subtitle')}
       </Typography>
 
       <AuthResetPasswordForm />
