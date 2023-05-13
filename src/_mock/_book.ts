@@ -11,7 +11,7 @@ export const books = [
     },
     {
       _id:2,
-      title: The Bible (or the Holy Scriptures) ",
+      title: "The Bible (or the Holy Scriptures) ",
       image:
         "https://www.operationezra.com/uploads/1/0/4/4/10446233/dong-cov_orig.jpg",
       price: "200",
