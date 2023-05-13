@@ -128,7 +128,7 @@ const en = {
       title: `Books`,
     },
     courses:{
-      title: `Books`,
+      title: `Courses`,
     },
     chat:{
       title: `chat`,
