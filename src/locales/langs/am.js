@@ -12,7 +12,7 @@ const am = {
       login: `ግባ`,
       login_title: `የመለያዎቹን መግቢያ ይግቡ`,
       login_head_title: `ሰላም, ደስ አለዎት`,
-      logout: ውጣ,
+      logout: `ውጣ`,
       logoutDescription: `የመለያዎቹን ውጣ`,
       register: {
         title: `የመለያዎቹን ለውጦች ይመዝገቡ`,
