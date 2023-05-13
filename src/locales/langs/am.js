@@ -1,24 +1,55 @@
 // ----------------------------------------------------------------------
 
 // IF THIS TRANSLATION IS INCORRECT PLEASE IGNORE THIS AS THIS TRANSLATION IS FOR DEMO PURPOSES ONLY
-// We are happy if you can help improve the translation by sending an email to support@minimals.cc.
 
 // ----------------------------------------------------------------------
 
 const am = {
-  auth: {
-    login: 'ግባ',
-    login_title:' የእርስዎ መለያዎችን ይግቡ',
-    login_head_title: `ሰላም, Welcome Back`,
-    register: 'አዲስ መለያ ይፍጠሩ',
-    reset_password:' የይለፍ ቃል ያስገቡ',
-    password: 'የይለፍ ቃል',
-    new_password: 'አዲስ የይለፍ ቃል',
-    confirm_password: 'የይለፍ ቃል አረጋግጥ',
-    dont_have_account: 'መለያ የሌለው የለም?',
+    auth: {
+      welcome: `እንኳን ደህና መጡ`,
+      welcomeDescription: `እንደገና, እባክዎ ይግቡ የመለያዎችዎን በርስት ጠቅ ያድርጉ።`,
+      hi: `ሰላም`,
+      login: `ግባ`,
+      login_title: `የመለያዎቹን መግቢያ ይግቡ`,
+      login_head_title: `ሰላም, ደስ አለዎት`,
+      logout: ውጣ,
+      logoutDescription: `የመለያዎቹን ውጣ`,
+      register: {
+        title: `የመለያዎቹን ለውጦች ይመዝገቡ`,
+        main_title: `በነጻ እንዲሁም በነፃ ነጻ እንዲሁም የምንገኝበትን ነው።`,
+        subtitle: `ከተመለሱ መለያችን አንድም የለም?`,
+        subtitle2: `ግባ`,
+        subtitle3: `በመመዝገብ ተግባራዊዎች ላይ የደረሰባቸውን የሚያደርጉት ይህንን ተጠቃሚ ለማሳየት ይግቡ`,
+        subtitle4: `የግል ደንቦች`,
+        subtitle5: `እና`,
+        subtitle6: `የግል ግላዊ መረጃዎች`,
+     },
+      password: `የምስጢር ቃል`,
+      confirm_password: `የምስጢር ቃል ይቀይሩ`,
+      dont_have_account: `መለያ የለዎትም?`,
+      verify: `ማረጋገጫ`,
+      verify_code_error: `ኮድ ያስፈልጋል`,
+      change_cassword: `የምስጢር ቃልን አስቀምጥ`,
+      reset_password: {
+      title: `የምስጢር ቃል እንደገና ይግቡ`,
+      main_title: `የምስጢር ቃልዎን ማስቀጠል የተሳካ ነው?`,
+      subtitle: `ከኢሜል አድርገው የሚለውን ልክ ያስገቡ።`,
+      subtitle2: `ተመለስ ወደ ግል ግሎች`,
     },
-
-
+    new_password:{
+      title: `'አዲስ የይለፍ ቃል`,
+      main_title: `በተሳካ ልክ የሚጎተቱ ላይ ተስተካከሉ!`,
+      subtitle: `የሚያስተላልፉትን የእኛ ኢሜል ይላኩ እና በእርስዎ ኢሜል ያስገቡ።`,
+      subtitle2: `እንደሚል ያስገቡ ከሆነ?`,
+      subtitle3: `ከላይ ያስተላልፉ`,
+      subtitle4: `ነፃ እየገባ ነው`,
+      subtitle5: `ተመለስ ወደ ግል ግሎች`,
+    }
+    },
+    beteliq: `በተሊቅ`,
+    header: {
+    login: `ወደ ትምህርት`,
+    },
   home:{
     hero:{
       title: `ስለ ቤተከርስቲያኔ`,
@@ -29,25 +60,6 @@ const am = {
       
     }
   },
-
-    demo: {
-      title: `English`,
-      introduction: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
-    },
-    docs: {
-      hi: `AMHi`,
-      description: `Need help? \n Please check our docs.`,
-      documentation: `documentation`,
-    },
-    app: `AMapp`,
-    user: `AMuser`,
-    list: `AMlist`,
-    edit: `AMedit`,
-    shop: `AMshop`,
-    blog: `AMblog`,
-    blogs: `AMblog`,
-    Blogs: `AMblog`,
-    Blog: `AMblog`,
   };
   
   export default am;
