@@ -11,103 +11,103 @@ export const books = [
     },
     {
       _id:2,
-      title: "Book 2",
+      title: The Bible (or the Holy Scriptures) ",
       image:
         "https://www.operationezra.com/uploads/1/0/4/4/10446233/dong-cov_orig.jpg",
       price: "200",
       description:
-        "The Ancient Faith Edition (released 2019) contains the identical content you know and love from the previous, most current release of the Orthodox Study Bible, including the same commentaries, notes, supplemental articles, and full-color icons and maps.",
+        "This is the primary text of the Ethiopian Orthodox Tewahedo Church, which includes the Old and New Testaments. The Ancient Faith Edition (released 2019) contains the identical content you know and love from the previous, most current release of the Orthodox Study Bible, including the same commentaries, notes, supplemental articles, and full-color icons and maps.",
     },
     {
       _id:3,
-      title: "Book 3",
+      title: "The Book of Enoch",
       image:
         "https://www.operationezra.com/uploads/1/0/4/4/10446233/tibebu-cov_orig.jpg",
       price: "100",
       description:
-        "The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
+        " This book contains writings attributed to Enoch, an ancestor of Noah, and is considered part of the Ethiopian Orthodox Tewahedo Church's canon. The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
     },
     {
       _id:4,
-      title: "Book 4",
+      title: "The Book of Jubilees",
       image:
         "https://www.operationezra.com/uploads/1/0/4/4/10446233/dream_orig.png",
       price: "200",
       link:"https://www.operationezra.com/uploads/1/0/4/4/10446233/yeha-cr.pdf",
       description:
-        "The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
+        "Also known as the Little Genesis, this book is a retelling of the first 49 chapters of Genesis, with additional details and explanations.The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
     },
     {
       _id:5,
-      title: "Book 5",
+      title: "The Book of Kebra Nagast",
       image:
         "https://www.operationezra.com/uploads/1/0/4/4/10446233/3153296.jpg?127",
       price: "100",
       description:
-        "The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
+        "This book tells the story of the Ethiopian Queen of Sheba and her visit to King Solomon, as well as the origins of the Ethiopian royal line.The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
     },
     {
       _id:6,
-      title: "Book 6",
+      title: The Book of the Saints of the Ethiopian Church",
       image:
         "https://www.operationezra.com/uploads/1/0/4/4/10446233/8992332.jpg?107",
       price: "200",
       description:
-        "The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
+        "This book contains biographies of Ethiopian Orthodox Tewahedo Church saints, including St. Tekle Haymanot, St. Yared, and St. Abune Gebre Menfes Kiddus. The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
     },
     {
       _id:7,
-      title: "Book 7",
+      title: "The Book of the Covenant",
       image:
         "https://www.operationezra.com/uploads/1/0/4/4/10446233/7394281.jpg?120",
       price: "100",
       description:
-        "The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
+        "This book contains the Ten Commandments and other laws given to Moses by God. The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
     },
     {
       _id:8,
-      title: "Book 8",
+      title: "The Book of the Dead",
       image:
         "https://www.operationezra.com/uploads/1/0/4/4/10446233/1627756.jpg?126",
       price: "200",
       description:
-        "The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
+        "This book contains prayers and instructions for the dead, as well as for those who are still living. The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
     },
     {
       _id:9,
-      title: "Book 9",
+      title: "The Synaxarium",
       image:
         "https://www.operationezra.com/uploads/1/0/4/4/10446233/1807337.jpg?122",
       price: "200",
       description:
-        "The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
+        "This book contains a calendar of the Ethiopian Orthodox Tewahedo Church's saints and their feast days. The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
     },
     {
       _id:10,
-      title: "Book 10",
+      title: "The Liturgy of St. Basil",
       image:
         "https://www.operationezra.com/uploads/1/0/4/4/10446233/5593897.jpg?140",
       price: "100",
       description:
-        "The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
+        " This is a liturgical text used in the Ethiopian Orthodox Tewahedo Church, which includes prayers, hymns, and readings. The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
     },
     {
       _id:11,
-      title: "Book 11",
+      title: "The Liturgy of St. Mark ",
       image:
         "https://www.operationezra.com/uploads/1/0/4/4/10446233/371086.jpg?129",
       price: "200",
       description:
-        "The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
+        "This is another liturgical text used in the Ethiopian Orthodox Tewahedo Church, which includes prayers, hymns, and readings. The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
     },
     {
       _id:12,
-      title: "Book 12",
+      title: "The Teachings of the Apostles",
       image:
         "https://www.operationezra.com/uploads/1/0/4/4/10446233/5593897.jpg?130",
       price: "200",
       description:
-        "The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
+        "This book contains the teachings and practices of the apostles, as well as instructions for Christian living. The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
     },
   ];
 
