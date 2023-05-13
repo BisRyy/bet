@@ -68,37 +68,37 @@ const en = {
       Blogs: {
         icon: ' /assets/icons/home/ic_make_brand.svg',
         title: 'Blogs',
-        description: 'Consistent design makes it easy to brand your own.',
+        description: 'Read News and posts about the  Ethiopian Orthodox Tewahido Church every day from your convinence without getting inturrupted from the original source.',
+      },
+      Courses:{
+        icon: ' /assets/icons/home/ic_development.svg',
+        title: 'Courses',
+        description: 'Curated teachings of the Ethiopian Orthodox Tewahido Church in video and audio format thought by experianced teachers across the country in different languages',
       },
       Books:{
         icon: ' /assets/icons/home/ic_design.svg',
         title: 'Books',
         description:
-          'The kit is built on the principles of the atomic design system. It helps you to create projects fastest and easily customized packages for your projects.',
-      },
-      Courses:{
-        icon: ' /assets/icons/home/ic_development.svg',
-        title: 'Courses',
-        description: 'Easy to customize and extend, saving you time and money.',
+          'Large set of books to read ang learn about ortodox. Books in different language are provided in pdf format which you can download and ready from anywhere.',
       },
     },
     books:{
-      title: `Huge pack`,
+      title: `Huge library`,
       title2: `of Books`,
-      subtitle: `Interface Starter Kit`,
-      description: `The kit is built on the principles of the atomic design system. It helps you to create projects fastest and easily customized packages for your projects.`,
+      subtitle: `Read From anywhere`,
+      description: `With our easily custumizable platform you can read, teach and share your knowledge easily. The platfotm supports all languages nationally as well as internationally.`,
       viewAll: `View All Books`,
     },
     for_teachers:{
       title: `For Teachers`,
       subtitle: `Full fledged blog`,
-      description: `The kit is built on the principles of the atomic design system. It helps you to create projects fastest and easily customized packages for your projects.`,
+      description: `With our easily custumizable platform you can teach and share your knowledge easily. The platfotm supports all languages nationally as well as internationally.`,
       button: `Teach with us`,
     },
     dark_mode:{
       title: `Dark Mode`,
       subtitle: `Easy switch between styles.`,
-      description: `The kit is built on the principles of the atomic design system. It helps you to create projects fastest and easily customized packages for your projects.`,
+      description: `We care about your eyes, focus on your reading at any time of the day or night.`,
     },
     looking_for:{
       subtitle: `Liked our work?`,
