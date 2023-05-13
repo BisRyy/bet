@@ -120,7 +120,7 @@ const en = {
     blog:{
       title: `Blogs`,
       subtitle: `All blogs`,
-      newBlog: `New Blog`,
+      newPost: `New Blog`,
       editBlog: `Edit Blog`,
       deleteBlog: `Delete Blog`,
     },
