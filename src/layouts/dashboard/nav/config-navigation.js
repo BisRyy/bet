@@ -240,6 +240,12 @@ const newConfig = [
     subheader: 'pages',
     items: [
       {
+        title: 'dashboard',
+        path: PATH_DASHBOARD.root,
+        icon: ICONS.dashboard,
+
+      },
+      {
         title: 'blogs',
         path: PATH_DASHBOARD.blog.posts,
         icon: ICONS.blog,

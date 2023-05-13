@@ -6,11 +6,11 @@ import { randomNumberRange, randomInArray } from '../utils';
 export const _userAbout = {
   id: _mock.id(1),
   cover: _mock.image.cover(1),
-  role: 'UI Designer',
+  role: 'Admin',
   follower: randomNumberRange(999, 99999),
   following: randomNumberRange(999, 99999),
   quote:
-    'Tart I love sugar plum I love oat cake. Sweet roll caramels I love jujubes. Topping cake wafer..',
+    'God is most glorified in us when we are most satisfied in Him',
   country: _mock.address.country(1),
   email: _mock.email(1),
   company: _mock.company(1),

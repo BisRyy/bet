@@ -219,13 +219,6 @@ function SeoIllustration({ ...other }) {
             <stop offset="1" stopColor={PRIMARY_DARK} />
           </linearGradient>
         </defs>
-
-        <image
-          href="/assets/illustrations/characters/character_3.png"
-          height="300"
-          x="312"
-          y="30"
-        />
       </svg>
     </Box>
   );

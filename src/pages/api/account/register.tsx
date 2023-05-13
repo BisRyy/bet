@@ -4,9 +4,9 @@ import { NextApiRequest, NextApiResponse } from 'next';
 //
 import { v4 as uuidv4 } from 'uuid';
 // utils
-import cors from 'src/utils/cors';
+// import cors from '../../../utils/cors';
 // _mock
-import { users, JWT_SECRET, JWT_EXPIRES_IN } from 'src/_mock/_account';
+import { users, JWT_SECRET, JWT_EXPIRES_IN } from '../../../_mock/_account';
 import User from '../../../models/user';
 import connectMongo from '../../../lib/dbConnect';
 
@@ -14,7 +14,7 @@ import connectMongo from '../../../lib/dbConnect';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    await cors(req, res);
+    // await cors(req, res);
 
     const { email = '', password, firstName, lastName } = req.body;
 

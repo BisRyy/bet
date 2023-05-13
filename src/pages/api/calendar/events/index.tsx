@@ -4,11 +4,11 @@ import cloneDeep from 'lodash/cloneDeep';
 //
 import { addDays, subDays, setHours, endOfDay, setMinutes, startOfDay, subHours } from 'date-fns';
 // utils
-import cors from 'src/utils/cors';
+// import cors from '../../../utils/cors';
 // theme
 import palette from '../../../../theme/colorpalette';
 // _mock
-import _mock from 'src/_mock';
+import _mock from '../../../../_mock';
 
 // ----------------------------------------------------------------------
 
@@ -125,7 +125,7 @@ export function updateEvents(newEv: typeof events) {
 // ----------------------------------------------------------------------
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  await cors(req, res);
+  // await cors(req, res);
 
   res.status(200).json({ events });
 }

@@ -18,6 +18,7 @@ import { useSettingsContext } from '../../../components/settings';
 import CustomBreadcrumbs from '../../../components/custom-breadcrumbs';
 // sections
 import { BlogPostCard, BlogPostsSort, BlogPostsSearch } from '../../../sections/@dashboard/blog';
+import { useLocales } from '../../../locales';
 
 // ----------------------------------------------------------------------
 
@@ -34,6 +35,8 @@ BlogPostsPage.getLayout = (page) => <DashboardLayout>{page}</DashboardLayout>;
 // ----------------------------------------------------------------------
 
 export default function BlogPostsPage() {
+  const { translate:t } = useLocales();
+
   const { themeStretch } = useSettingsContext();
 
   const [posts, setPosts] = useState([]);
@@ -62,7 +65,7 @@ export default function BlogPostsPage() {
   return (
     <>
       <Head>
-        <title> Blog: Posts | Minimal UI</title>
+        <title>{t('page:dashboard.blog.posts.title')} | {t('beteliq')}</title>
       </Head>
 
       <Container maxWidth={themeStretch ? false : 'lg'}>

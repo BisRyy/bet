@@ -1,15 +1,15 @@
 // next
 import { NextApiRequest, NextApiResponse } from 'next';
 // utils
-import cors from 'src/utils/cors';
+// import cors from '../../../utils/cors';
 // _mock
-import { products } from 'src/_mock/_products';
+import { products } from '../../../_mock/_products';
 
 // ----------------------------------------------------------------------
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    await cors(req, res);
+    // await cors(req, res);
 
     const { query } = req.query;
 

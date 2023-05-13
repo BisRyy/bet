@@ -24,6 +24,7 @@ import { secondaryFont } from '../../theme/typography';
 import SvgColor from '../../components/svg-color';
 import Iconify from '../../components/iconify';
 import { MotionContainer, varFade } from '../../components/animate';
+import { useLocales } from '../../locales';
 
 // ----------------------------------------------------------------------
 
@@ -104,6 +105,8 @@ export default function HomeHero() {
 
   const [hide, setHide] = useState(false);
 
+  const { translate:t } = useLocales();
+
   useEffect(
     () =>
       scrollYProgress.on('change', (scrollHeight) => {
@@ -122,7 +125,7 @@ export default function HomeHero() {
         <Container component={MotionContainer} sx={{ height: 1 }}>
           <Grid container spacing={10} sx={{ height: 1 }}>
             <Grid item xs={12} md={6} sx={{ height: 1 }}>
-              <Description />
+              <Description t={t} />
             </Grid>
 
             {isDesktop && (
@@ -145,12 +148,12 @@ export default function HomeHero() {
 
 // ----------------------------------------------------------------------
 
-function Description() {
+function Description({t}) {
   return (
     <StyledDescription>
       <m.div variants={varFade().in}>
         <Typography variant="h2" sx={{ textAlign: 'center' }}>
-          ስለ ቤተከርስቲያኔ
+         {t('home.hero.title')}
         </Typography>
       </m.div>
 
@@ -164,13 +167,13 @@ function Description() {
             repeat: Infinity,
           }}
         >
-          እማራልሁ።
+          {t('home.hero.subtitle')}
         </StyledGradientText>
       </m.div>
 
       <m.div variants={varFade().in}>
         <Typography variant="h5" sx={{ textAlign: 'center' }}>
-          የቤተክርስቲያን ተምህርቶችን፣ መፅሃፍትን፣ መዝሙራትና ሌሎች ኦርቶዶክሳዊ ተምህርቶችን በቅላሉ በእጅ ሰልኮ ያግኙ።
+          {t('home.hero.description')}
         </Typography>
       </m.div>
 
@@ -192,7 +195,7 @@ function Description() {
                 },
               }}
             >
-              ወደ ትምህርት
+              {t('home.hero.button1')}
             </Button>
           </Stack>
 
@@ -206,7 +209,7 @@ function Description() {
             href={PATH_AUTH.login}
             sx={{ borderColor: 'text.primary' }}
           >
-            Register
+            {t('home.hero.button2')}
           </Button>
         </Stack>
       </m.div>

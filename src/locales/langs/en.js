@@ -1,5 +1,7 @@
 // ----------------------------------------------------------------------
 
+import { features } from "process";
+
 // IF THIS TRANSLATION IS INCORRECT PLEASE IGNORE THIS AS THIS TRANSLATION IS FOR DEMO PURPOSES ONLY
 // We are happy if you can help improve the translation by sending an email to support@minimals.cc.
 
@@ -44,6 +46,36 @@ const en = {
   },
   beteliq: `Beteliq`,
 
+  home:{
+    hero:{
+      title: `Learn all about`,
+      subtitle: `Orthodox.`,
+      description: `የቤተክርስቲያን ተምህርቶችን፣ መፅሃፍትን፣ መዝሙራትና ሌሎች ኦርቶዶክሳዊ ተምህርቶችን በቅላሉ በእጅ ሰልኮ ያግኙ።`,
+      button1: `ወደ ትምህርት`,
+      button2: `ወደ መለያዎች`,
+    },
+    features:{
+      title: `All resources`,
+      title2: `at one place `,
+      subtitle: `Beteliq`,
+      blogs: {
+        icon: ' /assets/icons/home/ic_make_brand.svg',
+        title: 'Blogs',
+        description: 'Consistent design makes it easy to brand your own.',
+      },
+      books:{
+        icon: ' /assets/icons/home/ic_design.svg',
+        title: 'Books',
+        description:
+          'The kit is built on the principles of the atomic design system. It helps you to create projects fastest and easily customized packages for your projects.',
+      },
+      courses:{
+        icon: ' /assets/icons/home/ic_development.svg',
+        title: 'Courses',
+        description: 'Easy to customize and extend, saving you time and money.',
+      },
+    },
+  },
 
 
   demo: {

@@ -1,19 +1,19 @@
 // next
 import { NextApiRequest, NextApiResponse } from 'next';
 // utils
-import cors from 'src/utils/cors';
+// import cors from '../../../utils/cors';
 // _mock
 import {
   findConversationById,
   findContactByUsername,
   findConversationByOtherParticipantId,
-} from 'src/_mock/_chat';
+} from '../../../../_mock/_chat';
 
 // ----------------------------------------------------------------------
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    await cors(req, res);
+    // await cors(req, res);
 
     const { conversationKey } = req.query;
     let conversation = findConversationById(`${conversationKey}`);

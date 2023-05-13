@@ -2,18 +2,18 @@ import { paramCase } from 'change-case';
 // next
 import { NextApiRequest, NextApiResponse } from 'next';
 // utils
-import cors from 'src/utils/cors';
+import cors from '../../../../utils/cors';
 import connectMongo from '../../../../lib/dbConnect';
 import Blog from '../../../../models/blog'
 
 // _mock
-import { posts } from 'src/_mock/_blog';
+import { posts } from '../../../../_mock/_blog';
 
 // ----------------------------------------------------------------------
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    await cors(req, res);
+    // await cors(req, res);
     await connectMongo();
     const newPosts = await Blog.find({});
     newPosts.reverse();

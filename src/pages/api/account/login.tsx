@@ -2,9 +2,9 @@ import { sign } from 'jsonwebtoken';
 // next
 import { NextApiRequest, NextApiResponse } from 'next';
 // utils
-import cors from 'src/utils/cors';
+// import cors from '../../../utils/cors';
 // _mock
-import { users, JWT_SECRET, JWT_EXPIRES_IN } from 'src/_mock/_account';
+import { users, JWT_SECRET, JWT_EXPIRES_IN } from '../../../_mock/_account';
 import connectMongo from '../../../lib/dbConnect';
 import User from '../../../models/user';
 
@@ -12,7 +12,7 @@ import User from '../../../models/user';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    await cors(req, res);
+    // await cors(req, res);
 
     const { email, password } = req.body;
 

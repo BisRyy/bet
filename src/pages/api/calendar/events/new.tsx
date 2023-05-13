@@ -2,13 +2,13 @@ import { v4 as uuidv4 } from 'uuid';
 // next
 import { NextApiRequest, NextApiResponse } from 'next';
 // utils
-import cors from 'src/utils/cors';
+// import cors from '../../../utils/cors';
 
 // ----------------------------------------------------------------------
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    await cors(req, res);
+    // await cors(req, res);
 
     const { title, description, textColor, allDay, end, start } = req.body;
     const event = {

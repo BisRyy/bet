@@ -5,6 +5,7 @@ import { Box, Card, Container, Typography, Stack } from '@mui/material';
 // components
 import Image from '../../components/image';
 import { MotionViewport, varFade } from '../../components/animate';
+import { useLocales } from '../../locales';
 
 // ----------------------------------------------------------------------
 
@@ -46,6 +47,8 @@ const StyledCard = styled(Card)(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 export default function HomeMinimal() {
+  const { translate:t } = useLocales();
+  
   return (
     <StyledRoot>
       <Container component={MotionViewport}>
@@ -58,13 +61,15 @@ export default function HomeMinimal() {
         >
           <m.div variants={varFade().inUp}>
             <Typography component="div" variant="overline" sx={{ color: 'text.disabled' }}>
-              Bete Liq
+              {t('home.features.subtitle')}
             </Typography>
           </m.div>
 
           <m.div variants={varFade().inDown}>
             <Typography variant="h2">
-              All resources <br /> at one place 
+              {t('home.features.title')}
+              <br />
+              {t('home.features.title2')}
             </Typography>
           </m.div>
         </Stack>
