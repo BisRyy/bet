@@ -48,7 +48,7 @@ export const books = [
     },
     {
       _id:6,
-      title: The Book of the Saints of the Ethiopian Church",
+      title: "The Book of the Saints of the Ethiopian Church",
       image:
         "https://www.operationezra.com/uploads/1/0/4/4/10446233/8992332.jpg?107",
       price: "200",
