@@ -114,6 +114,9 @@ const en = {
     }
   },
   dashboard: {
+    dashboard:{
+      title: `Dashboard`,
+    },
     blog:{
       title: `Blogs`,
       subtitle: `All blogs`,
