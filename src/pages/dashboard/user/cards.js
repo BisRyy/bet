@@ -26,7 +26,7 @@ export default function UserCardsPage() {
   return (
     <>
       <Head>
-        <title> User: Cards | Minimal UI</title>
+        <title> User: Cards | Bete Liq</title>
       </Head>
 
       <Container maxWidth={themeStretch ? false : 'lg'}>

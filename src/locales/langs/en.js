@@ -9,9 +9,14 @@ import { features } from "process";
 
 const en = {
   auth: {
+    welcome: `Welcome`,
+    welcomeDescription: `Welcome back, please login to your account.`,
+    hi: `Hi`,
     login: `Login`,
     login_title: `Login to your account`,
     login_head_title: `Hi, Welcome Back`,
+    logout: `Logout`,
+    logoutDescription: `Logout from your account`,
     register: {
       title: `Create your account`,
       main_title: `Get started absolutely free.`,
@@ -45,35 +50,88 @@ const en = {
     }
   },
   beteliq: `Beteliq`,
-
+  header: {
+    login: `ወደ ትምህርት`,
+  },
   home:{
     hero:{
       title: `Learn all about`,
       subtitle: `Orthodox.`,
-      description: `የቤተክርስቲያን ተምህርቶችን፣ መፅሃፍትን፣ መዝሙራትና ሌሎች ኦርቶዶክሳዊ ተምህርቶችን በቅላሉ በእጅ ሰልኮ ያግኙ።`,
-      button1: `ወደ ትምህርት`,
-      button2: `ወደ መለያዎች`,
+      description: `Get books, courses, blogs and more resources to learn about orthodox.`,
+      button1: `Get Started`,
+      button2: `Register`,
     },
     features:{
       title: `All resources`,
       title2: `at one place `,
       subtitle: `Beteliq`,
-      blogs: {
+      Blogs: {
         icon: ' /assets/icons/home/ic_make_brand.svg',
         title: 'Blogs',
         description: 'Consistent design makes it easy to brand your own.',
       },
-      books:{
+      Books:{
         icon: ' /assets/icons/home/ic_design.svg',
         title: 'Books',
         description:
           'The kit is built on the principles of the atomic design system. It helps you to create projects fastest and easily customized packages for your projects.',
       },
-      courses:{
+      Courses:{
         icon: ' /assets/icons/home/ic_development.svg',
         title: 'Courses',
         description: 'Easy to customize and extend, saving you time and money.',
       },
+    },
+    books:{
+      title: `Huge pack`,
+      title2: `of Books`,
+      subtitle: `Interface Starter Kit`,
+      description: `The kit is built on the principles of the atomic design system. It helps you to create projects fastest and easily customized packages for your projects.`,
+      viewAll: `View All Books`,
+    },
+    for_teachers:{
+      title: `For Teachers`,
+      subtitle: `Full fledged blog`,
+      description: `The kit is built on the principles of the atomic design system. It helps you to create projects fastest and easily customized packages for your projects.`,
+      button: `Teach with us`,
+    },
+    dark_mode:{
+      title: `Dark Mode`,
+      subtitle: `Easy switch between styles.`,
+      description: `The kit is built on the principles of the atomic design system. It helps you to create projects fastest and easily customized packages for your projects.`,
+    },
+    looking_for:{
+      subtitle: `Liked our work?`,
+      title: `Looking for a similal solution?`,
+      button: `Contact the Developer`,
+    },
+    start:{
+      title: `Start learning`,
+      title2: `with Beteliq`,
+      description: `The kit is built on the principles of the atomic design system. It helps you to create projects fastest and easily customized packages for your projects.`,
+      button: `Get Started`,
+      button2: `Register`,
+    }
+  },
+  dashboard: {
+    blog:{
+      title: `Blogs`,
+      subtitle: `All blogs`,
+      newBlog: `New Blog`,
+      editBlog: `Edit Blog`,
+      deleteBlog: `Delete Blog`,
+    },
+    books:{
+      title: `Books`,
+    },
+    courses:{
+      title: `Books`,
+    },
+    chat:{
+      title: `chat`,
+    },
+    calendar:{
+      title:`calendar`,
     },
   },
 

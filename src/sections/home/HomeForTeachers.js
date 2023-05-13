@@ -6,10 +6,11 @@ import { Box, Grid, Container, Typography, Button } from '@mui/material';
 // utils
 import { filterStyles, textGradient, bgGradient } from '../../utils/cssStyles';
 // routes
-import { PATH_FIGMA_PREVIEW } from '../../routes/paths';
+import { PATH_FIGMA_PREVIEW, PATH_PAGE } from '../../routes/paths';
 // components
 import Iconify from '../../components/iconify';
 import { MotionViewport, varFade } from '../../components/animate';
+import { useLocales } from '../../locales';
 
 // ----------------------------------------------------------------------
 
@@ -71,17 +72,18 @@ const StyledContent = styled(m.img)(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 export default function HomeForDesigner() {
+  const { translate: t } = useLocales();
   return (
     <StyledRoot>
       <StyledWrap>
         <Container component={MotionViewport} sx={{ position: 'relative' }}>
           <Grid container>
             <Grid item md={6}>
-              <Description />
+              <Description t={t} />
             </Grid>
 
             <Grid item md={6}>
-              <StyledContent src="/assets/images/home/for_designer.jpg" variants={varFade().in} />
+              <StyledContent src="/assets/images/home/for_teachers.png" variants={varFade().in} />
             </Grid>
           </Grid>
         </Container>
@@ -96,14 +98,14 @@ export default function HomeForDesigner() {
 
 // ----------------------------------------------------------------------
 
-function Description() {
+function Description({ t}) {
   const theme = useTheme();
 
   return (
     <StyledDescription>
       <m.div variants={varFade().inUp}>
         <Typography component="div" variant="overline" sx={{ color: 'text.disabled' }}>
-          Professional Kit
+          {t('home.for_teachers.subtitle')}
         </Typography>
       </m.div>
 
@@ -118,7 +120,7 @@ function Description() {
             ),
           }}
         >
-          For Designer
+          {t('home.for_teachers.title')}
         </Typography>
       </m.div>
 
@@ -128,9 +130,7 @@ function Description() {
           size="large"
           variant="outlined"
           endIcon={<Iconify icon="ic:round-arrow-right-alt" />}
-          target="_blank"
-          rel="noopener"
-          href={PATH_FIGMA_PREVIEW}
+          href={PATH_PAGE.blog}
           sx={{
             bgcolor: 'text.primary',
             color: theme.palette.mode === 'light' ? 'common.white' : 'grey.800',
@@ -139,7 +139,7 @@ function Description() {
             },
           }}
         >
-          Go to Figma Workspace
+          {t('home.for_teachers.button')}
         </Button>
       </m.div>
     </StyledDescription>

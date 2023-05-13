@@ -40,7 +40,7 @@ export default function NavItem({ item, depth, open, active, isExternalLink, ...
       )}
 
       <ListItemText
-        primary={`${translate(title)}`}
+        primary={translate(`dashboard.${title}.title`)}
         secondary={
           caption && (
             <Tooltip title={`${translate(caption)}`} placement="top-start">

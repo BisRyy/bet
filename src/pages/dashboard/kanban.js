@@ -107,7 +107,7 @@ export default function KanbanPage() {
   return (
     <>
       <Head>
-        <title> Kanban | Minimal UI</title>
+        <title> Kanban | Bete Liq</title>
       </Head>
 
       <Container maxWidth={false} sx={{ height: 1 }}>

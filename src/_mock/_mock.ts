@@ -46,6 +46,11 @@ const _mock = {
     product: (index: number) => `${HOST_API}/assets/images/products/product_${index + 1}.jpg`,
     avatar: (index: number) => `${HOST_API}/assets/images/avatars/avatar_${index + 1}.jpg`,
   },
+  book: {
+    title: (index: number) => title[index],
+    author: (index: number) => `${firstName[index]} ${lastName[index]}`,
+    cover: (index: number) => `${HOST_API}/assets/images/books/book_${index + 1}.jpg`,
+  },
 };
 
 export default _mock;

@@ -30,6 +30,7 @@ import {
   CircularProgress,
   FormControlLabel,
   ToggleButtonGroup,
+  CardMedia,
 } from '@mui/material';
 // hooks
 import useResponsive from '../../hooks/useResponsive';
@@ -39,6 +40,7 @@ import { bgGradient } from '../../utils/cssStyles';
 import { PATH_PAGE } from '../../routes/paths';
 // _mock
 import _mock from '../../_mock';
+import {books} from '../../_mock/_book';
 // components
 import Label from '../../components/label';
 import Image from '../../components/image';
@@ -48,6 +50,7 @@ import MenuPopover from '../../components/menu-popover';
 import BadgeStatus from '../../components/badge-status';
 import { CustomAvatar, CustomAvatarGroup } from '../../components/custom-avatar';
 import { MotionViewport, varFade } from '../../components/animate';
+import { useLocales } from '../../locales';
 
 // ----------------------------------------------------------------------
 
@@ -103,22 +106,23 @@ const StyledRow = styled('div')(({ theme }) => ({
 
 export default function HomeHugePackElements() {
   const isDesktop = useResponsive('up', 'md');
+  const { translate:t } = useLocales();
 
   return (
     <StyledRoot>
       <Container component={MotionViewport}>
         <Grid direction={{ xs: 'column', md: 'row-reverse' }} container spacing={5}>
           <Grid item xs={12} md={5}>
-            <Description />
+            <Description t={t}/>
           </Grid>
 
-          <Grid item xs={12} md={7}>
+          <Grid item xs={12} md={7} sx={{ position: 'relative' }}>
             <Content />
           </Grid>
 
           {!isDesktop && (
             <Grid item xs={12} sx={{ textAlign: 'center' }}>
-              {ViewAllButton}
+              <ViewAllButton />
             </Grid>
           )}
         </Grid>
@@ -129,21 +133,21 @@ export default function HomeHugePackElements() {
 
 // ----------------------------------------------------------------------
 
-function Description() {
+function Description({t}) {
   const isDesktop = useResponsive('up', 'md');
 
   return (
     <StyledDescription>
       <m.div variants={varFade().inUp}>
         <Typography component="div" variant="overline" sx={{ color: 'text.disabled' }}>
-          Interface Starter Kit
+          {t('home.books.subtitle')}
         </Typography>
       </m.div>
 
       <m.div variants={varFade().inUp}>
         <Typography variant="h2" sx={{ my: 3 }}>
-          Huge pack <br />
-          of Books
+          {t('home.books.title')} <br />
+          {t('home.books.title2')}
         </Typography>
       </m.div>
 
@@ -154,12 +158,11 @@ function Description() {
             color: 'text.secondary',
           }}
         >
-          We collected most popular elements. Menu, sliders, buttons, inputs etc. are all here. Just
-          dive in!
+          {t('home.books.description')}
         </Typography>
       </m.div>
 
-      {isDesktop && ViewAllButton}
+      {isDesktop && <ViewAllButton />}
     </StyledDescription>
   );
 }
@@ -169,25 +172,43 @@ function Description() {
 function Content() {
   return (
     <StyledContent>
-   sfs
+      <Scrollbar>
+        <Stack spacing={5} sx={{ px: 2, py: 5 }}>
+          <Grid container spacing={5}>
+            {books.slice(0, 9).map((book) => (
+              <Grid key={book._id} item xs={4} sm={4} md={4}>
+                <m.div variants={varFade().inUp}>
+                  <CardMedia
+                    component={MotionViewport}
+                    sx={{ height: 180, borderRadius: 2 }}
+                    image={book.image}
+                  />
+                </m.div>
+              </Grid>
+
+            ))}
+          </Grid>
+        </Stack>
+      </Scrollbar>
     </StyledContent>
   );
 }
 
 // ----------------------------------------------------------------------
 
-const ViewAllButton = (
-  <m.div variants={varFade().inUp}>
-    <Button
-      size="large"
-      color="inherit"
-      variant="outlined"
-      target="_blank"
-      rel="noopener"
-      href={PATH_PAGE.components}
-      endIcon={<Iconify icon="ic:round-arrow-right-alt" />}
-    >
-      View All Books
-    </Button>
-  </m.div>
-);
+function ViewAllButton() {
+  const { translate:t } = useLocales();
+  return (
+    <m.div variants={varFade().inUp}>
+      <Button
+        size="large"
+        color="inherit"
+        variant="outlined"
+        href={PATH_PAGE.books}
+        endIcon={<Iconify icon="ic:round-arrow-right-alt" />}
+      >
+        {t('home.books.viewAll')}
+      </Button>
+    </m.div>
+  )
+}

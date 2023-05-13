@@ -41,7 +41,7 @@ export default function GeneralBookingPage() {
   return (
     <>
       <Head>
-        <title> General: Booking | Minimal UI</title>
+        <title> General: Booking | Bete Liq</title>
       </Head>
 
       <Container maxWidth={themeStretch ? false : 'xl'}>

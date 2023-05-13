@@ -24,7 +24,7 @@ export default function InvoiceCreatePage() {
   return (
     <>
       <Head>
-        <title> Invoices: Create a new invoice | Minimal UI</title>
+        <title> Invoices: Create a new invoice | Bete Liq</title>
       </Head>
 
       <Container maxWidth={themeStretch ? false : 'lg'}>

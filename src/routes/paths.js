@@ -21,9 +21,9 @@ export const PATH_AUTH = {
 };
 
 export const PATH_PAGE = {
-  books: '/books',
-  courses: '/courses',
-  blogs: '/blogs',
+  books: '/dashboard/books',
+  courses: '/dashboard/courses',
+  blog: '/dashboard/blog',
 
   comingSoon: '/coming-soon',
   maintenance: '/maintenance',

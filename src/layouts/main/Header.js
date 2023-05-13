@@ -19,6 +19,7 @@ import NavMobile from './nav/mobile';
 import navConfig from './nav/config-navigation';
 import NavDesktop from './nav/desktop';
 import LanguagePopover from '../dashboard/header/LanguagePopover';
+import { useLocales } from '../../locales';
 
 // ----------------------------------------------------------------------
 
@@ -28,6 +29,8 @@ export default function Header() {
   const isDesktop = useResponsive('up', 'md');
 
   const isOffset = useOffSetTop(HEADER.H_MAIN_DESKTOP);
+
+  const { translate: t } = useLocales();
 
   return (
     <AppBar color="transparent" sx={{ boxShadow: 0 }}>
@@ -59,7 +62,7 @@ export default function Header() {
           {isDesktop && <NavDesktop isOffset={isOffset} data={navConfig} />}
 
           <Button variant="contained" rel="noopener" href={PATH_AFTER_LOGIN}>
-          ወደ ትምህርት
+            {t('header.login')}
           </Button>
 
           {!isDesktop && <NavMobile isOffset={isOffset} data={navConfig} />}

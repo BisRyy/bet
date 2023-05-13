@@ -34,6 +34,7 @@ import {
 // assets
 import { SeoIllustration } from '../../assets/illustrations';
 import { AnalyticsNewsUpdate } from '../../sections/@dashboard/general/analytics';
+import { useLocales } from '../../locales';
 
 // ----------------------------------------------------------------------
 
@@ -44,6 +45,8 @@ GeneralAppPage.getLayout = (page) => <DashboardLayout>{page}</DashboardLayout>;
 export default function GeneralAppPage() {
   const { user } = useAuthContext();
 
+  const { translate } = useLocales();
+
   const theme = useTheme();
 
   const { themeStretch } = useSettingsContext();
@@ -51,15 +54,15 @@ export default function GeneralAppPage() {
   return (
     <>
       <Head>
-        <title> General: App | Minimal UI</title>
+        <title> General: App | Bete Liq</title>
       </Head>
 
       <Container maxWidth={themeStretch ? false : 'xl'}>
         <Grid container spacing={3}>
           <Grid item xs={12} md={8}>
             <AppWelcome
-              title={`Welcome back! \n ${user?.displayName}`}
-              description="If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything."
+              title={`${translate("auth.welcome")} \n ${user?.displayName}`}
+              description={translate('auth.welcomeDescription')}
               img={
                 <SeoIllustration
                   sx={{
@@ -69,7 +72,6 @@ export default function GeneralAppPage() {
                   }}
                 />
               }
-              action={<Button variant="contained">Go Now</Button>}
             />
           </Grid>
 

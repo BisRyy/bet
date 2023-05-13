@@ -5,16 +5,18 @@ import { Button, Box, Container, Stack } from '@mui/material';
 // utils
 import { bgGradient } from '../../utils/cssStyles';
 // routes
-import { PATH_FREE_VERSION, PATH_MINIMAL_ON_STORE } from '../../routes/paths';
+import { PATH_AUTH, PATH_DASHBOARD, PATH_FREE_VERSION, PATH_MINIMAL_ON_STORE, PATH_PAGE } from '../../routes/paths';
 // components
 import Iconify from '../../components/iconify';
 import Image from '../../components/image';
 import { MotionViewport, varFade } from '../../components/animate';
+import { useLocales } from '../../locales';
 
 // ----------------------------------------------------------------------
 
 export default function HomeAdvertisement() {
   const theme = useTheme();
+  const { translate:t } = useLocales()
 
   return (
     <Container component={MotionViewport}>
@@ -31,8 +33,8 @@ export default function HomeAdvertisement() {
           pb: { xs: 5, md: 0 },
         }}
       >
-        <Content />
-        <Description />
+        <Content t={t} />
+        <Description t={t} />
       </Stack>
     </Container>
   );
@@ -40,7 +42,7 @@ export default function HomeAdvertisement() {
 
 // ----------------------------------------------------------------------
 
-function Description() {
+function Description({ t }) {
   return (
     <Box
       sx={{
@@ -55,8 +57,8 @@ function Description() {
         variants={varFade().inDown}
         sx={{ color: 'common.white', mb: 5, typography: 'h2' }}
       >
-        Get started with
-        <br /> minimal kit today
+        {t('home.start.title')} <br />
+        {t('home.start.title2')}
       </Box>
 
       <Stack
@@ -69,15 +71,13 @@ function Description() {
             color="inherit"
             size="large"
             variant="contained"
-            target="_blank"
-            rel="noopener"
-            href={PATH_MINIMAL_ON_STORE}
+            href={PATH_DASHBOARD.root}
             sx={{
               color: 'grey.800',
               bgcolor: 'common.white',
             }}
           >
-            Purchase Now
+            {t('home.start.button')}
           </Button>
         </m.div>
 
@@ -86,13 +86,11 @@ function Description() {
             color="inherit"
             size="large"
             variant="outlined"
-            target="_blank"
-            rel="noopener"
-            href={PATH_FREE_VERSION}
+            href={PATH_AUTH.login}
             endIcon={<Iconify icon="eva:external-link-fill" width={16} sx={{ mr: 0.5 }} />}
             sx={{ color: 'common.white', '&:hover': { borderColor: 'currentColor' } }}
           >
-            Get Free Version
+            {t('home.start.button2')}
           </Button>
         </m.div>
       </Stack>

@@ -33,7 +33,7 @@ export default function InvoiceEditPage() {
   return (
     <>
       <Head>
-        <title> Invoice: Edit | Minimal UI</title>
+        <title> Invoice: Edit | Bete Liq</title>
       </Head>
 
       <Container maxWidth={themeStretch ? false : 'lg'}>

@@ -49,7 +49,7 @@ export default function GeneralAppPage() {
   return (
     <>
       <Head>
-        <title> General: App | Minimal UI</title>
+        <title> General: App | Bete Liq</title>
       </Head>
 
       <Container maxWidth={themeStretch ? false : 'xl'}>

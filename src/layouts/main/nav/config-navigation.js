@@ -26,7 +26,7 @@ const navConfig = [
   {
     title: 'Blogs',
     icon: <Iconify icon="eva:book-open-fill" />,
-    path: PATH_PAGE.blogs,
+    path: PATH_PAGE.blog,
   },
 ];
 

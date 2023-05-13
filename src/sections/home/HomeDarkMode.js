@@ -7,6 +7,7 @@ import { useSettingsContext } from '../../components/settings';
 import SvgColor from '../../components/svg-color';
 import Image from '../../components/image';
 import { MotionViewport, varFade } from '../../components/animate';
+import { useLocales } from '../../locales';
 
 // ----------------------------------------------------------------------
 
@@ -16,7 +17,7 @@ const StyledRoot = styled('div')(({ theme }) => ({
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center center',
-  backgroundImage: `url('/assets/background/overlay_4.jpg')`,
+  // backgroundImage: `url('/assets/background/overlay_4.jpg')`,
   [theme.breakpoints.up('md')]: {
     padding: theme.spacing(20, 0),
   },
@@ -26,20 +27,21 @@ const StyledRoot = styled('div')(({ theme }) => ({
 
 export default function HomeDarkMode() {
   const { themeMode, onToggleMode } = useSettingsContext();
+  const { translate:t } = useLocales();
 
   return (
     <StyledRoot>
       <Container component={MotionViewport}>
         <m.div variants={varFade().inUp}>
           <Typography component="div" variant="overline" sx={{ color: 'primary.main' }}>
-            Easy switch between styles.
+            {t('home.dark_mode.subtitle')}
           </Typography>
         </m.div>
 
         <m.div variants={varFade().inUp}>
           <Stack spacing={2} direction="row" alignItems="center" display="inline-flex">
-            <Typography variant="h2" sx={{ my: 3, color: 'common.white' }}>
-              Dark mode
+            <Typography variant="h2" sx={{ my: 3}}>
+              {t('home.dark_mode.title')}
             </Typography>
 
             <IconButton color={themeMode === 'dark' ? 'warning' : 'default'} onClick={onToggleMode}>
@@ -52,14 +54,14 @@ export default function HomeDarkMode() {
 
         <m.div variants={varFade().inUp}>
           <Typography sx={{ color: 'grey.500' }}>
-            A dark theme that feels easier on the eyes.
+            {t('home.dark_mode.description')}
           </Typography>
         </m.div>
 
         <m.div variants={varFade().inUp}>
           <Image
             alt="darkmode"
-            src="/assets/images/home/darkmode.jpg"
+            src="/assets/images/home/darkmode.png"
             sx={{
               borderRadius: 2,
               my: { xs: 5, md: 10 },

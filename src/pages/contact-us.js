@@ -19,7 +19,7 @@ export default function ContactPage() {
   return (
     <>
       <Head>
-        <title> Contact us | Minimal UI</title>
+        <title> Contact us | Bete Liq</title>
       </Head>
 
       <ContactHero />

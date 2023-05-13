@@ -1,6 +1,7 @@
 
 export const books = [
     {
+      _id:1,
       title: "Book 1",
       image:
         "https://www.pngitem.com/pimgs/m/170-1707194_free-psd-book-cover-template-book-cover-template.png",
@@ -9,6 +10,7 @@ export const books = [
         "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
     },
     {
+      _id:2,
       title: "Book 2",
       image:
         "https://www.pngitem.com/pimgs/m/170-1707194_free-psd-book-cover-template-book-cover-template.png",
@@ -17,6 +19,7 @@ export const books = [
         "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
     },
     {
+      _id:3,
       title: "Book 1",
       image:
         "https://www.pngitem.com/pimgs/m/98-985756_book-cover-hd-png-download.png",
@@ -25,6 +28,7 @@ export const books = [
         "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
     },
     {
+      _id:4,
       title: "Book 2",
       image:
         "https://www.pngitem.com/pimgs/m/98-985756_book-cover-hd-png-download.png",
@@ -33,6 +37,7 @@ export const books = [
         "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
     },
     {
+      _id:5,
       title: "Book 1",
       image:
         "https://www.pngitem.com/pimgs/m/11-119086_clip-art-the-ultimate-free-d-3d-book.png",
@@ -41,6 +46,7 @@ export const books = [
         "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
     },
     {
+      _id:6,
       title: "Book 2",
       image:
         "https://www.pngitem.com/pimgs/m/11-119086_clip-art-the-ultimate-free-d-3d-book.png",
@@ -49,6 +55,7 @@ export const books = [
         "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
     },
     {
+      _id:7,
       title: "Book 1",
       image:
         "https://www.pngitem.com/pimgs/m/26-268627_book-cover-design-by-venanzio-otterbein-college-hd.png",
@@ -57,6 +64,7 @@ export const books = [
         "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
     },
     {
+      _id:8,
       title: "Book 2",
       image:
         "https://www.pngitem.com/pimgs/m/170-1707194_free-psd-book-cover-template-book-cover-template.png",
@@ -65,6 +73,34 @@ export const books = [
         "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
     },
     {
+      _id:9,
+      title: "Book 2",
+      image:
+        "https://www.pngitem.com/pimgs/m/26-268627_book-cover-design-by-venanzio-otterbein-college-hd.png",
+      price: "200",
+      description:
+        "lorem ipsum dolor sit amet conse adipisicing elit. Quisquam, voluptatum.",
+    },
+    {
+      _id:10,
+      title: "Book 1",
+      image:
+        "https://www.pngitem.com/pimgs/m/26-268627_book-cover-design-by-venanzio-otterbein-college-hd.png",
+      price: "100",
+      description:
+        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+    },
+    {
+      _id:11,
+      title: "Book 2",
+      image:
+        "https://www.pngitem.com/pimgs/m/170-1707194_free-psd-book-cover-template-book-cover-template.png",
+      price: "200",
+      description:
+        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+    },
+    {
+      _id:12,
       title: "Book 2",
       image:
         "https://www.pngitem.com/pimgs/m/26-268627_book-cover-design-by-venanzio-otterbein-college-hd.png",

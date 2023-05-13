@@ -75,7 +75,7 @@ export default function UserAccountPage() {
   return (
     <>
       <Head>
-        <title> User: Account Settings | Minimal UI</title>
+        <title> User: Account Settings | Bete Liq</title>
       </Head>
 
       <Container maxWidth={themeStretch ? false : 'lg'}>

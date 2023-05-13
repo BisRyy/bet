@@ -41,7 +41,7 @@ export default function PermissionDeniedPage() {
   return (
     <>
       <Head>
-        <title> Other Cases: Permission Denied | Minimal UI</title>
+        <title> Other Cases: Permission Denied | Bete Liq</title>
       </Head>
 
       <Container maxWidth={themeStretch ? false : 'lg'}>

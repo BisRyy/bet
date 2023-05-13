@@ -65,7 +65,7 @@ export default function BlogPostsPage() {
   return (
     <>
       <Head>
-        <title>{t('page:dashboard.blog.posts.title')} | {t('beteliq')}</title>
+        <title>{t('dashboard.blog.title')} | {t('beteliq')}</title>
       </Head>
 
       <Container maxWidth={themeStretch ? false : 'lg'}>
@@ -91,7 +91,7 @@ export default function BlogPostsPage() {
               variant="contained"
               startIcon={<Iconify icon="eva:plus-fill" />}
             >
-              New Post
+              {t('dashboard.blog.post.newPost')}
             </Button>
           }
         />

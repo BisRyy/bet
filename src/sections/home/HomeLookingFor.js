@@ -10,6 +10,7 @@ import { PATH_ZONE_ON_STORE } from '../../routes/paths';
 import Image from '../../components/image';
 import Iconify from '../../components/iconify';
 import { MotionViewport, varFade } from '../../components/animate';
+import { useLocales } from '../../locales';
 
 // ----------------------------------------------------------------------
 
@@ -24,6 +25,7 @@ const StyledRoot = styled('div')(({ theme }) => ({
 
 export default function HomeLookingFor() {
   const isDesktop = useResponsive('up', 'md');
+  const { translate:t } = useLocales()
 
   return (
     <StyledRoot>
@@ -35,7 +37,7 @@ export default function HomeLookingFor() {
           spacing={{ xs: 5, md: 0 }}
         >
           <Grid item xs={12} md={4}>
-            <Description />
+            <Description t={t} />
           </Grid>
 
           <Grid item xs={12} md={7}>
@@ -44,7 +46,7 @@ export default function HomeLookingFor() {
 
           {!isDesktop && (
             <Grid item xs={12} sx={{ textAlign: 'center' }}>
-              {VisitButton}
+              <VisitButton />
             </Grid>
           )}
         </Grid>
@@ -55,7 +57,7 @@ export default function HomeLookingFor() {
 
 // ----------------------------------------------------------------------
 
-function Description() {
+function Description({ t}) {
   const isDesktop = useResponsive('up', 'md');
 
   return (
@@ -69,7 +71,7 @@ function Description() {
     >
       <m.div variants={varFade().inDown}>
         <Typography variant="overline" component="div" sx={{ color: 'text.disabled' }}>
-          Looking For a
+          {t('home.looking_for.subtitle')}
         </Typography>
       </m.div>
 
@@ -81,11 +83,11 @@ function Description() {
             mb: { md: 5 },
           }}
         >
-          Landing Page Template?
+          {t('home.looking_for.title')}
         </Typography>
       </m.div>
 
-      {isDesktop && <m.div variants={varFade().inDown}> {VisitButton} </m.div>}
+      {isDesktop && <m.div variants={varFade().inDown}> <VisitButton /> </m.div>}
     </Stack>
   );
 }
@@ -100,16 +102,18 @@ function Content() {
   );
 }
 
-const VisitButton = (
+function VisitButton () {
+  const { translate:t } = useLocales()
+  return (
   <Button
     color="inherit"
     size="large"
     variant="outlined"
     target="_blank"
     rel="noopener"
-    href={PATH_ZONE_ON_STORE}
+    href="https://bisrat.tech/"
     endIcon={<Iconify icon="ic:round-arrow-right-alt" />}
   >
-    Visit Zone Landing Page
+    {t('home.looking_for.button')}
   </Button>
-);
+)}

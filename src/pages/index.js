@@ -13,10 +13,7 @@ import {
   HomeDarkMode,
   HomeLookingFor,
   HomeForDesigner,
-  HomeColorPresets,
-  HomePricingPlans,
   HomeAdvertisement,
-  HomeCleanInterfaces,
   HomeHugePackElements,
 } from '../sections/home';
 
@@ -56,7 +53,7 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title> The starting point for your next project | Minimal UI</title>
+        <title> The starting point for your next project | Bete Liq</title>
       </Head>
 
       {progress}
@@ -77,12 +74,6 @@ export default function HomePage() {
         <HomeForDesigner />
 
         <HomeDarkMode />
-
-        <HomeColorPresets />
-
-        <HomeCleanInterfaces />
-
-        <HomePricingPlans />
 
         <HomeLookingFor />
 

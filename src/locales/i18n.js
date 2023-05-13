@@ -29,16 +29,16 @@ i18n
   .use(initReactI18next)
   .init({
     resources: {
+      am: { translations: amLocales },
+      ao: { translations: aoLocales },
       en: { translations: enLocales },
       fr: { translations: frLocales },
       vi: { translations: viLocales },
       cn: { translations: cnLocales },
       ar: { translations: arLocales },
-      am: { translations: amLocales },
-      ao: { translations: aoLocales },
     },
     lng,
-    fallbackLng: defaultLang.value,
+    fallbackLng: 'en' || defaultLang.value,
     debug: false,
     ns: ['translations'],
     defaultNS: 'translations',

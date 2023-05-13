@@ -44,7 +44,7 @@ export default function EcommerceProductEditPage() {
   return (
     <>
       <Head>
-        <title> Ecommerce: Edit product | Minimal UI</title>
+        <title> Ecommerce: Edit product | Bete Liq</title>
       </Head>
 
       <Container maxWidth={themeStretch ? false : 'lg'}>

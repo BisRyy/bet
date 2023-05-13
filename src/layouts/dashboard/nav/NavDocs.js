@@ -6,13 +6,30 @@ import { useAuthContext } from '../../../auth/useAuthContext';
 import { useLocales } from '../../../locales';
 // routes
 import { PATH_DOCS } from '../../../routes/paths';
+import { useSnackbar } from 'notistack';
+import { useRouter } from 'next/router';
 
 // ----------------------------------------------------------------------
 
 export default function NavDocs() {
-  const { user } = useAuthContext();
+  const { replace, push } = useRouter();
+
+  const { user, logout } = useAuthContext();
+
+  const { enqueueSnackbar } = useSnackbar();
 
   const { translate } = useLocales();
+
+  const handleLogout = async () => {
+    try {
+      logout();
+      replace(PATH_AUTH.login);
+      handleClosePopover();
+    } catch (error) {
+      console.error(error);
+      enqueueSnackbar('Unable to logout!', { variant: 'error' });
+    }
+  };
 
   return (
     <Stack
@@ -30,16 +47,16 @@ export default function NavDocs() {
 
       <div>
         <Typography gutterBottom variant="subtitle1">
-          {`${translate('docs.hi')}, ${user?.displayName}`}
+          {`${translate('auth.hi')}, ${user?.displayName}`}
         </Typography>
 
         <Typography variant="body2" sx={{ color: 'text.secondary', whiteSpace: 'pre-line' }}>
-          {`${translate('docs.description')}`}
+          {`${translate('auth.logoutDescription')}`}
         </Typography>
       </div>
 
-      <Button href={PATH_DOCS.root} target="_blank" rel="noopener" variant="contained">
-        {`${translate('docs.documentation')}`}
+      <Button variant="contained" onClick={handleLogout}>
+        {`${translate('auth.logout')}`}
       </Button>
     </Stack>
   );

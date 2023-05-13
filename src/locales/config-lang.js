@@ -6,21 +6,21 @@ import { enUS, frFR, zhCN, viVN, arSA, amET } from '@mui/material/locale';
 
 export const allLangs = [
   {
-    label: 'English',
-    value: 'en',
-    systemValue: enUS,
-    icon: '/assets/icons/flags/ic_flag_en.svg',
-  },
-  {
     label: 'Amharic',
     value: 'am',
     systemValue: amET,
-    icon: '/assets/icons/flags/Flag_of_Ethiopia.svg.png',
-  },
+    icon: '/assets/icons/flags/ethiopia.svg',
+  },  
   {
     label: 'Afaan Oromo',
     value: 'ao',
     icon: '/assets/icons/flags/ethiopia.svg',
+  },
+  {
+    label: 'English',
+    value: 'en',
+    systemValue: enUS,
+    icon: '/assets/icons/flags/ic_flag_en.svg',
   },
   {
     label: 'French',
@@ -41,11 +41,11 @@ export const allLangs = [
     icon: '/assets/icons/flags/ic_flag_cn.svg',
   },
   {
-    label: 'Arabic (Sudan)',
+    label: 'Arabic',
     value: 'ar',
     systemValue: arSA,
     icon: '/assets/icons/flags/ic_flag_sa.svg',
   },
 ];
 
-export const defaultLang = allLangs[0]; // English
+export const defaultLang = allLangs[0]; // Amharic

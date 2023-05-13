@@ -246,7 +246,7 @@ const newConfig = [
 
       },
       {
-        title: 'blogs',
+        title: 'blog',
         path: PATH_DASHBOARD.blog.posts,
         icon: ICONS.blog,
         // children: [

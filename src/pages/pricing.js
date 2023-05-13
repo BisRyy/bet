@@ -19,7 +19,7 @@ export default function PricingPage() {
   return (
     <>
       <Head>
-        <title> Pricing | Minimal UI</title>
+        <title> Pricing | Bete Liq</title>
       </Head>
 
       <Container

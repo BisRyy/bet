@@ -15,7 +15,7 @@ export default function ChatPage() {
   return (
     <>
       <Head>
-        <title> Chat | Minimal UI</title>
+        <title> Chat | Bete Liq</title>
       </Head>
 
       <Chat />

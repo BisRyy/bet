@@ -24,7 +24,7 @@ export default function EcommerceProductCreatePage() {
   return (
     <>
       <Head>
-        <title> Ecommerce: Create a new product | Minimal UI</title>
+        <title> Ecommerce: Create a new product | Bete Liq</title>
       </Head>
 
       <Container maxWidth={themeStretch ? false : 'lg'}>

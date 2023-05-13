@@ -23,12 +23,12 @@ ComingSoonPage.getLayout = (page) => <CompactLayout>{page}</CompactLayout>;
 // ----------------------------------------------------------------------
 
 export default function ComingSoonPage() {
-  const { days, hours, minutes, seconds } = useCountdown(new Date('07/07/2024 21:30'));
+  const { days, hours, minutes, seconds } = useCountdown(new Date('06/06/2023 21:30'));
 
   return (
     <>
       <Head>
-        <title> Coming Soon | Minimal UI</title>
+        <title> Coming Soon | Bete Liq</title>
       </Head>
 
       <Typography variant="h3" paragraph>
@@ -72,21 +72,9 @@ export default function ComingSoonPage() {
         sx={{ my: 5 }}
       />
 
-      <Stack spacing={1} alignItems="center" justifyContent="center" direction="row">
-        {_socials.map((social) => (
-          <IconButton
-            key={social.name}
-            sx={{
-              color: social.color,
-              '&:hover': {
-                bgcolor: alpha(social.color, 0.08),
-              },
-            }}
-          >
-            <Iconify icon={social.icon} />
-          </IconButton>
-        ))}
-      </Stack>
+      <Button variant="contained" size="large" startIcon={<Iconify icon="akar-icons:arrow-left" />} href="/dashboard">
+        Back to Home
+      </Button>
     </>
   );
 }

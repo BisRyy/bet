@@ -23,13 +23,6 @@ function ComingSoonIllustration({ ...other }) {
       <svg width="100%" height="100%" viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
         <BackgroundIllustration />
 
-        <image
-          href="/assets/illustrations/characters/character_1.png"
-          height="300"
-          x="320"
-          y="30"
-        />
-
         <path
           fill="url(#paint0_linear_1_79)"
           d="M290.378 112.9v127.8c0 .8-.2 1.6-.5 2.4-.3.8-.8 1.4-1.3 2-.6.6-1.3 1-2 1.3-.8.3-1.6.5-2.4.5h-166.7c-.8 0-1.7-.1-2.4-.5s-1.4-.8-2-1.4c-.6-.6-1-1.4-1.2-2.1-.2-.8-.3-1.6-.2-2.5V112.6c-.4-3.1 2.3-5.9 5.8-5.9h166.7c.8 0 1.6.2 2.4.5.8.3 1.4.8 2 1.3.6.6 1 1.3 1.4 2 .2.7.4 1.6.4 2.4z"

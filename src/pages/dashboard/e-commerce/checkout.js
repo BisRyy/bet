@@ -117,7 +117,7 @@ export default function EcommerceCheckoutPage() {
   return (
     <>
       <Head>
-        <title> Ecommerce: Checkout | Minimal UI</title>
+        <title> Ecommerce: Checkout | Bete Liq</title>
       </Head>
 
       <Container maxWidth={themeStretch ? false : 'lg'}>

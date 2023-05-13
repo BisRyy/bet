@@ -13,18 +13,14 @@ const CARDS = [
   {
     icon: ' /assets/icons/home/ic_make_brand.svg',
     title: 'Blogs',
-    description: 'Consistent design makes it easy to brand your own.',
   },
   {
     icon: ' /assets/icons/home/ic_design.svg',
     title: 'Books',
-    description:
-      'The kit is built on the principles of the atomic design system. It helps you to create projects fastest and easily customized packages for your projects.',
   },
   {
     icon: ' /assets/icons/home/ic_development.svg',
     title: 'Courses',
-    description: 'Easy to customize and extend, saving you time and money.',
   },
 ];
 
@@ -100,15 +96,17 @@ export default function HomeMinimal() {
               >
                 <Image
                   src={card.icon}
-                  alt={card.title}
+                  alt={t(`home.features.${card.title}.title`)}
                   sx={{ mx: 'auto', width: 48, height: 48 }}
                 />
 
                 <Typography variant="h5" sx={{ mt: 8, mb: 2 }}>
-                  {card.title}
+                  {t(`home.features.${card.title}.title`)}
                 </Typography>
 
-                <Typography sx={{ color: 'text.secondary' }}>{card.description}</Typography>
+                <Typography sx={{ color: 'text.secondary' }}>
+                {t(`home.features.${card.title}.description`)}
+                </Typography>
               </StyledCard>
             </m.div>
           ))}
