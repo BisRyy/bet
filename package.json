@@ -1,8 +1,8 @@
 {
-  "name": "@minimal/material-kit-nextjs",
-  "author": "Minimals UI",
+  "name": "Beteliq Education platform",
+  "author": "Bisrat",
   "version": "4.2.0",
-  "description": "Next.Js Javascript Version",
+  "description": "Bete Liq Education platform is a web application designed to provide spiritual education to members of the Ethiopian Orthodox Tewahedo Church.",
   "private": true,
   "scripts": {
     "dev": "next dev -p 3031",
