@@ -2,111 +2,112 @@
 export const books = [
     {
       _id:1,
-      title: "Book 1",
+      title: "The Orthodox Study Bible, Ancient Faith Edition",
       image:
-        "https://www.pngitem.com/pimgs/m/170-1707194_free-psd-book-cover-template-book-cover-template.png",
+        "https://www.operationezra.com/uploads/1/0/4/4/10446233/51oimmlxckl-sx362-bo1-204-203-200_orig.jpg",
       price: "100",
       description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        "The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
     },
     {
       _id:2,
       title: "Book 2",
       image:
-        "https://www.pngitem.com/pimgs/m/170-1707194_free-psd-book-cover-template-book-cover-template.png",
+        "https://www.operationezra.com/uploads/1/0/4/4/10446233/dong-cov_orig.jpg",
       price: "200",
       description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        "The Ancient Faith Edition (released 2019) contains the identical content you know and love from the previous, most current release of the Orthodox Study Bible, including the same commentaries, notes, supplemental articles, and full-color icons and maps.",
     },
     {
       _id:3,
-      title: "Book 1",
+      title: "Book 3",
       image:
-        "https://www.pngitem.com/pimgs/m/98-985756_book-cover-hd-png-download.png",
+        "https://www.operationezra.com/uploads/1/0/4/4/10446233/tibebu-cov_orig.jpg",
       price: "100",
       description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        "The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
     },
     {
       _id:4,
-      title: "Book 2",
+      title: "Book 4",
       image:
-        "https://www.pngitem.com/pimgs/m/98-985756_book-cover-hd-png-download.png",
+        "https://www.operationezra.com/uploads/1/0/4/4/10446233/dream_orig.png",
       price: "200",
+      link:"https://www.operationezra.com/uploads/1/0/4/4/10446233/yeha-cr.pdf"
       description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        "The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
     },
     {
       _id:5,
-      title: "Book 1",
+      title: "Book 5",
       image:
-        "https://www.pngitem.com/pimgs/m/11-119086_clip-art-the-ultimate-free-d-3d-book.png",
+        "https://www.operationezra.com/uploads/1/0/4/4/10446233/3153296.jpg?127",
       price: "100",
       description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        "The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
     },
     {
       _id:6,
-      title: "Book 2",
+      title: "Book 6",
       image:
-        "https://www.pngitem.com/pimgs/m/11-119086_clip-art-the-ultimate-free-d-3d-book.png",
+        "https://www.operationezra.com/uploads/1/0/4/4/10446233/8992332.jpg?107",
       price: "200",
       description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        "The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
     },
     {
       _id:7,
-      title: "Book 1",
+      title: "Book 7",
       image:
-        "https://www.pngitem.com/pimgs/m/26-268627_book-cover-design-by-venanzio-otterbein-college-hd.png",
+        "https://www.operationezra.com/uploads/1/0/4/4/10446233/7394281.jpg?120",
       price: "100",
       description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        "The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
     },
     {
       _id:8,
-      title: "Book 2",
+      title: "Book 8",
       image:
-        "https://www.pngitem.com/pimgs/m/170-1707194_free-psd-book-cover-template-book-cover-template.png",
+        "https://www.operationezra.com/uploads/1/0/4/4/10446233/1627756.jpg?126",
       price: "200",
       description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        "The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
     },
     {
       _id:9,
-      title: "Book 2",
+      title: "Book 9",
       image:
-        "https://www.pngitem.com/pimgs/m/26-268627_book-cover-design-by-venanzio-otterbein-college-hd.png",
+        "https://www.operationezra.com/uploads/1/0/4/4/10446233/1807337.jpg?122",
       price: "200",
       description:
-        "lorem ipsum dolor sit amet conse adipisicing elit. Quisquam, voluptatum.",
+        "The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
     },
     {
       _id:10,
-      title: "Book 1",
+      title: "Book 10",
       image:
-        "https://www.pngitem.com/pimgs/m/26-268627_book-cover-design-by-venanzio-otterbein-college-hd.png",
+        "https://www.operationezra.com/uploads/1/0/4/4/10446233/5593897.jpg?140",
       price: "100",
       description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        "The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
     },
     {
       _id:11,
-      title: "Book 2",
+      title: "Book 11",
       image:
-        "https://www.pngitem.com/pimgs/m/170-1707194_free-psd-book-cover-template-book-cover-template.png",
+        "https://www.operationezra.com/uploads/1/0/4/4/10446233/371086.jpg?129",
       price: "200",
       description:
-        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        "The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
     },
     {
       _id:12,
-      title: "Book 2",
+      title: "Book 12",
       image:
-        "https://www.pngitem.com/pimgs/m/26-268627_book-cover-design-by-venanzio-otterbein-college-hd.png",
+        "https://www.operationezra.com/uploads/1/0/4/4/10446233/5593897.jpg?130",
       price: "200",
       description:
-        "lorem ipsum dolor sit amet conse adipisicing elit. Quisquam, voluptatum.",
+        "The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
     },
   ];
 
