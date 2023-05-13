@@ -91,7 +91,7 @@ export default function BlogPostsPage() {
               variant="contained"
               startIcon={<Iconify icon="eva:plus-fill" />}
             >
-              {t('dashboard.blog.post.newPost')}
+              {t('dashboard.blog.newPost')}
             </Button>
           }
         />
