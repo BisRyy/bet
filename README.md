@@ -1,3 +1,5 @@
+# Bete Liq Educaton Platform
+
 ## USING YARN (Recommend)
 
 - yarn install
