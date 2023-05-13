@@ -33,7 +33,7 @@ export const books = [
       image:
         "https://www.operationezra.com/uploads/1/0/4/4/10446233/dream_orig.png",
       price: "200",
-      link:"https://www.operationezra.com/uploads/1/0/4/4/10446233/yeha-cr.pdf"
+      link:"https://www.operationezra.com/uploads/1/0/4/4/10446233/yeha-cr.pdf",
       description:
         "The Orthodox Study Bible is the fruit of over twenty years of labor by many of the best Orthodox Christian theologians of our time. Here, by the grace of God, you will find the living water of His Word with comprehensive study guides and teachings that bring to our modern world the mind of the ancient Christian Church. It is the first ever full-length (Old and New Testaments) Orthodox Study Bible in English.",
     },
