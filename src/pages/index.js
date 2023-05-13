@@ -53,7 +53,7 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title> The starting point for your next project | Bete Liq</title>
+        <title> EOTC Education Platform | Bete Liq</title>
       </Head>
 
       {progress}
