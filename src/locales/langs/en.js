@@ -32,7 +32,7 @@ const en = {
     dont_have_account: `Don’t have an account?`,
     verify: `Verify`,
     verify_code_error: `Code is required`,
-    change_cassword: `Update Password`,
+    change_password: `Update Password`,
     reset_password: {
       title: `Reset Password`,
       main_title: `Forgot your password?`,
@@ -102,7 +102,7 @@ const en = {
     },
     looking_for:{
       subtitle: `Liked our work?`,
-      title: `Looking for a similal solution?`,
+      title: `Looking for a similar solution?`,
       button: `Contact the Developer`,
     },
     start:{
