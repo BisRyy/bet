@@ -61,7 +61,7 @@ export default function Footer() {
         <Typography variant="caption" component="div">
           © All rights reserved
           <br /> made by &nbsp;
-          <Link href="https://bistat.tech/"> Bisrat Kebere </Link>
+          <Link href="https://bisrat.tech/"> Bisrat Kebere </Link>
         </Typography>
       </Container>
     </Box>

@@ -13,7 +13,20 @@ const en = {
           button1: `Gara Barnota`,
           button2: "Galma'i",
         }
-    }
+    },
+    
+  Blogs: `Barnota`,
+  Books: `Kitaabota`,
+  Courses: `Farfanna`,
+  blogs: `Barnota`,
+  books: `Kitaabota`,
+  courses: `Farfanna`,
+  Blog: `Barnota`,
+  Book: `Kitaaba`,
+  Course: `Farfanna`,
+  blog: `Barnota`,
+  book: `Kitaaba`,
+  course: `Farfanna`
   };
   
   export default en;

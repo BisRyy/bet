@@ -26,7 +26,7 @@ const NavItem = forwardRef(({ item, depth, open, active, isExternalLink, ...othe
       {icon && <StyledIcon>{icon}</StyledIcon>}
 
       <ListItemText
-        primary={`${translate(title)}`}
+        primary={`${translate(`dashboard.${title}.title`)}`}
         primaryTypographyProps={{
           noWrap: true,
           component: 'span',
