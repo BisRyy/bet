@@ -43,7 +43,7 @@ const _mock = {
   },
   image: {
     cover: (index: number) => `${HOST_API}/assets/images/covers/cover_${index + 1}.jpg`,
-    product: (index: number) => `${HOST_API}/assets/images/products/product_${index + 1}.jpg`,
+    product: (index: number) => `${HOST_API}/assets/images/products/product.png`,
     avatar: (index: number) => `${HOST_API}/assets/images/avatars/avatar_${index + 1}.jpg`,
   },
   book: {

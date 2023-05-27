@@ -31,17 +31,17 @@ import CartWidget from '../../../../sections/@dashboard/e-commerce/CartWidget';
 const SUMMARY = [
   {
     title: '100% Original',
-    description: 'Chocolate bar candy canes ice cream toffee cookie halvah.',
+    description: 'Direct from the Producer.',
     icon: 'ic:round-verified',
   },
   {
-    title: '10 Day Replacement',
-    description: 'Marshmallow biscuit donut dragée fruitcake wafer.',
+    title: 'Fast Shipping and Delivery',
+    description: 'Delivered to your doorstep within 3 - 5 working days.',
     icon: 'eva:clock-fill',
   },
   {
     title: 'Year Warranty',
-    description: 'Cotton candy gingerbread cake I love sugar sweet.',
+    description: 'For all products.',
     icon: 'ic:round-verified-user',
   },
 ];
