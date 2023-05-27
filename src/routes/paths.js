@@ -39,6 +39,7 @@ export const PATH_PAGE = {
 };
 
 export const PATH_DASHBOARD = {
+  app: path(ROOTS_DASHBOARD, '/app'),
   root: ROOTS_DASHBOARD,
   kanban: path(ROOTS_DASHBOARD, '/kanban'),
   calendar: path(ROOTS_DASHBOARD, '/calendar'),

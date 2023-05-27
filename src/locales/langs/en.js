@@ -136,6 +136,9 @@ const en = {
     calendar:{
       title:`calendar`,
     },
+    ecommerce:{
+      title:`ecommerce`,
+    }
   },
 
 
