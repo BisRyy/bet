@@ -54,7 +54,7 @@ const _mock = {
     cover: (index) =>
       `/assets/images/covers/cover_${index + 1}.jpg`,
     product: (index) =>
-      `/assets/images/products/product_${index + 1}.jpg`,
+      `/assets/images/products/product.png`,
     avatar: (index) =>
       `/assets/images/avatars/avatar_${index + 1}.jpg`,
   },

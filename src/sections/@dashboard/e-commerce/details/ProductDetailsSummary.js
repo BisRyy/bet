@@ -195,7 +195,7 @@ export default function ProductDetailsSummary({ cart, product, onAddCart, onGoto
           />
         </Stack>
 
-        <Stack direction="row" justifyContent="space-between">
+        {/* <Stack direction="row" justifyContent="space-between">
           <Typography variant="subtitle2" sx={{ height: 40, lineHeight: '40px', flexGrow: 1 }}>
             Size
           </Typography>
@@ -223,7 +223,7 @@ export default function ProductDetailsSummary({ cart, product, onAddCart, onGoto
               </MenuItem>
             ))}
           </RHFSelect>
-        </Stack>
+        </Stack> */}
 
         <Stack direction="row" justifyContent="space-between">
           <Typography variant="subtitle2" sx={{ height: 36, lineHeight: '36px' }}>

@@ -241,7 +241,7 @@ const newConfig = [
     items: [
       {
         title: 'dashboard',
-        path: PATH_DASHBOARD.root,
+        path: PATH_DASHBOARD.app,
         icon: ICONS.dashboard,
 
       },
@@ -276,6 +276,11 @@ const newConfig = [
         //   { title: 'edit', path: PATH_DASHBOARD.books.editById },
         //   { title: 'details', path: PATH_DASHBOARD.books.detailsById },
         // ],
+      },
+      {
+        title: 'ecommerce',
+        path: PATH_DASHBOARD.eCommerce.root,
+        icon: ICONS.cart,
       },
       {
         title: 'calendar',
