@@ -12,13 +12,13 @@ import FormProvider, { RHFSwitch } from '../../../../components/hook-form';
 const ACTIVITY_OPTIONS = [
   {
     value: 'activityComments',
-    label: 'Email me when someone comments onmy article',
+    label: 'Email me when someone comments on my article',
   },
   {
     value: 'activityAnswers',
     label: 'Email me when someone answers on my form',
   },
-  { value: 'activityFollows', label: 'Email me hen someone follows me' },
+  { value: 'activityFollows', label: 'Email me when someone follows me' },
 ];
 
 const APPLICATION_OPTIONS = [

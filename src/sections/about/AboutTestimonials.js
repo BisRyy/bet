@@ -13,43 +13,42 @@ import Iconify from '../../components/iconify';
 import { MotionViewport, varFade } from '../../components/animate';
 
 // ----------------------------------------------------------------------
-
 const TESTIMONIALS = [
   {
     name: 'Jenny Wilson',
     rating: 5,
-    dateCreate: new Date(),
+    dateCreate: new Date('2022-05-25'),
     content: `Excellent Work! Thanks a lot!`,
   },
   {
-    name: 'Cody Fisher',
+    name: 'Amanuel T., Addis Ababa',
     rating: 5,
     dateCreate: new Date(),
-    content: `It's a very good dashboard and we are really liking the product . We've done some things, like migrate to TS and implementing a react useContext api, to fit our job methodology but the product is one of the best in terms of design and application architecture. The team did a really good job.`,
+    content: `The course features are comprehensive and well-structured, allowing me to deepen my understanding of our faith at my own pace. The blogs offer insightful articles that help me explore different aspects of spirituality, while the spiritual calendar keeps me connected to important dates and events. `,
   },
   {
-    name: 'Marvin McKinney',
+    name: 'Selamawit K., Gondar',
     rating: 5,
-    dateCreate: new Date(),
-    content: `Customer support is realy fast and helpful the desgin of this theme is looks amazing also the code is very clean and readble realy good job !`,
+    dateCreate: new Date('2023-02-23'),
+    content: `As a lifelong member of the Ethiopian Orthodox Tewahedo Church, I've always sought ways to expand my knowledge and spiritual growth. `,
   },
   {
-    name: 'Darrell Steward',
+    name: 'Yared M., Lalibela',
     rating: 5,
     dateCreate: new Date(),
-    content: `Amazing, really good code quality and gives you a lot of examples for implementations.`,
+    content: `Amazing, really good quality videos!`,
   },
   {
-    name: 'Jacob Jones',
+    name: 'Bethlehem A., Axum',
     rating: 5,
-    dateCreate: new Date(),
-    content: `Got a few questions after purchasing the product. The owner responded very fast and very helpfull. Overall the code is excellent and works very good. 5/5 stars!`,
+    dateCreate: new Date('2022-12-01'),
+    content: `The blog sections thought-provoking articles that have broadened my understanding of our faith and challenged me to grow spiritually. The inclusion of a spiritual calendar is a wonderful touch, helping me stay connected to our traditions throughout the year.`,
   },
   {
-    name: 'Bessie Cooper',
+    name: 'Dawit H., Dire Dawa',
     rating: 5,
-    dateCreate: new Date(),
-    content: `CEO of Codealy.io here. We’ve built a developer assessment platform that makes sense - tasks are based on git repositories and run in virtual machines. We automate the pain points - storing candidates code, running it and sharing test results with the whole team, remotely. Bought this template as we need to provide an awesome dashboard for our early customers. I am super happy with purchase. The code is just as good as the design. Thanks!`,
+    dateCreate: new Date('2021-10-10'),
+    content: `The spiritual calendar keeps me connected to our religious traditions and ensures I never miss an important occasion. The chat feature is an excellent tool for seeking guidance and connecting with fellow believers. This platform has truly deepened my knowledge of the Ethiopian Orthodox Tewahedo Church and strengthened my faith.`,
   },
 ];
 
@@ -97,16 +96,31 @@ export default function AboutTestimonials() {
 
               <m.div variants={varFade().inUp}>
                 <Typography variant="h2" sx={{ mb: 3, color: 'common.white' }}>
-                  Who love <br />
-                  my work
+                  What our students say
                 </Typography>
               </m.div>
 
               <m.div variants={varFade().inUp}>
                 <Typography sx={{ color: 'common.white' }}>
-                  Our goal is to create a product and service that you’re satisfied with and use it
-                  every day. This is why we’re constantly working on our services to make it better
-                  every day and really listen to what our users has to say.
+                  Our goal's are 
+                  <br />
+                  <br />
+                  To organize the youth, who are the children of the church, in higher education
+                  under the association and provide them with the teachings of the church.
+                  <br />
+                  <br />
+                  To expand evangelism with various means (ministry, publication, audio and video
+                  recordings) in cooperation with the pertinent church bodies.
+                  <br />
+                  <br />
+                  To prepare conditions that enable the educated section of the society support the
+                  Orthodox Church with his/her knowledge and assets.
+                  <br />
+                  <br />
+                  To enable the members of the association render free and humanitarian service. To
+                  preserve the generation of the dignity and fame of the church fathers.
+                  <br />
+                  <br />
                 </Typography>
               </m.div>
 

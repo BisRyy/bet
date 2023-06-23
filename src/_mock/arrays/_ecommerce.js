@@ -4,14 +4,14 @@ import _mock from '../_mock';
 
 const COUNTRY = ['de', 'en', 'fr', 'kr', 'us'];
 
-const CATEGORY = ['CAP', 'Branded Shoes', 'Headphone', 'Cell Phone', 'Earings'];
+const CATEGORY = ['Books', 'Cloth', 'Prayer', 'Cross', 'Others'];
 
 const PRODUCT_NAME = [
-  'Small Granite Computer',
-  'Small Rubber Mouse',
-  'Awesome Rubber Hat',
-  'Sleek Cotton Sausages',
-  'Rustic Wooden Chicken',
+  'Holy Bible',
+  'Cross Necklace',
+  'Candle',
+  'Ethiopian Cross',
+  'Prayer Book',
 ];
 
 export const _ecommerceSalesOverview = [...Array(3)].map((_, index) => ({
@@ -46,11 +46,16 @@ export const _ecommerceLatestProducts = [...Array(5)].map((_, index) => ({
 export const _ecommerceNewProducts = [...Array(5)].map((_, index) => ({
   id: _mock.id(index),
   name: [
-    'Nike Air Max 97',
-    'Nike Zoom Gravity',
-    'Nike DBreak-Type',
-    'Kyrie Flytrap 3 EP Basketball Shoe',
-    'Nike Air Max Fusion Men',
+    'Religious T-shirt',
+    'Pendant',
+    'Clergy Robe',
+    'Holy Water Bottle',
+    'Wooden Cross',
+    'Religious Wall Hanging',
+    'Ethiopian Orthodox Calendar',
+    'Religious Keychain',
+    'Religious Tapestry',
+    'Ethiopian Orthodox Cross Stitch Kit',
   ][index],
   image: _mock.image.product(index),
 }));

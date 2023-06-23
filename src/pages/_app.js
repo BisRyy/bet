@@ -49,8 +49,6 @@ import SnackbarProvider from '../components/snackbar';
 import { MotionLazyContainer } from '../components/animate';
 import { ThemeSettings, SettingsProvider } from '../components/settings';
 
-// Check our docs
-// https://docs.minimals.cc/authentication/js-version
 
 import { AuthProvider } from '../auth/JwtContext';
 // import { AuthProvider } from '../auth/Auth0Context';

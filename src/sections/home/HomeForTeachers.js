@@ -6,7 +6,7 @@ import { Box, Grid, Container, Typography, Button } from '@mui/material';
 // utils
 import { filterStyles, textGradient, bgGradient } from '../../utils/cssStyles';
 // routes
-import { PATH_FIGMA_PREVIEW, PATH_PAGE } from '../../routes/paths';
+import { PATH_PAGE } from '../../routes/paths';
 // components
 import Iconify from '../../components/iconify';
 import { MotionViewport, varFade } from '../../components/animate';

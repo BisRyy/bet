@@ -3,7 +3,7 @@
 import { features } from "process";
 
 // IF THIS TRANSLATION IS INCORRECT PLEASE IGNORE THIS AS THIS TRANSLATION IS FOR DEMO PURPOSES ONLY
-// We are happy if you can help improve the translation by sending an email to support@minimals.cc.
+// We are happy if you can help improve the translation by sending an email to dev@bisrat.tech.
 
 // ----------------------------------------------------------------------
 
@@ -39,7 +39,7 @@ const en = {
       subtitle: `Enter your email address below and we'll send you a link to reset your password.`,
       subtitle2: `Return to sign in`,
     },
-    new_password:{
+    new_password: {
       title: `New Password`,
       main_title: `Request sent successfully!`,
       subtitle: ` We've sent a 6-digit confirmation email to your email.`,
@@ -47,100 +47,125 @@ const en = {
       subtitle3: `Don't have a code?`,
       subtitle4: `Resend code`,
       subtitle5: `Return to sign in`,
-    }
+    },
   },
   beteliq: `Beteliq`,
   header: {
     login: `ወደ ትምህርት`,
   },
-  home:{
-    hero:{
+  home: {
+    hero: {
       title: `Learn all about`,
       subtitle: `Orthodox.`,
       description: `Get books, courses, blogs and more resources to learn about orthodox.`,
       button1: `Get Started`,
       button2: `Register`,
     },
-    features:{
+    features: {
       title: `All resources`,
       title2: `at one place `,
       subtitle: `Beteliq`,
       Blogs: {
         icon: ' /assets/icons/home/ic_make_brand.svg',
         title: 'Blogs',
-        description: 'Read News and posts about the  Ethiopian Orthodox Tewahido Church every day from your convinence without getting inturrupted from the original source.',
+        description:
+          'Read News and posts about the  Ethiopian Orthodox Tewahido Church every day from your convinence without getting inturrupted from the original source.',
       },
-      Courses:{
+      Courses: {
         icon: ' /assets/icons/home/ic_development.svg',
         title: 'Courses',
-        description: 'Curated teachings of the Ethiopian Orthodox Tewahido Church in video and audio format thought by experianced teachers across the country in different languages',
+        description:
+          'Curated teachings of the Ethiopian Orthodox Tewahido Church in video and audio format thought by experianced teachers across the country in different languages',
       },
-      Books:{
+      Books: {
         icon: ' /assets/icons/home/ic_design.svg',
         title: 'Books',
         description:
           'Large set of books to read ang learn about ortodox. Books in different language are provided in pdf format which you can download and ready from anywhere.',
       },
     },
-    books:{
+    books: {
       title: `Huge library`,
       title2: `of Books`,
       subtitle: `Read From anywhere`,
       description: `With our easily custumizable platform you can read, teach and share your knowledge easily. The platfotm supports all languages nationally as well as internationally.`,
       viewAll: `View All Books`,
     },
-    for_teachers:{
+    for_teachers: {
       title: `For Teachers`,
       subtitle: `Full fledged blog`,
       description: `With our easily custumizable platform you can teach and share your knowledge easily. The platfotm supports all languages nationally as well as internationally.`,
       button: `Teach with us`,
     },
-    dark_mode:{
+    dark_mode: {
       title: `Dark Mode`,
       subtitle: `Easy switch between styles.`,
       description: `We care about your eyes, focus on your reading at any time of the day or night.`,
     },
-    looking_for:{
+    looking_for: {
       subtitle: `Liked our work?`,
       title: `Looking for a similar solution?`,
       button: `Contact the Developer`,
     },
-    start:{
+    start: {
       title: `Start learning`,
       title2: `with Beteliq`,
       description: `The kit is built on the principles of the atomic design system. It helps you to create projects fastest and easily customized packages for your projects.`,
       button: `Get Started`,
       button2: `Register`,
-    }
+    },
   },
   dashboard: {
-    dashboard:{
+    dashboard: {
       title: `Dashboard`,
     },
-    blog:{
+    blog: {
       title: `Blogs`,
       subtitle: `All blogs`,
       newPost: `New Blog`,
-      editBlog: `Edit Blog`,
+      editCourse: `Edit Blog`,
       deleteBlog: `Delete Blog`,
     },
-    books:{
+    courses: {
+      new: `New Course`,
+      title: `Courses`,
+      subtitle: `All Courses`,
+      editCourse: `Edit Course`,
+      deleteCourse: `Delete Course`,
+    },
+    books: {
       title: `Books`,
     },
-    courses:{
-      title: `Courses`,
-    },
-    chat:{
+    chat: {
       title: `chat`,
     },
-    calendar:{
-      title:`calendar`,
+    calendar: {
+      title: `calendar`,
     },
-    ecommerce:{
-      title:`ecommerce`,
-    }
+    ecommerce: {
+      title: `ecommerce`,
+    },
+    users: {
+      title: `users`,
+      list: `list`,
+      new: `new`,
+      edit: `edit`,
+    },
+    products: {
+      title: `products`,
+      list: `list`,
+      new: `new`,
+    },
+    admin: {
+      title: `admin`,
+    },
+    sells: {
+      title: `sells`,
+    },
+    analytics: {
+      title: `analytics`,
+    },
   },
-
 
   demo: {
     title: `English`,

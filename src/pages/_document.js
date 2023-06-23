@@ -34,7 +34,7 @@ export default class MyDocument extends Document {
           {/* Meta */}
           <meta
             name="description"
-            content="The starting point for your next project with Bete Liq Kit, built on the newest version of Material-UI ©, ready to be customized to your style"
+            content="The Bete Liq Education platform is a web application designed to provide spiritual education to members of the Ethiopian Orthodox Tewahedo Church. The platform is intended to serve as a digital learning resource, providing a wide range of spiritual content and educational materials for users to access from the comfort of their homes."
           />
           <meta name="keywords" content="react,material,kit,application,dashboard,admin,template" />
           <meta name="author" content="Bete Liq Kit" />

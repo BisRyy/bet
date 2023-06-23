@@ -6,7 +6,7 @@ import { Box, Grid, Link, Stack, Divider, Container, Typography, IconButton } fr
 // routes
 import { PATH_PAGE } from '../../routes/paths';
 // _mock
-// import { _socials } from '../../_mock/arrays';
+import { _socials } from '../../_mock/arrays';
 // components
 import Logo from '../../components/logo';
 import Iconify from '../../components/iconify';
@@ -15,7 +15,7 @@ import Iconify from '../../components/iconify';
 
 const LINKS = [
   {
-    headline: 'Minimal',
+    headline: 'Beteliq',
     children: [
       { name: 'About us', href: PATH_PAGE.about },
       { name: 'Contact us', href: PATH_PAGE.contact },
@@ -32,8 +32,8 @@ const LINKS = [
   {
     headline: 'Contact',
     children: [
-      { name: 'support@minimals.cc', href: '#' },
-      { name: 'Los Angeles, 359  Hidden Valley Road', href: '#' },
+      { name: 'dev@bisrat.tech', href: 'mailto:dev@bisrat.tech' },
+      { name: 'AASTU, Addis Ababa, Ethiopia', href: '#' },
     ],
   },
 ];
@@ -60,10 +60,25 @@ export default function Footer() {
 
         <Typography variant="caption" component="div">
           © All rights reserved
-          <br /> made by &nbsp;
-          <Link href="https://bisrat.tech/"> Bisrat Kebere </Link>
+          <br /> Made by &nbsp;
+          <Link href="https://bisrat.tech/" target='_blank' > Bisrat Kebere </Link>
         </Typography>
       </Container>
+      <Stack
+        spacing={1}
+        direction="row"
+        justifyContent='center'
+        sx={{
+          mt: 1,
+          mb: { xs: 5, md: 3 },
+        }}
+      >
+        {_socials.map((social) => (
+          <IconButton key={social.name} href={social.path} target="_blank">
+            <Iconify icon={social.icon} />
+          </IconButton>
+        ))}
+      </Stack>
     </Box>
   );
 
@@ -97,25 +112,11 @@ export default function Footer() {
 
           <Grid item xs={8} md={3}>
             <Typography variant="body2" sx={{ pr: { md: 5 } }}>
-              The starting point for your next project with Bete Liq Kit, built on the newest
-              version of Material-UI ©, ready to be customized to your style.
+              The "Bete Liq" Education platform is a web application designed to provide spiritual
+              education to members of the Ethiopian Orthodox Tewahedo Church. The platform is
+              intended to serve as a digital learning resource, providing a wide range of spiritual
+              content and educational materials for users to access from the comfort of their homes.
             </Typography>
-
-            {/* <Stack
-              spacing={1}
-              direction="row"
-              justifyContent={{ xs: 'center', md: 'flex-start' }}
-              sx={{
-                mt: 5,
-                mb: { xs: 5, md: 0 },
-              }}
-            >
-              {_socials.map((social) => (
-                <IconButton key={social.name}>
-                  <Iconify icon={social.icon} />
-                </IconButton>
-              ))}
-            </Stack> */}
           </Grid>
 
           <Grid item xs={12} md={7}>

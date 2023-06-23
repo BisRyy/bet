@@ -31,7 +31,7 @@ export default function Profile({ info, posts }) {
             school={info.school}
           />
 
-          <ProfileSocialInfo socialLinks={info.socialLinks} />
+          {/* <ProfileSocialInfo socialLinks={info.socialLinks} /> */}
         </Stack>
       </Grid>
 

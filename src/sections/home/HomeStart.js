@@ -5,7 +5,7 @@ import { Button, Box, Container, Stack } from '@mui/material';
 // utils
 import { bgGradient } from '../../utils/cssStyles';
 // routes
-import { PATH_AUTH, PATH_DASHBOARD, PATH_FREE_VERSION, PATH_MINIMAL_ON_STORE, PATH_PAGE } from '../../routes/paths';
+import { PATH_AUTH, PATH_DASHBOARD, PATH_PAGE } from '../../routes/paths';
 // components
 import Iconify from '../../components/iconify';
 import Image from '../../components/image';

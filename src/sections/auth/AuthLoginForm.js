@@ -31,8 +31,8 @@ export default function AuthLoginForm() {
   });
 
   const defaultValues = {
-    email: 'dev@bisrat.tech',
-    password: 'demo1234',
+    email: '',
+    password: '',
   };
 
   const methods = useForm({

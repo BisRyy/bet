@@ -9,9 +9,9 @@ import { TextAnimate, MotionContainer, varFade } from '../../components/animate'
 
 const CONTACTS = [
   {
-    country: 'Bali',
-    address: '508 Bridle Avenue Newnan, GA 30263',
-    phoneNumber: '(239) 555-0108',
+    country: 'Ethiopia',
+    address: '5 Kilo, Addis Ababa',
+    phoneNumber: '(251) 92555-0115',
   },
   {
     country: 'London',
@@ -19,7 +19,7 @@ const CONTACTS = [
     phoneNumber: '(319) 555-0115',
   },
   {
-    country: 'Prague',
+    country: 'Israel',
     address: '508 Bridle Avenue Newnan, GA 30263',
     phoneNumber: '(252) 555-0126',
   },
@@ -34,7 +34,7 @@ const StyledRoot = styled('div')(({ theme }) => ({
   position: 'relative',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  backgroundImage: 'url(/assets/background/overlay_1.svg), url(/assets/images/contact/hero.jpg)',
+  backgroundImage: 'url(/assets/background/overlay_1.svg), url(/assets/images/eotcmk.jpg)',
   padding: theme.spacing(10, 0),
   [theme.breakpoints.up('md')]: {
     height: 560,

@@ -9,8 +9,6 @@ import { Button, Box, Link, Container, Typography, Stack, Grid, Rating } from '@
 import {
   PATH_AUTH,
   PATH_DASHBOARD,
-  PATH_FIGMA_PREVIEW,
-  PATH_FREE_VERSION,
 } from '../../routes/paths';
 // hooks
 import useResponsive from '../../hooks/useResponsive';

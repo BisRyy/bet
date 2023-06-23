@@ -5,7 +5,6 @@ import { Box, Button, Container, Typography, Grid, Stack } from '@mui/material';
 // hooks
 import useResponsive from '../../hooks/useResponsive';
 // routes
-import { PATH_ZONE_ON_STORE } from '../../routes/paths';
 // components
 import Image from '../../components/image';
 import Iconify from '../../components/iconify';

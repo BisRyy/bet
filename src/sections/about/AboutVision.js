@@ -18,7 +18,7 @@ export default function AboutVision() {
           position: 'relative',
         }}
       >
-        <Image src="/assets/images/about/vision.jpg" alt="about-vision" />
+        <Image src="/assets/images/home/for_teachers.png" alt="about-vision" />
 
         <Stack
           direction="row"
@@ -32,7 +32,7 @@ export default function AboutVision() {
             position: 'absolute',
           }}
         >
-          {['ibm', 'lya', 'spotify', 'netflix', 'hbo', 'amazon'].map((logo) => (
+          {/* {['ibm', 'lya', 'spotify', 'netflix', 'hbo', 'amazon'].map((logo) => (
             <m.div key={logo} variants={varFade().in}>
               <Image
                 alt={logo}
@@ -43,13 +43,27 @@ export default function AboutVision() {
                 }}
               />
             </m.div>
-          ))}
+          ))} */}
         </Stack>
       </Box>
 
       <m.div variants={varFade().inUp}>
-        <Typography variant="h3" sx={{ textAlign: 'center', maxWidth: 800, mx: 'auto' }}>
-          Our vision offering the best product nulla vehicula tortor scelerisque ultrices malesuada.
+        <Typography variant="h2" sx={{ mb: 3, textAlign: 'center' }}>
+          Necessity
+        </Typography>
+        <Typography variant="h5" sx={{ maxWidth: 800, mx: 'auto' }}>
+          To keep the youth in higher institutions who baptized and become children of the Holy
+          Spirit from heretics who use various means to trap and deviate to their belief.
+          <br />
+          <br />
+          To design favorable means for students of higher institutions to know and preserve as well
+          as pass to the next generation the canon and tradition of the church passed on to them by
+          forefathers of the church.
+          <br />
+          <br />
+          To enable the youth overcome the social problems up on graduation and in serving their
+          country and the church with their profession. To follow up the youth's adherence and
+          practice of the orthodox belief.
         </Typography>
       </m.div>
     </Container>

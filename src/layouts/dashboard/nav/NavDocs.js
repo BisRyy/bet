@@ -4,8 +4,6 @@ import { Stack, Button, Typography, Box } from '@mui/material';
 import { useAuthContext } from '../../../auth/useAuthContext';
 // locales
 import { useLocales } from '../../../locales';
-// routes
-import { PATH_DOCS } from '../../../routes/paths';
 import { useSnackbar } from 'notistack';
 import { useRouter } from 'next/router';
 

@@ -10,7 +10,6 @@ import { bgBlur } from '../../utils/cssStyles';
 // config
 import { HEADER, PATH_AFTER_LOGIN } from '../../config-global';
 // routes
-import { PATH_DASHBOARD, PATH_DOCS, PATH_MINIMAL_ON_STORE } from '../../routes/paths';
 // components
 import Logo from '../../components/logo';
 import Label from '../../components/label';

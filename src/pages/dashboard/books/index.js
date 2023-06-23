@@ -29,7 +29,7 @@ export default function Books() {
         my: 3,
       }}
     >
-      <h1> Dashboard Books are Here </h1>
+      <h1> EOTC Library </h1>
       <Grid container spacing={3}>
         {books.map((book, index) => (
           <Grid key={index} item xs={6} sm={4} md={3}>
