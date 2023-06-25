@@ -1,4 +1,4 @@
-# Bete Liq Educaton Platform
+# Bete Liq Education Platform
 > The Bete Liq Education Platform is a comprehensive web application designed to provide spiritual education and resources to members of the Ethiopian Orthodox Tewahdo Church. The platform features a blog section for
 > teachers to post spiritual content, a course section for students to access audio and video courses, a book library, a calendar for accessing information about holy day ceremonies, and a chat feature to connect with
 > fellow Christians.
@@ -18,9 +18,9 @@
 
 ## Installation
 Clone the repository:
-'''bash
+```bash
 git clone https://github.com/BisRyy/bet.git
-'''
+```
 
 ### USING YARN (Recommend)
 
