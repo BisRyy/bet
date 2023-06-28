@@ -1,14 +1,9 @@
 import { Schema, model, models } from 'mongoose';
 
 const testSchema = new Schema({
-  name: String,
-  email: {
-    type: String,
-    required: true,
-    unique: true,
-  },
+  name: {},
 });
 
-const Test = models.Test || model('Test', testSchema);
+const Test = models.Test2 || model('Test2', testSchema);
 
 export default Test;
