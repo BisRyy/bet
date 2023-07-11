@@ -34,6 +34,7 @@
     "@hello-pangea/dnd": "^16.2.0",
     "@hookform/resolvers": "^2.9.10",
     "@iconify/react": "^4.0.1",
+    "@loglib/tracker": "^0.4.3",
     "@mui/lab": "^5.0.0-alpha.116",
     "@mui/material": "^5.11.5",
     "@mui/system": "^5.11.5",
