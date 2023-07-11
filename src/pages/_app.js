@@ -55,6 +55,9 @@ import { AuthProvider } from '../auth/JwtContext';
 // import { AuthProvider } from '../auth/FirebaseContext';
 // import { AuthProvider } from '../auth/AwsCognitoContext';
 
+// Analytics
+import Loglib from '@loglib/tracker/react';
+
 // ----------------------------------------------------------------------
 
 const clientSideEmotionCache = createEmotionCache();
@@ -88,6 +91,12 @@ export default function MyApp(props) {
                         <StyledChart />
                         <ProgressBar />
                         {getLayout(<Component {...pageProps} />)}
+                        <Loglib
+                          config={{
+                            id: 'liq',
+                            host: 'https://www.loglib.io',
+                          }}
+                        />
                       </SnackbarProvider>
                     </ThemeLocalization>
                   </ThemeSettings>
