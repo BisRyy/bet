@@ -37,9 +37,9 @@ const { translate } = useLocales();
         </Stack>
       </Stack>
 
-      <Alert severity="info" sx={{ mb: 3 }}>
+      {/* <Alert severity="info" sx={{ mb: 3 }}>
         Use email : <strong>dev@bisrat.tech</strong> / password :<strong> demo1234</strong> for Admin access
-      </Alert>
+      </Alert> */}
 
       <AuthLoginForm />
 
