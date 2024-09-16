@@ -5,16 +5,16 @@
 // ----------------------------------------------------------------------
 
 const en = {
-    home:{
-        hero:{
-          title: `Waa'e Orthodox`,
-          subtitle: `Nan Baradha.`,
-          description: `Barnota bataskaana, kitabota amanti adda adda fi oduwwan amanti bakkuma jirtaniti argadha.`,
-          button1: `Gara Barnota`,
-          button2: "Galma'i",
-        }
+  home: {
+    hero: {
+      title: `Waa'e Orthodox`,
+      subtitle: `Nan Baradha.`,
+      description: `Barnota bataskaana, kitabota amanti adda adda fi oduwwan amanti bakkuma jirtaniti argadha.`,
+      button1: `Gara Barnota`,
+      button2: 'Telegram Community',
     },
-    
+  },
+
   Blogs: `Barnota`,
   Books: `Kitaabota`,
   Courses: `Farfanna`,
@@ -26,8 +26,7 @@ const en = {
   Course: `Farfanna`,
   blog: `Barnota`,
   book: `Kitaaba`,
-  course: `Farfanna`
-  };
-  
-  export default en;
-  
+  course: `Farfanna`,
+};
+
+export default en;

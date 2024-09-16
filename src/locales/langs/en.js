@@ -51,7 +51,7 @@ const en = {
   },
   beteliq: `Beteliq`,
   header: {
-    login: `ወደ ትምህርት`,
+    login: `Blogs`,
   },
   home: {
     hero: {
@@ -59,7 +59,7 @@ const en = {
       subtitle: `Orthodox.`,
       description: `Get books, courses, blogs and more resources to learn about orthodox.`,
       button1: `Get Started`,
-      button2: `Register`,
+      button2: `Telegram Community`,
     },
     features: {
       title: `All resources`,
@@ -111,8 +111,8 @@ const en = {
       title: `Start learning`,
       title2: `with Beteliq`,
       description: `The kit is built on the principles of the atomic design system. It helps you to create projects fastest and easily customized packages for your projects.`,
-      button: `Get Started`,
-      button2: `Register`,
+      button: `Start Learning`,
+      button2: `Telegram Community`,
     },
   },
   dashboard: {

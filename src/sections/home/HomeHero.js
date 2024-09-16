@@ -177,7 +177,7 @@ function Description({ t }) {
           <Stack alignItems="center" spacing={2}>
             <Button
               component={NextLink}
-              href={PATH_DASHBOARD.root}
+              href={'/blogs'}
               color="inherit"
               size="large"
               variant="contained"
@@ -201,7 +201,7 @@ function Description({ t }) {
             startIcon={<Iconify icon="oi:account-login" width={24} height={24} />}
             target="_blank"
             rel="noopener"
-            href={PATH_AUTH.login}
+            href={'https://t.me/lost_and_found_orthodox'}
             sx={{ borderColor: 'text.primary' }}
           >
             {t('home.hero.button2')}

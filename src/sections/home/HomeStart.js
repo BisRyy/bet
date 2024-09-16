@@ -16,7 +16,7 @@ import { useLocales } from '../../locales';
 
 export default function HomeAdvertisement() {
   const theme = useTheme();
-  const { translate:t } = useLocales()
+  const { translate: t } = useLocales();
 
   return (
     <Container component={MotionViewport}>
@@ -71,7 +71,7 @@ function Description({ t }) {
             color="inherit"
             size="large"
             variant="contained"
-            href={PATH_DASHBOARD.root}
+            href={"/blogs"}
             sx={{
               color: 'grey.800',
               bgcolor: 'common.white',
@@ -86,7 +86,7 @@ function Description({ t }) {
             color="inherit"
             size="large"
             variant="outlined"
-            href={PATH_AUTH.login}
+            href={'https://t.me/lost_and_found_orthodox'}
             endIcon={<Iconify icon="eva:external-link-fill" width={16} sx={{ mr: 0.5 }} />}
             sx={{ color: 'common.white', '&:hover': { borderColor: 'currentColor' } }}
           >

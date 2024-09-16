@@ -60,15 +60,15 @@ export default function Header() {
 
           {isDesktop && <NavDesktop isOffset={isOffset} data={navConfig} />}
 
-          <Button variant="contained" rel="noopener" href={PATH_AFTER_LOGIN}>
+          <LanguagePopover />
+
+          <Button variant="contained" rel="noopener" href={"/blogs"}>
             {t('header.login')}
           </Button>
 
           {!isDesktop && <NavMobile isOffset={isOffset} data={navConfig} />}
 
-          <Box sx={{ flexGrow: .5 }} />
-
-          <LanguagePopover />
+          {/* <Box sx={{ flexGrow: 0.5 }} /> */}
         </Container>
       </Toolbar>
 

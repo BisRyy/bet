@@ -6,20 +6,20 @@ import NextLink from 'next/link';
 // @mui
 import { Grid, Button, Container, Stack } from '@mui/material';
 // utils
-import axios from '../../../utils/axios';
+import axios from '../utils/axios';
 // routes
-import { PATH_DASHBOARD } from '../../../routes/paths';
+import { PATH_DASHBOARD } from '../routes/paths';
 // layouts
-import DashboardLayout from '../../../layouts/dashboard';
+import DashboardLayout from '../layouts/dashboard';
+import MainLayout from '../layouts/main';
 // components
-import Iconify from '../../../components/iconify';
-import { SkeletonPostItem } from '../../../components/skeleton';
-import { useSettingsContext } from '../../../components/settings';
-import CustomBreadcrumbs from '../../../components/custom-breadcrumbs';
+import Iconify from '../components/iconify';
+import { SkeletonPostItem } from '../components/skeleton';
+import { useSettingsContext } from '../components/settings';
+import CustomBreadcrumbs from '../components/custom-breadcrumbs';
 // sections
-import { BlogPostCard, BlogPostsSort, BlogPostsSearch } from '../../../sections/@dashboard/blog';
-import { useLocales } from '../../../locales';
-import { useAuthContext } from '../../../auth/useAuthContext';
+import { BlogPostCard, BlogPostsSort, BlogPostsSearch } from '../sections/@dashboard/blog';
+import { useLocales } from '../locales';
 
 // ----------------------------------------------------------------------
 
@@ -31,7 +31,7 @@ const SORT_OPTIONS = [
 
 // ----------------------------------------------------------------------
 
-BlogPostsPage.getLayout = (page) => <DashboardLayout>{page}</DashboardLayout>;
+BlogPostsPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 
 // ----------------------------------------------------------------------
 
@@ -45,8 +45,6 @@ export default function BlogPostsPage() {
   const [sortBy, setSortBy] = useState('latest');
 
   const sortedPosts = applySortBy(posts, sortBy);
-
-  const { user } = useAuthContext();
 
   const getAllPosts = useCallback(async () => {
     try {
@@ -73,34 +71,32 @@ export default function BlogPostsPage() {
         </title>
       </Head>
 
-      <Container maxWidth={themeStretch ? false : 'lg'}>
+      <Container maxWidth={themeStretch ? false : 'lg'} sx={{ mb: 10 }}>
         <CustomBreadcrumbs
-          heading="Blog"
+          heading="Orthodox Learnings"
           links={[
+            // {
+            //   name: 'Dashboard',
+            //   href: PATH_DASHBOARD.root,
+            // },
             {
-              name: 'Dashboard',
-              href: PATH_DASHBOARD.root,
+              name: 'Blogs',
+              href: '/blogs',
             },
-            {
-              name: 'Blog',
-              href: PATH_DASHBOARD.blog.root,
-            },
-            {
-              name: 'Posts',
-            },
+            // {
+            //   name: 'Posts',
+            // },
           ]}
-          action={
-            user.role === 'admin' && (
-              <Button
-                component={NextLink}
-                href={PATH_DASHBOARD.blog.new}
-                variant="contained"
-                startIcon={<Iconify icon="eva:plus-fill" />}
-              >
-                {t('dashboard.blog.newPost')}
-              </Button>
-            )
-          }
+          //   action={
+          //     <Button
+          //       component={NextLink}
+          //       href={PATH_DASHBOARD.blog.new}
+          //       variant="contained"
+          //       startIcon={<Iconify icon="eva:plus-fill" />}
+          //     >
+          //       {t('dashboard.blog.newPost')}
+          //     </Button>
+          //   }
         />
 
         <Stack mb={5} direction="row" alignItems="center" justifyContent="space-between">
