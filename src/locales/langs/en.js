@@ -1,6 +1,6 @@
 // ----------------------------------------------------------------------
 
-import { features } from "process";
+import { features } from 'process';
 
 // IF THIS TRANSLATION IS INCORRECT PLEASE IGNORE THIS AS THIS TRANSLATION IS FOR DEMO PURPOSES ONLY
 // We are happy if you can help improve the translation by sending an email to dev@bisrat.tech.
@@ -10,7 +10,7 @@ import { features } from "process";
 const en = {
   auth: {
     welcome: `Welcome`,
-    welcomeDescription: `Welcome back, please login to your account.`,
+    welcomeDescription: `Welcome to Beteliq, Learn all about Orthodox.`,
     hi: `Hi`,
     login: `Login`,
     login_title: `Login to your account`,

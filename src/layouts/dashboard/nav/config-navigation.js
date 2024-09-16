@@ -63,17 +63,20 @@ const newConfig = [
         title: 'ecommerce',
         path: PATH_DASHBOARD.eCommerce.root,
         icon: ICONS.cart,
+        roles: ['admin'],
       },
       {
         title: 'calendar',
         path: PATH_DASHBOARD.calendar,
         icon: ICONS.calendar,
+        roles: ['admin'],
       },
       {
         title: 'chat',
         path: PATH_DASHBOARD.chat.root,
         icon: ICONS.chat,
         caption: 'This feature is under development',
+        roles: ['admin'],
       },
       {
         title: 'admin',

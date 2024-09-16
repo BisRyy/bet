@@ -61,13 +61,16 @@ export default function Footer() {
         <Typography variant="caption" component="div">
           © All rights reserved
           <br /> Made by &nbsp;
-          <Link href="https://bisrat.tech/" target='_blank' > Bisrat Kebere </Link>
+          <Link href="https://bisry.me/" target="_blank">
+            {' '}
+            Bisrat Kebere{' '}
+          </Link>
         </Typography>
       </Container>
       <Stack
         spacing={1}
         direction="row"
-        justifyContent='center'
+        justifyContent="center"
         sx={{
           mt: 1,
           mb: { xs: 5, md: 3 },
