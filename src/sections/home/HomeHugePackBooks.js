@@ -173,14 +173,14 @@ function Content() {
   return (
     <StyledContent>
       <Scrollbar>
-        <Stack spacing={5} sx={{ px: 2, py: 5 }}>
-          <Grid container spacing={5}>
+        <Stack spacing={5} sx={{ px: 2, py: 2 }}>
+          <Grid container spacing={{ xs: 1, sm: 2, md: 4 }} overflow={'hidden'}>
             {books.slice(0, 9).map((book) => (
               <Grid key={book._id} item xs={4} sm={4} md={4}>
                 <m.div variants={varFade().inUp}>
                   <CardMedia
                     component={MotionViewport}
-                    sx={{ height: 180, borderRadius: 2 }}
+                    sx={{ height: 180, borderRadius: 1 }}
                     image={book.image}
                   />
                 </m.div>

@@ -32,16 +32,16 @@ export default function HomeLookingFor() {
         <Grid
           container
           alignItems="center"
-          justifyContent="space-between"
+          justifyContent="space-around"
           spacing={{ xs: 5, md: 0 }}
         >
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={6}>
             <Description t={t} />
           </Grid>
 
-          <Grid item xs={12} md={7}>
+          {/* <Grid item xs={12} md={7}>
             <Content />
-          </Grid>
+          </Grid> */}
 
           {!isDesktop && (
             <Grid item xs={12} sx={{ textAlign: 'center' }}>
@@ -115,7 +115,7 @@ function VisitButton() {
       variant="outlined"
       target="_blank"
       rel="noopener"
-      href="https://bisry.me/"
+      href="https://t.me/anoniQbot"
       endIcon={<Iconify icon="ic:round-arrow-right-alt" />}
     >
       {t('home.looking_for.button')}

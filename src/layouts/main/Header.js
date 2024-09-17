@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 // @mui
 import { useTheme } from '@mui/material/styles';
-import { Box, Button, AppBar, Toolbar, Container, Link } from '@mui/material';
+import { Box, Button, AppBar, Toolbar, Container, Link, IconButton } from '@mui/material';
 // hooks
 import useOffSetTop from '../../hooks/useOffSetTop';
 import useResponsive from '../../hooks/useResponsive';
@@ -19,6 +19,8 @@ import navConfig from './nav/config-navigation';
 import NavDesktop from './nav/desktop';
 import LanguagePopover from '../dashboard/header/LanguagePopover';
 import { useLocales } from '../../locales';
+import { useSettingsContext } from '../../components/settings';
+import SvgColor from '../../components/svg-color';
 
 // ----------------------------------------------------------------------
 
@@ -26,6 +28,8 @@ export default function Header() {
   const theme = useTheme();
 
   const isDesktop = useResponsive('up', 'md');
+
+  const { themeMode, onToggleMode } = useSettingsContext();
 
   const isOffset = useOffSetTop(HEADER.H_MAIN_DESKTOP);
 
@@ -60,9 +64,14 @@ export default function Header() {
 
           {isDesktop && <NavDesktop isOffset={isOffset} data={navConfig} />}
 
+          <IconButton color={themeMode === 'dark' ? 'warning' : 'default'} onClick={onToggleMode}>
+            <SvgColor
+              src={`/assets/icons/setting/ic_${themeMode === 'light' ? 'moon' : 'sun'}.svg`}
+            />
+          </IconButton>
           <LanguagePopover />
 
-          <Button variant="contained" rel="noopener" href={"/blogs"}>
+          <Button variant="contained" rel="noopener" href={'/blogs'}>
             {t('header.login')}
           </Button>
 

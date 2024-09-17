@@ -1,11 +1,12 @@
 import { m } from 'framer-motion';
 // @mui
 import { alpha, styled } from '@mui/material/styles';
-import { Box, Card, Container, Typography, Stack } from '@mui/material';
+import { Box, Card, Container, Typography, Stack, Link } from '@mui/material';
 // components
 import Image from '../../components/image';
 import { MotionViewport, varFade } from '../../components/animate';
 import { useLocales } from '../../locales';
+import NextLink from 'next/link';
 
 // ----------------------------------------------------------------------
 
@@ -13,14 +14,17 @@ const CARDS = [
   {
     icon: ' /assets/icons/home/ic_make_brand.svg',
     title: 'Blogs',
+    link: '/blogs',
   },
   {
     icon: ' /assets/icons/home/ic_design.svg',
     title: 'Books',
+    link: 'https://t.me/lost_and_found_orthodox/4',
   },
   {
     icon: ' /assets/icons/home/ic_development.svg',
     title: 'Courses',
+    link: 'https://t.me/lost_and_found_orthodox',
   },
 ];
 
@@ -43,8 +47,8 @@ const StyledCard = styled(Card)(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 export default function HomeMinimal() {
-  const { translate:t } = useLocales();
-  
+  const { translate: t } = useLocales();
+
   return (
     <StyledRoot>
       <Container component={MotionViewport}>
@@ -100,12 +104,14 @@ export default function HomeMinimal() {
                   sx={{ mx: 'auto', width: 48, height: 48 }}
                 />
 
-                <Typography variant="h5" sx={{ mt: 8, mb: 2 }}>
-                  {t(`home.features.${card.title}.title`)}
-                </Typography>
+                <Link component={NextLink} href={card.link} underline="none">
+                  <Typography variant="h5" sx={{ mt: 8, mb: 2 }} href>
+                    {t(`home.features.${card.title}.title`)}
+                  </Typography>
+                </Link>
 
                 <Typography sx={{ color: 'text.secondary' }}>
-                {t(`home.features.${card.title}.description`)}
+                  {t(`home.features.${card.title}.description`)}
                 </Typography>
               </StyledCard>
             </m.div>

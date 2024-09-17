@@ -81,7 +81,7 @@ const en = {
         icon: ' /assets/icons/home/ic_design.svg',
         title: 'Books',
         description:
-          'Large set of books to read ang learn about ortodox. Books in different language are provided in pdf format which you can download and ready from anywhere.',
+          'Large set of books to read and learn about ortodox. Books in different language are provided in pdf format which you can download and ready from anywhere.',
       },
     },
     books: {
@@ -103,15 +103,15 @@ const en = {
       description: `We care about your eyes, focus on your reading at any time of the day or night.`,
     },
     looking_for: {
-      subtitle: `Liked our work?`,
-      title: `Looking for a similar solution?`,
-      button: `Contact the Developer`,
+      subtitle: `Ecclesiastes 12:1`,
+      title: `Remember your Creator in the days of your youth, before the days of trouble come`,
+      button: `Ask About Orthodox Anonymously`,
     },
     start: {
-      title: `Start learning`,
-      title2: `with Beteliq`,
-      description: `The kit is built on the principles of the atomic design system. It helps you to create projects fastest and easily customized packages for your projects.`,
-      button: `Start Learning`,
+      title: `Help Building Beteliq`,
+      title2: `with Translation, Design as well as Development.`,
+      description: `You can contribute to beteliq by building`,
+      button: `Contribute on Github`,
       button2: `Telegram Community`,
     },
   },
