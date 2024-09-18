@@ -29,7 +29,7 @@ UserTableRow.propTypes = {
 };
 
 export default function UserTableRow({ row, selected, onEditRow, onSelectRow, onDeleteRow }) {
-  const { name, photoURL , company, role, isVerified, status } = row;
+  const { displayName, photoURL , country, role, isPublic, status="active" } = row;
 
   const [openConfirm, setOpenConfirm] = useState(false);
 
@@ -60,15 +60,15 @@ export default function UserTableRow({ row, selected, onEditRow, onSelectRow, on
 
         <TableCell>
           <Stack direction="row" alignItems="center" spacing={2}>
-            <Avatar alt={name} src={photoURL } />
+            <Avatar alt={displayName} src={photoURL } />
 
             <Typography variant="subtitle2" noWrap>
-              {name}
+              {displayName}
             </Typography>
           </Stack>
         </TableCell>
 
-        <TableCell align="left">{company}</TableCell>
+        <TableCell align="left">{country}</TableCell>
 
         <TableCell align="left" sx={{ textTransform: 'capitalize' }}>
           {role}
@@ -76,12 +76,12 @@ export default function UserTableRow({ row, selected, onEditRow, onSelectRow, on
 
         <TableCell align="center">
           <Iconify
-            icon={isVerified ? 'eva:checkmark-circle-fill' : 'eva:clock-outline'}
+            icon={isPublic ? 'eva:checkmark-circle-fill' : 'eva:clock-outline'}
             sx={{
               width: 20,
               height: 20,
               color: 'success.main',
-              ...(!isVerified && { color: 'warning.main' }),
+              ...(!isPublic && { color: 'warning.main' }),
             }}
           />
         </TableCell>
@@ -107,7 +107,7 @@ export default function UserTableRow({ row, selected, onEditRow, onSelectRow, on
         open={openPopover}
         onClose={handleClosePopover}
         arrow="right-top"
-        sx={{ width: 140 }}
+        sx={{ width: 160 }}
       >
         <MenuItem
           onClick={() => {
@@ -125,9 +125,10 @@ export default function UserTableRow({ row, selected, onEditRow, onSelectRow, on
             onEditRow();
             handleClosePopover();
           }}
+          sx={{ color: 'success.main' }}
         >
-          <Iconify icon="eva:edit-fill" />
-          Edit
+          <Iconify icon="material-symbols:upgrade" />
+          Upgrade Role
         </MenuItem>
       </MenuPopover>
 
