@@ -34,7 +34,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     const user = {
-      id: uuidv4(),
       displayName: `${firstName} ${lastName}`,
       email,
       password,
@@ -43,7 +42,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const newuser = await User.create(user);
 
-    const accessToken = sign({ userId: user.id }, JWT_SECRET, {
+    const accessToken = sign({ userId: newuser._id }, JWT_SECRET, {
       expiresIn: JWT_EXPIRES_IN,
     });
 
