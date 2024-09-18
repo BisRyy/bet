@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 // utils
 // import cors from '../../../utils/cors';
 // _mock
-import { JWT_SECRET, JWT_EXPIRES_IN } from '../../../_mock/_account';
+import { users, JWT_SECRET, JWT_EXPIRES_IN } from '../../../_mock/_account';
 import User from '../../../models/user';
 import connectMongo from '../../../lib/dbConnect';
 
@@ -19,7 +19,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { email = '', password, firstName, lastName } = req.body;
 
     await connectMongo();
-    const users = await User.find({});
+    const newUsers = await User.find({});
+
+    newUsers.forEach((user) => {
+      users.push(user);
+    });
 
     const existUser = users.find((_user) => _user.email === email);
 
@@ -29,15 +33,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       });
     }
 
-    const user = new User({
+    const user = {
       id: uuidv4(),
+      displayName: `${firstName} ${lastName}`,
       email,
       password,
-      firstName,
-      lastName,
-    });
+      role: 'user',
+    };
 
-    const newuser = await user.save();
+    const newuser = await User.create(user);
 
     const accessToken = sign({ userId: user.id }, JWT_SECRET, {
       expiresIn: JWT_EXPIRES_IN,
