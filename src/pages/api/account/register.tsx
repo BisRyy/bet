@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 // utils
 // import cors from '../../../utils/cors';
 // _mock
-import { users, JWT_SECRET, JWT_EXPIRES_IN } from '../../../_mock/_account';
+import { users as newUsers, JWT_SECRET, JWT_EXPIRES_IN } from '../../../_mock/_account';
 import User from '../../../models/user';
 import connectMongo from '../../../lib/dbConnect';
 
@@ -19,7 +19,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { email = '', password, firstName, lastName } = req.body;
 
     await connectMongo();
-    const newUsers = await User.find({});
+    const users = await User.find({});
 
     newUsers.forEach((user) => {
       users.push(user);
