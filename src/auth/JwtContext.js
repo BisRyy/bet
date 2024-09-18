@@ -38,7 +38,7 @@ const reducer = (state, action) => {
   if (action.type === 'REGISTER') {
     return {
       ...state,
-      isAuthenticated: true,
+      isAuthenticated: false,
       user: action.payload.user,
     };
   }
@@ -139,7 +139,7 @@ export function AuthProvider({ children }) {
     });
     const { accessToken, user } = response.data;
 
-    localStorage.setItem('accessToken', accessToken);
+    // localStorage.setItem('accessToken', accessToken);
 
     dispatch({
       type: 'REGISTER',
