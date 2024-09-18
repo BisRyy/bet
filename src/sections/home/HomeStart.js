@@ -90,7 +90,7 @@ function Description({ t }) {
             color="inherit"
             size="large"
             variant="outlined"
-            href={'https://t.me/lost_and_found_orthodox'}
+            href={'https://t.me/lost_and_found_orthodox/77'}
             endIcon={<Iconify icon="eva:external-link-fill" width={16} sx={{ mr: 0.5 }} />}
             startIcon={<Iconify icon="akar-icons:telegram-fill" width={20} sx={{ mr: 0.5 }} />}
             sx={{ color: 'common.white', '&:hover': { borderColor: 'currentColor' } }}

@@ -26,6 +26,7 @@ const en = {
       subtitle4: `Terms of Service`,
       subtitle5: ` and `,
       subtitle6: `Privacy Policy`,
+      success: `Your Account has been created successfully!`,
     },
     password: `Password`,
     confirm_password: `Confirm Password`,
@@ -125,6 +126,8 @@ const en = {
       newPost: `New Blog`,
       editCourse: `Edit Blog`,
       deleteBlog: `Delete Blog`,
+      draftPosts: `Draft Posts`,
+      draftPostsDesc: `You can Publish Draft Posts Submitted by the Community Members`,
     },
     courses: {
       new: `New Course`,

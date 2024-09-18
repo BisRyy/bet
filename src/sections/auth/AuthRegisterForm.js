@@ -12,13 +12,18 @@ import { useAuthContext } from '../../auth/useAuthContext';
 import Iconify from '../../components/iconify';
 import FormProvider, { RHFTextField } from '../../components/hook-form';
 import { useLocales } from '../../locales';
+import { useSnackbar } from 'notistack';
+import { useRouter } from 'next/router';
 
 // ----------------------------------------------------------------------
 
 export default function AuthRegisterForm() {
   const { register } = useAuthContext();
-  const { translate:t } = useLocales();
+  const { translate: t } = useLocales();
 
+  const { enqueueSnackbar } = useSnackbar();
+
+  const { push } = useRouter();
 
   const [showPassword, setShowPassword] = useState(false);
 
@@ -52,6 +57,8 @@ export default function AuthRegisterForm() {
     try {
       if (register) {
         await register(data.email, data.password, data.firstName, data.lastName);
+        enqueueSnackbar(t('auth.register.success'), { variant: 'success' });
+        push(PATH_AUTH.login);
       }
     } catch (error) {
       console.error(error);

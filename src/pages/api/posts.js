@@ -8,34 +8,30 @@ import Blog from '../../models/blog';
  */
 
 export default async function handler(req, res) {
-    if (req.method === 'POST') {
-        try {
-            console.log('CONNECTING TO MONGO');
+  if (req.method === 'POST') {
+    try {
+      console.log('CONNECTING TO MONGO');
 
-            await connectMongo();
+      await connectMongo();
 
-            console.log('CONNECTED TO MONGO');
-        
-            console.log('CREATING DOCUMENT');
+      console.log('CONNECTED TO MONGO');
 
-            const blog = await Blog.create(req.body);
+      console.log('CREATING DOCUMENT');
 
-            console.log('CREATED BLOG');
-        
-            return res.json({ blog });
-            
-          } catch (error) {
-            console.log(error);
-            return res.json({ error });
-          }
-      }else if (req.method === 'GET') {
-            await connectMongo();
-            const posts = await Blog.find({});
+      const blog = await Blog.create(req.body);
 
-        return res.status(200).json({ posts });
-      } else {
-        // Handle any other HTTP method
-        res.status(200).json({ name: 'John Doe' })
-      }
-    return res.status(405).end();  // Method Not Allowed
+      console.log('CREATED BLOG');
+
+      return res.json({ blog });
+    } catch (error) {
+      console.log(error);
+      return res.json({ error });
+    }
+  } else if (req.method === 'GET') {
+    await connectMongo();
+    const posts = await Blog.find({}).where('publish').equals(true).sort({ createdAt: -1 });
+
+    return res.status(200).json({ posts });
+  }
+  return res.status(405).end(); // Method Not Allowed
 }

@@ -28,6 +28,7 @@ import {
 } from '../../sections/@dashboard/blog';
 import Iconify from '../../components/iconify/Iconify';
 import { useAuthContext } from '../../auth/useAuthContext';
+import ConfirmDialog from '../../components/confirm-dialog';
 
 // ----------------------------------------------------------------------
 
@@ -53,6 +54,8 @@ export default function BlogPostPage() {
   const [loadingPost, setLoadingPost] = useState(true);
 
   const [errorMsg, setErrorMsg] = useState(null);
+
+  const [openConfirm, setOpenConfirm] = useState(false);
 
   const getPost = useCallback(async () => {
     try {
@@ -81,6 +84,14 @@ export default function BlogPostPage() {
     }
   }, [title]);
 
+  const handleOpenConfirm = () => {
+    setOpenConfirm(true);
+  };
+
+  const handleCloseConfirm = () => {
+    setOpenConfirm(false);
+  };
+
   const handleDeletePost = async () => {
     console.log('delete post', post._id);
     try {
@@ -92,6 +103,26 @@ export default function BlogPostPage() {
     }
     push(PATH_DASHBOARD.blog.root);
     enqueueSnackbar('Post deleted', { variant: 'error' });
+  };
+
+  const handlePublishPost = async () => {
+    console.log('publish post', post._id);
+    try {
+      const response = await axios.put('/api/blog/post', {
+        id: post._id,
+        publish: post?.publish ? false : true,
+      });
+
+      setPost(response.data.post);
+    } catch (error) {
+      console.error(error);
+    }
+
+    if (post?.publish) {
+      enqueueSnackbar('Post unpublished', { variant: 'error' });
+    } else {
+      enqueueSnackbar('Post published', { variant: 'success' });
+    }
   };
 
   useEffect(() => {
@@ -128,14 +159,30 @@ export default function BlogPostPage() {
           ]}
           action={
             (user?.role === 'admin' || user?.role === 'teacher') && (
-              <Button
-                onClick={handleDeletePost}
-                variant="contained"
-                startIcon={<Iconify icon="eva:trash-2-fill" />}
-                color="error"
-              >
-                Delete Post
-              </Button>
+              <Stack direction="row" spacing={1}>
+                <Button
+                  onClick={handleOpenConfirm}
+                  variant="contained"
+                  startIcon={<Iconify icon="eva:trash-2-fill" />}
+                  color="error"
+                >
+                  Delete Post
+                </Button>
+                <Button
+                  onClick={handlePublishPost}
+                  variant="contained"
+                  startIcon={
+                    post?.publish ? (
+                      <Iconify icon="eva:eye-off-fill" />
+                    ) : (
+                      <Iconify icon="eva:eye-fill" />
+                    )
+                  }
+                  color={post?.publish ? 'warning' : 'success'}
+                >
+                  {post?.publish ? 'Unpublish' : 'Publish'}
+                </Button>
+              </Stack>
             )
           }
         />
@@ -246,6 +293,24 @@ export default function BlogPostPage() {
           </>
         )}
       </Container>
+      <ConfirmDialog
+        open={openConfirm}
+        onClose={handleCloseConfirm}
+        title="Delete"
+        content={<>Are you sure want to delete this blog?</>}
+        action={
+          <Button
+            variant="contained"
+            color="error"
+            onClick={() => {
+              handleDeletePost();
+              handleCloseConfirm();
+            }}
+          >
+            Delete
+          </Button>
+        }
+      />
     </>
   );
 }

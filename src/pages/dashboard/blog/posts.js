@@ -4,7 +4,7 @@ import { useEffect, useCallback, useState } from 'react';
 import Head from 'next/head';
 import NextLink from 'next/link';
 // @mui
-import { Grid, Button, Container, Stack } from '@mui/material';
+import { Grid, Button, Container, Stack, Typography } from '@mui/material';
 // utils
 import axios from '../../../utils/axios';
 // routes
@@ -42,6 +42,8 @@ export default function BlogPostsPage() {
 
   const [posts, setPosts] = useState([]);
 
+  const [unpublishedPosts, setUnpublishedPosts] = useState([]);
+
   const [sortBy, setSortBy] = useState('latest');
 
   const sortedPosts = applySortBy(posts, sortBy);
@@ -52,6 +54,7 @@ export default function BlogPostsPage() {
     try {
       const response = await axios.get('/api/blog/posts');
       setPosts(response.data.posts);
+      setUnpublishedPosts(response.data.unpublishedPosts);
     } catch (error) {
       console.error(error);
     }
@@ -90,18 +93,34 @@ export default function BlogPostsPage() {
             },
           ]}
           action={
-            user.role === 'admin' && (
-              <Button
-                component={NextLink}
-                href={PATH_DASHBOARD.blog.new}
-                variant="contained"
-                startIcon={<Iconify icon="eva:plus-fill" />}
-              >
-                {t('dashboard.blog.newPost')}
-              </Button>
-            )
+            <Button
+              component={NextLink}
+              href={PATH_DASHBOARD.blog.new}
+              variant="contained"
+              startIcon={<Iconify icon="eva:plus-fill" />}
+            >
+              {t('dashboard.blog.newPost')}
+            </Button>
           }
         />
+
+        {unpublishedPosts.length > 0 && (
+          <Stack mb={1} direction="column" alignItems="start" justifyContent="space-between">
+            <Typography variant="h6">{t('dashboard.blog.draftPosts')}</Typography>
+            <Typography variant="body">{t('dashboard.blog.draftPostsDesc')}</Typography>
+          </Stack>
+        )}
+        <Grid container spacing={3} paddingY={4}>
+          {unpublishedPosts.map((post, index) =>
+            post ? (
+              <Grid key={post._id} item xs={12} sm={6} md={3}>
+                <BlogPostCard post={post} index={index} />
+              </Grid>
+            ) : (
+              <SkeletonPostItem key={index} />
+            )
+          )}
+        </Grid>
 
         <Stack mb={5} direction="row" alignItems="center" justifyContent="space-between">
           <BlogPostsSearch />

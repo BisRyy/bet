@@ -8,7 +8,7 @@ const en = {
   home: {
     hero: {
       title: `Waa'e Orthodox`,
-      subtitle: `Nan Baradha.`,
+      subtitle: `Baradha.`,
       description: `Barnota bataskaana, kitabota amanti adda adda fi oduwwan amanti bakkuma jirtaniti argadha.`,
       button1: `Gara Barnota`,
       button2: 'Telegram Community',
