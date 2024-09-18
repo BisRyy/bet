@@ -14,6 +14,7 @@ import FormProvider, { RHFTextField } from '../../components/hook-form';
 import { useLocales } from '../../locales';
 import { useSnackbar } from 'notistack';
 import { useRouter } from 'next/router';
+import { PATH_AUTH } from '../../routes/paths';
 
 // ----------------------------------------------------------------------
 

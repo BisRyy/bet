@@ -10,7 +10,7 @@ export const allLangs = [
     value: 'am',
     systemValue: amET,
     icon: '/assets/icons/flags/ethiopia.svg',
-  },  
+  },
   {
     label: 'Afaan Oromo',
     value: 'ao',
@@ -48,4 +48,4 @@ export const allLangs = [
   // },
 ];
 
-export const defaultLang = allLangs[0]; // Amharic
+export const defaultLang = allLangs[2]; // English

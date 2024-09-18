@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 // @mui
 import { useTheme } from '@mui/material/styles';
-import { Box, Button, AppBar, Toolbar, Container, Link, IconButton } from '@mui/material';
+import { Box, Button, AppBar, Toolbar, Container, Link, IconButton, Stack } from '@mui/material';
 // hooks
 import useOffSetTop from '../../hooks/useOffSetTop';
 import useResponsive from '../../hooks/useResponsive';
@@ -71,9 +71,14 @@ export default function Header() {
           </IconButton>
           <LanguagePopover />
 
-          <Button variant="contained" rel="noopener" href={'/blogs'}>
-            {t('header.login')}
-          </Button>
+          <Stack direction="row" spacing={1}>
+            <Button variant="outlined" rel="noopener" href={'/blogs'}>
+              {t('header.blogs')}
+            </Button>
+            <Button variant="contained" rel="noopener" href={PATH_AFTER_LOGIN}>
+              {t('header.login')}
+            </Button>
+          </Stack>
 
           {!isDesktop && <NavMobile isOffset={isOffset} data={navConfig} />}
 

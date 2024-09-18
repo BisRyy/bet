@@ -22,7 +22,8 @@ const am = {
   },
   beteliq: `ቤተ-ሊቅ`,
   header: {
-    login: `ትምህርት`,
+    login: `ግባ`,
+    blogs: `ትምህርት`,
   },
   home: {
     hero: {

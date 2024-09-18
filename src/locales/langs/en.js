@@ -52,7 +52,8 @@ const en = {
   },
   beteliq: `Beteliq`,
   header: {
-    login: `Blogs`,
+    login: `Login`,
+    blogs: `Blogs`,
   },
   home: {
     hero: {

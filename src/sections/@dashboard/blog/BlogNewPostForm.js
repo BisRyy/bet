@@ -39,7 +39,7 @@ export default function BlogNewPostForm() {
 
   const [openPreview, setOpenPreview] = useState(false);
 
-  const [imageLoading, setImageLoading] = useState(true);
+  const [imageLoading, setImageLoading] = useState(false);
 
   const NewBlogSchema = Yup.object().shape({
     title: Yup.string().required('Title is required'),
@@ -183,7 +183,7 @@ export default function BlogNewPostForm() {
                   component="label"
                   startIcon={
                     imageLoading ? (
-                      <CircularProgress color="warning" size={200} />
+                      <Iconify icon="line-md:loading-loop" />
                     ) : (
                       <Iconify icon="eva:image-fill" />
                     )
