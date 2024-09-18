@@ -56,11 +56,9 @@ export default function AuthRegisterForm() {
 
   const onSubmit = async (data) => {
     try {
-      if (register) {
-        await register(data.email, data.password, data.firstName, data.lastName);
-        enqueueSnackbar(t('auth.register.success'), { variant: 'success' });
-        push(PATH_AUTH.login);
-      }
+      await register(data.email, data.password, data.firstName, data.lastName);
+      enqueueSnackbar(t('auth.register.success'), { variant: 'success' });
+      push(PATH_AUTH.login);
     } catch (error) {
       console.error(error);
 
