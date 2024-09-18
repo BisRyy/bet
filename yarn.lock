@@ -4165,6 +4165,7 @@ __metadata:
     i18next: "npm:^22.4.9"
     i18next-browser-languagedetector: "npm:^7.0.1"
     jsonwebtoken: "npm:^8.5.1"
+    license-generator: "npm:^0.0.13"
     lodash: "npm:^4.17.21"
     mapbox-gl: "npm:^2.12.0"
     mongodb: "npm:^5.4.0"
@@ -4844,6 +4845,13 @@ __metadata:
   version: 2.0.3
   resolution: "comma-separated-tokens@npm:2.0.3"
   checksum: 10c0/91f90f1aae320f1755d6957ef0b864fe4f54737f3313bd95e0802686ee2ca38bff1dd381964d00ae5db42912dd1f4ae5c2709644e82706ffc6f6842a813cdd67
+  languageName: node
+  linkType: hard
+
+"commander@npm:~2.1.0":
+  version: 2.1.0
+  resolution: "commander@npm:2.1.0"
+  checksum: 10c0/7506ea2bb820e865d84562a0825a0a16728e116522b89a314853c9e66c8f27abcd2506fc8f80ca9a09884a075055fd6678761ed16ad39fb17aa61d5e84def3c2
   languageName: node
   linkType: hard
 
@@ -7007,6 +7015,17 @@ __metadata:
     prelude-ls: "npm:^1.2.1"
     type-check: "npm:~0.4.0"
   checksum: 10c0/effb03cad7c89dfa5bd4f6989364bfc79994c2042ec5966cb9b95990e2edee5cd8969ddf42616a0373ac49fac1403437deaf6e9050fbbaa3546093a59b9ac94e
+  languageName: node
+  linkType: hard
+
+"license-generator@npm:^0.0.13":
+  version: 0.0.13
+  resolution: "license-generator@npm:0.0.13"
+  dependencies:
+    commander: "npm:~2.1.0"
+  bin:
+    license-generator: index.js
+  checksum: 10c0/70bb5179713b665a0d49183211d3dc1fc619db97b60d095bcbf665107df272eb93db396d6514ad59f6bdc7620bd5da8f4bb43d06eaa05b1c02f0f34472999f6d
   languageName: node
   linkType: hard
 
