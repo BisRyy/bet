@@ -65,14 +65,14 @@ const newConfig = [
         title: 'ecommerce',
         path: PATH_DASHBOARD.eCommerce.root,
         icon: ICONS.cart,
-        roles: ['admin'],
+        roles: ['superadmin'],
         caption: 'This feature is under development',
       },
       {
         title: 'calendar',
         path: PATH_DASHBOARD.calendar,
         icon: ICONS.calendar,
-        roles: ['admin'],
+        roles: ['superadmin'],
         caption: 'This feature is under development',
       },
       {
@@ -80,32 +80,31 @@ const newConfig = [
         path: PATH_DASHBOARD.chat.root,
         icon: ICONS.chat,
         caption: 'This feature is under development',
-        roles: ['admin'],
+        roles: ['superadmin'],
       },
       {
         title: 'admin',
         icon: ICONS.lock,
-        roles: ['admin'],
+        roles: ['admin', 'superadmin'],
         path: PATH_DASHBOARD.user.list,
-        caption: 'This feature is under development',
         children: [
           {
             title: 'users',
             path: PATH_DASHBOARD.user.list,
           },
-          {
-            title: 'products',
-            path: PATH_DASHBOARD.eCommerce.list,
-          },
-          {
-            title: 'sells',
-            path: PATH_DASHBOARD.general.ecommerce,
-          },
-          {
-            title: 'analytics',
-            path: PATH_DASHBOARD.general.analytics,
-            caption: 'Data Provided might be inaccurate',
-          },
+          // {
+          //   title: 'products',
+          //   path: PATH_DASHBOARD.eCommerce.list,
+          // },
+          // {
+          //   title: 'sells',
+          //   path: PATH_DASHBOARD.general.ecommerce,
+          // },
+          // {
+          //   title: 'analytics',
+          //   path: PATH_DASHBOARD.general.analytics,
+          //   caption: 'Data Provided might be inaccurate',
+          // },
         ],
       },
     ],

@@ -21,7 +21,7 @@ export const users = [
     city: 'Addis Ababa',
     zipCode: '1000',
     about: 'God is Good',
-    role: 'admin',
+    role: 'superadmin',
     isPublic: true,
   },
 ];

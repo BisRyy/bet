@@ -1,5 +1,5 @@
 import { paramCase } from 'change-case';
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 // next
 import Head from 'next/head';
 import NextLink from 'next/link';
@@ -42,6 +42,9 @@ import {
 } from '../../../components/table';
 // sections
 import { UserTableToolbar, UserTableRow } from '../../../sections/@dashboard/user/list';
+import axios from '../../../utils/axios';
+import axiosInstance from '../../../utils/axios';
+import { useSnackbar } from 'notistack';
 
 // ----------------------------------------------------------------------
 
@@ -49,15 +52,9 @@ const STATUS_OPTIONS = ['all', 'active', 'banned'];
 
 const ROLE_OPTIONS = [
   'all',
-  'ux designer',
-  'full stack designer',
-  'backend developer',
-  'project manager',
-  'leader',
-  'ui designer',
-  'ui/ux designer',
-  'front end developer',
-  'full stack developer',
+  'user',
+  'admin',
+  'teacher'
 ];
 
 const TABLE_HEAD = [
@@ -99,7 +96,7 @@ export default function UserListPage() {
 
   const { push } = useRouter();
 
-  const [tableData, setTableData] = useState(_userList);
+  const [tableData, setTableData] = useState([])
 
   const [openConfirm, setOpenConfirm] = useState(false);
 
@@ -108,6 +105,21 @@ export default function UserListPage() {
   const [filterRole, setFilterRole] = useState('all');
 
   const [filterStatus, setFilterStatus] = useState('all');
+
+  const {enqueueSnackbar} = useSnackbar();
+
+  const getAllUsers = useCallback(async () => {
+    try {
+      const response = await axios.get('/api/user');
+      setTableData(response.data.users);
+    } catch (error) {
+      console.error(error);
+    }
+  }, []);
+
+  useEffect(() => {
+    getAllUsers();
+  }, [getAllUsers]);
 
   const dataFiltered = applyFilter({
     inputData: tableData,
@@ -152,7 +164,7 @@ export default function UserListPage() {
   };
 
   const handleDeleteRow = (id) => {
-    const deleteRow = tableData.filter((row) => row.id !== id);
+    const deleteRow = tableData.filter((row) => row._id !== id);
     setSelected([]);
     setTableData(deleteRow);
 
@@ -164,7 +176,7 @@ export default function UserListPage() {
   };
 
   const handleDeleteRows = (selectedRows) => {
-    const deleteRows = tableData.filter((row) => !selectedRows.includes(row.id));
+    const deleteRows = tableData.filter((row) => !selectedRows.includes(row._id));
     setSelected([]);
     setTableData(deleteRows);
 
@@ -180,8 +192,20 @@ export default function UserListPage() {
     }
   };
 
-  const handleEditRow = (id) => {
-    push(PATH_DASHBOARD.user.edit(paramCase(id)));
+  const handleEditRow = async (name, id, role) => {
+    // change user role on click
+    console.log('change user role', id);
+    try {
+      const response = await axios.put('/api/user/role', {
+        id,
+        role: role === 'teacher' ? 'admin' : role === 'admin' ? 'user' : "teacher"
+      });
+      console.log('user role changed', response.data.user);
+      enqueueSnackbar(`User ${name} role changed to ${role === 'teacher' ? 'user' : 'teacher'}`, { variant: 'success' });
+    } catch (error) {
+      console.error(error);
+    }
+    getAllUsers();
   };
 
   const handleResetFilter = () => {
@@ -250,7 +274,7 @@ export default function UserListPage() {
               onSelectAllRows={(checked) =>
                 onSelectAllRows(
                   checked,
-                  tableData.map((row) => row.id)
+                  tableData.map((row) => row._id)
                 )
               }
               action={
@@ -274,7 +298,7 @@ export default function UserListPage() {
                   onSelectAllRows={(checked) =>
                     onSelectAllRows(
                       checked,
-                      tableData.map((row) => row.id)
+                      tableData.map((row) => row._id)
                     )
                   }
                 />
@@ -284,12 +308,12 @@ export default function UserListPage() {
                     .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                     .map((row) => (
                       <UserTableRow
-                        key={row.id}
+                        key={row._id}
                         row={row}
-                        selected={selected.includes(row.id)}
-                        onSelectRow={() => onSelectRow(row.id)}
-                        onDeleteRow={() => handleDeleteRow(row.id)}
-                        onEditRow={() => handleEditRow(row.name)}
+                        selected={selected.includes(row._id)}
+                        onSelectRow={() => onSelectRow(row._id)}
+                        onDeleteRow={() => handleDeleteRow(row._id)}
+                        onEditRow={() => handleEditRow(row.displayName, row._id, row.role)}
                       />
                     ))}
 
