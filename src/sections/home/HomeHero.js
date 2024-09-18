@@ -6,10 +6,7 @@ import NextLink from 'next/link';
 import { styled, alpha, useTheme } from '@mui/material/styles';
 import { Button, Box, Link, Container, Typography, Stack, Grid, Rating } from '@mui/material';
 // routes
-import {
-  PATH_AUTH,
-  PATH_DASHBOARD,
-} from '../../routes/paths';
+import { PATH_AUTH, PATH_DASHBOARD } from '../../routes/paths';
 // hooks
 import useResponsive from '../../hooks/useResponsive';
 // utils
@@ -103,7 +100,7 @@ export default function HomeHero() {
 
   const [hide, setHide] = useState(false);
 
-  const { translate:t } = useLocales();
+  const { translate: t } = useLocales();
 
   useEffect(
     () =>
@@ -146,12 +143,12 @@ export default function HomeHero() {
 
 // ----------------------------------------------------------------------
 
-function Description({t}) {
+function Description({ t }) {
   return (
     <StyledDescription>
       <m.div variants={varFade().in}>
         <Typography variant="h2" sx={{ textAlign: 'center' }}>
-         {t('home.hero.title')}
+          {t('home.hero.title')}
         </Typography>
       </m.div>
 
@@ -180,7 +177,7 @@ function Description({t}) {
           <Stack alignItems="center" spacing={2}>
             <Button
               component={NextLink}
-              href={PATH_DASHBOARD.root}
+              href={'/blogs'}
               color="inherit"
               size="large"
               variant="contained"
@@ -204,7 +201,7 @@ function Description({t}) {
             startIcon={<Iconify icon="oi:account-login" width={24} height={24} />}
             target="_blank"
             rel="noopener"
-            href={PATH_AUTH.login}
+            href={'https://t.me/lost_and_found_orthodox'}
             sx={{ borderColor: 'text.primary' }}
           >
             {t('home.hero.button2')}
@@ -269,7 +266,7 @@ function Content() {
           //   animate={{ y: ['100%', '0%'] }}
           //   transition={transition}
           alt={`hero_${isLight ? 'light' : 'dark'}_2`}
-          src="https://addisababa.eotc.org.et/en/wp-content/uploads/middle-logo-264x300.png"
+          src="/assets/middle-logo-264x300.png"
           width="70%"
           //   src={`/assets/images/home/hero_${isLight ? 'light' : 'dark'}_2.png`}
           sx={{ position: 'absolute' }}
@@ -279,7 +276,7 @@ function Content() {
           //   animate={{ y: ['0%', '-100%'] }}
           //   transition={transition}
           alt={`hero_${isLight ? 'light' : 'dark'}_2`}
-          src="https://addisababa.eotc.org.et/en/wp-content/uploads/middle-logo-264x300.png"
+          src="/assets/middle-logo-264x300.png"
           width="70%"
           //   src={`/assets/images/home/hero_${isLight ? 'light' : 'dark'}_2.png`}
           sx={{ position: 'absolute' }}

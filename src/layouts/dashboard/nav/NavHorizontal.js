@@ -33,7 +33,7 @@ function NavHorizontal() {
           }),
         }}
       >
-        <NavSectionHorizontal data={navConfig} />
+        {/* <NavSectionHorizontal data={navConfig} /> */}
       </Toolbar>
 
       <Shadow />

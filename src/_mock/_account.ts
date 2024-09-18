@@ -12,7 +12,7 @@ export const users = [
     id: '8864c717-587d-472a-929a-8e5f298024da-0',
     displayName: 'Beteliq Admin',
     email: 'dev@bisrat.tech',
-    password: 'demo1234',
+    password: 'dev@bisrat.tech',
     photoURL: `${HOST_API}/assets/images/avatars/avatar_default.jpg`,
     phoneNumber: '++251 911 111 111',
     country: 'Ethiopia',

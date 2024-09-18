@@ -129,7 +129,7 @@ PostContent.propTypes = {
 export function PostContent({ title, view, comment, share, createdAt, index }) {
   const isDesktop = useResponsive('up', 'md');
 
-  const linkTo = PATH_DASHBOARD.blog.view(paramCase(title));
+  const linkTo = PATH_DASHBOARD.blog.viewPublic(paramCase(title));
 
   const latestPostLarge = index === 0;
 

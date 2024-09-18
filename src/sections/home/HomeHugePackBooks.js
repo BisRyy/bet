@@ -40,7 +40,7 @@ import { bgGradient } from '../../utils/cssStyles';
 import { PATH_PAGE } from '../../routes/paths';
 // _mock
 import _mock from '../../_mock';
-import {books} from '../../_mock/_book';
+import { books } from '../../_mock/_book';
 // components
 import Label from '../../components/label';
 import Image from '../../components/image';
@@ -106,14 +106,14 @@ const StyledRow = styled('div')(({ theme }) => ({
 
 export default function HomeHugePackElements() {
   const isDesktop = useResponsive('up', 'md');
-  const { translate:t } = useLocales();
+  const { translate: t } = useLocales();
 
   return (
     <StyledRoot>
       <Container component={MotionViewport}>
         <Grid direction={{ xs: 'column', md: 'row-reverse' }} container spacing={5}>
           <Grid item xs={12} md={5}>
-            <Description t={t}/>
+            <Description t={t} />
           </Grid>
 
           <Grid item xs={12} md={7} sx={{ position: 'relative' }}>
@@ -133,7 +133,7 @@ export default function HomeHugePackElements() {
 
 // ----------------------------------------------------------------------
 
-function Description({t}) {
+function Description({ t }) {
   const isDesktop = useResponsive('up', 'md');
 
   return (
@@ -173,19 +173,18 @@ function Content() {
   return (
     <StyledContent>
       <Scrollbar>
-        <Stack spacing={5} sx={{ px: 2, py: 5 }}>
-          <Grid container spacing={5}>
+        <Stack spacing={5} sx={{ px: 2, py: 2 }}>
+          <Grid container spacing={{ xs: 1, sm: 2, md: 4 }} overflow={'hidden'}>
             {books.slice(0, 9).map((book) => (
               <Grid key={book._id} item xs={4} sm={4} md={4}>
                 <m.div variants={varFade().inUp}>
                   <CardMedia
                     component={MotionViewport}
-                    sx={{ height: 180, borderRadius: 2 }}
+                    sx={{ height: 180, borderRadius: 1 }}
                     image={book.image}
                   />
                 </m.div>
               </Grid>
-
             ))}
           </Grid>
         </Stack>
@@ -197,18 +196,18 @@ function Content() {
 // ----------------------------------------------------------------------
 
 function ViewAllButton() {
-  const { translate:t } = useLocales();
+  const { translate: t } = useLocales();
   return (
     <m.div variants={varFade().inUp}>
       <Button
         size="large"
         color="inherit"
         variant="outlined"
-        href={PATH_PAGE.books}
+        href={'https://t.me/lost_and_found_orthodox/4'}
         endIcon={<Iconify icon="ic:round-arrow-right-alt" />}
       >
         {t('home.books.viewAll')}
       </Button>
     </m.div>
-  )
+  );
 }

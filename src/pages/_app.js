@@ -57,6 +57,7 @@ import { AuthProvider } from '../auth/JwtContext';
 
 // Analytics
 import Loglib from '@loglib/tracker/react';
+import { Analytics } from '@vercel/analytics/react';
 
 // ----------------------------------------------------------------------
 
@@ -97,6 +98,7 @@ export default function MyApp(props) {
                             host: 'https://www.loglib.io',
                           }}
                         />
+                        <Analytics />
                       </SnackbarProvider>
                     </ThemeLocalization>
                   </ThemeSettings>

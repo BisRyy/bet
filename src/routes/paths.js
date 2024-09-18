@@ -98,6 +98,7 @@ export const PATH_DASHBOARD = {
     posts: path(ROOTS_DASHBOARD, '/blog/posts'),
     new: path(ROOTS_DASHBOARD, '/blog/new'),
     view: (title) => path(ROOTS_DASHBOARD, `/blog/post/${title}`),
+    viewPublic: (title) => path('', `/blog/${title}`),
     demoView: path(ROOTS_DASHBOARD, '/blog/post/apply-these-7-secret-techniques-to-improve-event'),
   },
   courses: {
@@ -115,4 +116,3 @@ export const PATH_DASHBOARD = {
     detailsByID: (id) => path(ROOTS_DASHBOARD, `/books/${id}/details`),
   },
 };
-

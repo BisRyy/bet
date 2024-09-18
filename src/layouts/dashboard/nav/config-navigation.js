@@ -53,33 +53,41 @@ const newConfig = [
         title: 'courses',
         path: PATH_DASHBOARD.courses.root,
         icon: ICONS.file,
+        caption: 'This feature is under development',
       },
       {
         title: 'books',
         path: PATH_DASHBOARD.books.root,
         icon: ICONS.folder,
+        caption: 'This feature is under development',
       },
       {
         title: 'ecommerce',
         path: PATH_DASHBOARD.eCommerce.root,
         icon: ICONS.cart,
+        roles: ['admin'],
+        caption: 'This feature is under development',
       },
       {
         title: 'calendar',
         path: PATH_DASHBOARD.calendar,
         icon: ICONS.calendar,
+        roles: ['admin'],
+        caption: 'This feature is under development',
       },
       {
         title: 'chat',
         path: PATH_DASHBOARD.chat.root,
         icon: ICONS.chat,
         caption: 'This feature is under development',
+        roles: ['admin'],
       },
       {
         title: 'admin',
         icon: ICONS.lock,
         roles: ['admin'],
         path: PATH_DASHBOARD.user.list,
+        caption: 'This feature is under development',
         children: [
           {
             title: 'users',

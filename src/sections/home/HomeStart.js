@@ -1,7 +1,7 @@
 import { m } from 'framer-motion';
 // @mui
 import { useTheme } from '@mui/material/styles';
-import { Button, Box, Container, Stack } from '@mui/material';
+import { Button, Box, Container, Stack, Typography } from '@mui/material';
 // utils
 import { bgGradient } from '../../utils/cssStyles';
 // routes
@@ -16,7 +16,7 @@ import { useLocales } from '../../locales';
 
 export default function HomeAdvertisement() {
   const theme = useTheme();
-  const { translate:t } = useLocales()
+  const { translate: t } = useLocales();
 
   return (
     <Container component={MotionViewport}>
@@ -55,10 +55,12 @@ function Description({ t }) {
       <Box
         component={m.div}
         variants={varFade().inDown}
-        sx={{ color: 'common.white', mb: 5, typography: 'h2' }}
+        sx={{ color: 'common.white', fontWeight: 'bold', mb: 5, typography: 'h3' }}
       >
         {t('home.start.title')} <br />
-        {t('home.start.title2')}
+        <Typography sx={{ color: 'common.white', typography: 'h4' }}>
+          {t('home.start.title2')}
+        </Typography>
       </Box>
 
       <Stack
@@ -71,7 +73,9 @@ function Description({ t }) {
             color="inherit"
             size="large"
             variant="contained"
-            href={PATH_DASHBOARD.root}
+            href={'https://github.com/bisryy/bet'}
+            startIcon={<Iconify icon="eva:github-fill" width={20} sx={{ mr: 0.5 }} />}
+            endIcon={<Iconify icon="eva:external-link-fill" width={16} sx={{ mr: 0.5 }} />}
             sx={{
               color: 'grey.800',
               bgcolor: 'common.white',
@@ -86,8 +90,9 @@ function Description({ t }) {
             color="inherit"
             size="large"
             variant="outlined"
-            href={PATH_AUTH.login}
+            href={'https://t.me/lost_and_found_orthodox/77'}
             endIcon={<Iconify icon="eva:external-link-fill" width={16} sx={{ mr: 0.5 }} />}
+            startIcon={<Iconify icon="akar-icons:telegram-fill" width={20} sx={{ mr: 0.5 }} />}
             sx={{ color: 'common.white', '&:hover': { borderColor: 'currentColor' } }}
           >
             {t('home.start.button2')}

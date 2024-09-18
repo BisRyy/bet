@@ -14,7 +14,7 @@ import {
   _appInstalled,
   _appRelated,
   _appInvoices,
-  _analyticPost
+  _analyticPost,
 } from '../../_mock/arrays';
 // components
 import { useSettingsContext } from '../../components/settings';
@@ -61,8 +61,10 @@ export default function GeneralAppPage() {
         <Grid container spacing={3}>
           <Grid item xs={12} md={8}>
             <AppWelcome
-              title={`${translate("auth.welcome")} \n ${user?.displayName}`}
-              description={translate('auth.welcomeDescription')}
+              title={`${translate('auth.welcome')} \n ${user?.displayName}`}
+              description={
+                translate('home.looking_for.title') + ' - ' + translate('home.looking_for.subtitle')
+              }
               img={
                 <SeoIllustration
                   sx={{

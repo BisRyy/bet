@@ -17,8 +17,7 @@ import { useLocales } from '../../locales';
 
 export default function AuthRegisterForm() {
   const { register } = useAuthContext();
-  const { translate:t } = useLocales();
-
+  const { translate: t } = useLocales();
 
   const [showPassword, setShowPassword] = useState(false);
 

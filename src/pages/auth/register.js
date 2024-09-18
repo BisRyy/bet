@@ -13,7 +13,9 @@ export default function RegisterPage() {
   return (
     <>
       <Head>
-        <title> {t('auth.register')} |  {t("beteliq")}</title>
+        <title>
+          {t('auth.register.title')} | {t('beteliq')}
+        </title>
       </Head>
 
       <GuestGuard>

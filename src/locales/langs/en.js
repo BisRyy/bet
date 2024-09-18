@@ -1,6 +1,6 @@
 // ----------------------------------------------------------------------
 
-import { features } from "process";
+import { features } from 'process';
 
 // IF THIS TRANSLATION IS INCORRECT PLEASE IGNORE THIS AS THIS TRANSLATION IS FOR DEMO PURPOSES ONLY
 // We are happy if you can help improve the translation by sending an email to dev@bisrat.tech.
@@ -10,7 +10,7 @@ import { features } from "process";
 const en = {
   auth: {
     welcome: `Welcome`,
-    welcomeDescription: `Welcome back, please login to your account.`,
+    welcomeDescription: `Welcome to Beteliq, Learn all about Orthodox.`,
     hi: `Hi`,
     login: `Login`,
     login_title: `Login to your account`,
@@ -26,6 +26,7 @@ const en = {
       subtitle4: `Terms of Service`,
       subtitle5: ` and `,
       subtitle6: `Privacy Policy`,
+      success: `Your Account has been created successfully!`,
     },
     password: `Password`,
     confirm_password: `Confirm Password`,
@@ -51,7 +52,8 @@ const en = {
   },
   beteliq: `Beteliq`,
   header: {
-    login: `ወደ ትምህርት`,
+    login: `Login`,
+    blogs: `Blogs`,
   },
   home: {
     hero: {
@@ -59,7 +61,7 @@ const en = {
       subtitle: `Orthodox.`,
       description: `Get books, courses, blogs and more resources to learn about orthodox.`,
       button1: `Get Started`,
-      button2: `Register`,
+      button2: `Telegram Community`,
     },
     features: {
       title: `All resources`,
@@ -81,7 +83,7 @@ const en = {
         icon: ' /assets/icons/home/ic_design.svg',
         title: 'Books',
         description:
-          'Large set of books to read ang learn about ortodox. Books in different language are provided in pdf format which you can download and ready from anywhere.',
+          'Large set of books to read and learn about ortodox. Books in different language are provided in pdf format which you can download and ready from anywhere.',
       },
     },
     books: {
@@ -103,16 +105,16 @@ const en = {
       description: `We care about your eyes, focus on your reading at any time of the day or night.`,
     },
     looking_for: {
-      subtitle: `Liked our work?`,
-      title: `Looking for a similar solution?`,
-      button: `Contact the Developer`,
+      subtitle: `Ecclesiastes 12:1`,
+      title: `Remember your Creator in the days of your youth, before the days of trouble come`,
+      button: `Ask About Orthodox Anonymously`,
     },
     start: {
-      title: `Start learning`,
-      title2: `with Beteliq`,
-      description: `The kit is built on the principles of the atomic design system. It helps you to create projects fastest and easily customized packages for your projects.`,
-      button: `Get Started`,
-      button2: `Register`,
+      title: `Help Building Beteliq`,
+      title2: `with Translation, Design as well as Development.`,
+      description: `You can contribute to beteliq by building`,
+      button: `Contribute on Github`,
+      button2: `Telegram Community`,
     },
   },
   dashboard: {
@@ -125,6 +127,8 @@ const en = {
       newPost: `New Blog`,
       editCourse: `Edit Blog`,
       deleteBlog: `Delete Blog`,
+      draftPosts: `Draft Posts`,
+      draftPostsDesc: `You can Publish Draft Posts Submitted by the Community Members`,
     },
     courses: {
       new: `New Course`,

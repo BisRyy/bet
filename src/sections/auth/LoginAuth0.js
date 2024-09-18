@@ -37,9 +37,9 @@ export default function LoginAuth0() {
         </Tooltip>
       </Stack>
 
-      <Alert severity="info" sx={{ mb: 3 }}>
+      {/* <Alert severity="info" sx={{ mb: 3 }}>
         Use email : <strong>dev@bisrat.tech</strong> / password :<strong> demo1234</strong>
-      </Alert>
+      </Alert> */}
 
       <Button
         fullWidth

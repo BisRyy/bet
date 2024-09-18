@@ -24,7 +24,7 @@ const StyledRoot = styled('div')(({ theme }) => ({
 
 export default function HomeLookingFor() {
   const isDesktop = useResponsive('up', 'md');
-  const { translate:t } = useLocales()
+  const { translate: t } = useLocales();
 
   return (
     <StyledRoot>
@@ -32,16 +32,16 @@ export default function HomeLookingFor() {
         <Grid
           container
           alignItems="center"
-          justifyContent="space-between"
+          justifyContent="space-around"
           spacing={{ xs: 5, md: 0 }}
         >
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={6}>
             <Description t={t} />
           </Grid>
 
-          <Grid item xs={12} md={7}>
+          {/* <Grid item xs={12} md={7}>
             <Content />
-          </Grid>
+          </Grid> */}
 
           {!isDesktop && (
             <Grid item xs={12} sx={{ textAlign: 'center' }}>
@@ -56,7 +56,7 @@ export default function HomeLookingFor() {
 
 // ----------------------------------------------------------------------
 
-function Description({ t}) {
+function Description({ t }) {
   const isDesktop = useResponsive('up', 'md');
 
   return (
@@ -86,7 +86,12 @@ function Description({ t}) {
         </Typography>
       </m.div>
 
-      {isDesktop && <m.div variants={varFade().inDown}> <VisitButton /> </m.div>}
+      {isDesktop && (
+        <m.div variants={varFade().inDown}>
+          {' '}
+          <VisitButton />{' '}
+        </m.div>
+      )}
     </Stack>
   );
 }
@@ -101,18 +106,19 @@ function Content() {
   );
 }
 
-function VisitButton () {
-  const { translate:t } = useLocales()
+function VisitButton() {
+  const { translate: t } = useLocales();
   return (
-  <Button
-    color="inherit"
-    size="large"
-    variant="outlined"
-    target="_blank"
-    rel="noopener"
-    href="https://bisrat.tech/"
-    endIcon={<Iconify icon="ic:round-arrow-right-alt" />}
-  >
-    {t('home.looking_for.button')}
-  </Button>
-)}
+    <Button
+      color="inherit"
+      size="large"
+      variant="outlined"
+      target="_blank"
+      rel="noopener"
+      href="https://t.me/anoniQbot"
+      endIcon={<Iconify icon="ic:round-arrow-right-alt" />}
+    >
+      {t('home.looking_for.button')}
+    </Button>
+  );
+}

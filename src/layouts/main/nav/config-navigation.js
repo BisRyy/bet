@@ -8,26 +8,26 @@ import Iconify from '../../../components/iconify';
 // ----------------------------------------------------------------------
 
 const navConfig = [
-  {
-    title: 'Home',
-    icon: <Iconify icon="eva:home-fill" />,
-    path: '/',
-  },
-  {
-    title: 'Courses',
-    icon: <Iconify icon="ic:round-grain" />,
-    path: PATH_PAGE.courses,
-  },
-  {
-    title: 'Books',
-    path: PATH_PAGE.books,
-    icon: <Iconify icon="eva:file-fill" />,
-  },
-  {
-    title: 'Blogs',
-    icon: <Iconify icon="eva:book-open-fill" />,
-    path: PATH_PAGE.blog,
-  },
+  // {
+  //   title: 'Home',
+  //   icon: <Iconify icon="eva:home-fill" />,
+  //   path: '/',
+  // },
+  // {
+  //   title: 'Courses',
+  //   icon: <Iconify icon="ic:round-grain" />,
+  //   path: PATH_PAGE.courses,
+  // },
+  // {
+  //   title: 'Books',
+  //   path: PATH_PAGE.books,
+  //   icon: <Iconify icon="eva:file-fill" />,
+  // },
+  // {
+  //   title: 'Blogs',
+  //   icon: <Iconify icon="eva:book-open-fill" />,
+  //   path: '/blogs',
+  // },
 ];
 
 export default navConfig;

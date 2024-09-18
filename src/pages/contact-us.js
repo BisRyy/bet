@@ -22,7 +22,7 @@ export default function ContactPage() {
         <title> Contact us | Bete Liq</title>
       </Head>
 
-      <ContactHero />
+      {/* <ContactHero /> */}
 
       <Container sx={{ py: 10 }}>
         <Box

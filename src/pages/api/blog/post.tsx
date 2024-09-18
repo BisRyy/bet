@@ -4,7 +4,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 // utils
 // import cors from '../../../utils/cors';
 import connectMongo from '../../../lib/dbConnect';
-import Blog from '../../../models/blog'
+import Blog from '../../../models/blog';
 
 // _mock
 import { posts } from '../../../_mock/_blog';
@@ -38,19 +38,36 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         message: 'Internal server error',
       });
     }
-  } else if (req.method == 'DELETE'){
+  } else if (req.method == 'DELETE') {
     const { id } = req.query;
     try {
       // await cors(req, res);
       await connectMongo();
       const post = await Blog.findByIdAndDelete(id);
       res.status(200).json({ post });
-    }
-    catch (error) {
+    } catch (error) {
       console.error(error);
       res.status(500).json({
         message: 'Internal server error',
       });
     }
+  } else if (req.method == 'PUT') {
+    const { id, publish } = req.body;
+    try {
+      // await cors(req, res);
+      await connectMongo();
+      const post = await Blog.findOneAndUpdate({ _id: id }, { publish }, { new: true });
+      console.log(post);
+      res.status(200).json({ post });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({
+        message: 'Internal server error',
+      });
+    }
+  } else {
+    res.status(405).json({
+      message: 'Method Not Allowed',
+    });
   }
 }

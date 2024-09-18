@@ -10,6 +10,7 @@ import { _socials } from '../../_mock/arrays';
 // components
 import Logo from '../../components/logo';
 import Iconify from '../../components/iconify';
+import Label from '../../components/label';
 
 // ----------------------------------------------------------------------
 
@@ -56,18 +57,25 @@ export default function Footer() {
       }}
     >
       <Container>
-        <Logo sx={{ mb: 1, mx: 'auto' }} />
+        <Logo />
 
         <Typography variant="caption" component="div">
-          © All rights reserved
+          <Link href="https://github.com/bisryy/bet" target="_blank">
+            Open Source{' '}
+          </Link>
+          © No rights reserved. 2017 / 2024.
+        </Typography>
+        <Typography variant="caption" component="div">
           <br /> Made by &nbsp;
-          <Link href="https://bisrat.tech/" target='_blank' > Bisrat Kebere </Link>
+          <Link href="https://bisry.me/" target="_blank">
+            Bisrat Kebere{' '}
+          </Link>
         </Typography>
       </Container>
       <Stack
         spacing={1}
         direction="row"
-        justifyContent='center'
+        justifyContent="center"
         sx={{
           mt: 1,
           mb: { xs: 5, md: 3 },
@@ -161,11 +169,11 @@ export default function Footer() {
             textAlign: { xs: 'center', md: 'left' },
           }}
         >
-          © 2015 / 2023. All rights reserved
+          © 2017 / 2024. No rights reserved
         </Typography>
       </Container>
     </Box>
   );
 
-  return isHome ? simpleFooter : mainFooter;
+  return isHome ? simpleFooter : simpleFooter;
 }
