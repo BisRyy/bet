@@ -87,16 +87,16 @@ export default function BlogPostsPage() {
             //   name: 'Posts',
             // },
           ]}
-          //   action={
-          //     <Button
-          //       component={NextLink}
-          //       href={PATH_DASHBOARD.blog.new}
-          //       variant="contained"
-          //       startIcon={<Iconify icon="eva:plus-fill" />}
-          //     >
-          //       {t('dashboard.blog.newPost')}
-          //     </Button>
-          //   }
+          action={
+            <Button
+              component={NextLink}
+              href={PATH_DASHBOARD.blog.new}
+              variant="contained"
+              startIcon={<Iconify icon="eva:plus-fill" />}
+            >
+              {t('dashboard.blog.newPost')}
+            </Button>
+          }
         />
 
         <Stack mb={5} direction="row" alignItems="center" justifyContent="space-between">

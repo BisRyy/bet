@@ -124,7 +124,7 @@ const en = {
     blog: {
       title: `Blogs`,
       subtitle: `All blogs`,
-      newPost: `New Blog`,
+      newPost: `Add New Blog`,
       editCourse: `Edit Blog`,
       deleteBlog: `Delete Blog`,
       draftPosts: `Draft Posts`,

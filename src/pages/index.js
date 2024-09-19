@@ -53,7 +53,7 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title> EOTC Education Platform | Bete Liq</title>
+        <title> Lost and Found Orthodox | Bete Liq</title>
       </Head>
 
       {progress}
