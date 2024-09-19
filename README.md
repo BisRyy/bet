@@ -18,6 +18,40 @@
 - Comprehensive user guide and developer guide
 - Integration and interoperability with other systems and technologies
 
+## CONTRIBUTING
+
+### Translation
+
+- The platform is currently available in English. Only the some parts of the home page are translated to Amharic and Afaan Oromo.
+
+- You can contribute to the translation of the platform by translating the content in the `src/locales` directory.
+
+- To Add Translation to current languages, you can go to the language file `src/locales/[language].js` and change the values from english to the desired [language].
+
+For example, to add translation to Amharic, you can go to the `src/locales/am.js` file and change the values from english to Amharic.
+
+Change this:
+
+```javascript
+// src/locales/am.js
+{
+    Book: "Book",
+    Course: "Course",
+}
+```
+
+To this:
+
+```javascript
+// src/locales/am.js
+{
+    Book: "መጽሐፍ",
+    Course: "ትምህርት",
+}
+```
+
+- The platform uses i18n for translation. You can add a new language by creating a new file as [language].js in the `public/locales` directory and adding the translation content in the `config-lang.js` and `i18n.js` files. You can copy the english file and change the values to the desired language.
+
 ## Installation
 
 Clone the repository:
